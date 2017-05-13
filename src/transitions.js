@@ -9,7 +9,9 @@ class Transitions {
             'BounceLeft', 
             'BounceRight',
             'BounceDown', 
-            'BounceUp'
+            'BounceUp',
+            'ElasticRight',
+            'ElasticLeft'
          ]
     }
 
@@ -22,6 +24,10 @@ class Transitions {
         Phaser.Plugin.StateTransition.Out.BounceUp =  this.getBounceTransition(false, 'y', 1, 'height')
         Phaser.Plugin.StateTransition.In.BounceDown =  this.getBounceTransition(true, 'y', -1, 'height')
         Phaser.Plugin.StateTransition.Out.BounceDown =  this.getBounceTransition(false, 'y', -1, 'height')
+        Phaser.Plugin.StateTransition.In.ElasticRight = this.getElasticTransition(true, 1)
+        Phaser.Plugin.StateTransition.Out.ElasticRight = this.getElasticTransition(false, 1)
+        Phaser.Plugin.StateTransition.In.ElasticLeft = this.getElasticTransition(true, -1)
+        Phaser.Plugin.StateTransition.Out.ElasticLeft = this.getElasticTransition(false, -1)
     }
 
     getBounceTransition(intro, value, scalar, dimension){
@@ -35,6 +41,19 @@ class Transitions {
                     return game[dimension] * scalar
                 }
         return bounce
+    }
+
+    getElasticTransition(intro, scalar){
+        var elastic = {
+            ease: Phaser.Easing.Elastic.InOut,
+            duration: 2500,
+            intro: intro,
+            props: {
+                x: function(game) { return game.width * scalar },
+                y: function(game){ return game.height * scalar }
+            }
+        }
+        return elastic
     }
 
     getTransitions(){
