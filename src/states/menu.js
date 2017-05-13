@@ -8,9 +8,9 @@ class Menu extends Phaser.State {
   }
 
   create() {
-    this.theme = Phaser.ArrayUtils.getRandomItem(themes.themes);
-    this.title = titleGenerator(this.theme);
-    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, this.title, {
+    this.game.global.theme = Phaser.ArrayUtils.getRandomItem(themes.themes);
+    this.game.global.title = titleGenerator(this.game.global.theme);
+    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, this.game.global.title, {
       font: '42px Arial',
       fill: '#ffffff',
       align: 'center'
@@ -23,7 +23,7 @@ class Menu extends Phaser.State {
   update() {}
 
   startGame() {
-    this.game.state.start('slide', null, null, true, false, this.game.config.total_slides, this.theme, this.title);
+    this.game.state.start('slide', null, null, true, false, this.game.config.total_slides);
   }
 
 }
