@@ -2,6 +2,6 @@
   "generator-phaser": {
     "projectName": "presentation.game",
     "esVersion": 6,
-    "gameFolder": "game"
+    "gameFolder": "boilerplate"
   }
 }
