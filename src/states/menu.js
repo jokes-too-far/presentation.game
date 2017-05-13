@@ -1,5 +1,6 @@
 import themes from '../contentGeneration/themes'
 import titleGenerator from '../contentGeneration/titleGenerator'
+import relatedWords from '../contentGeneration/relatedWords'
 
 class Menu extends Phaser.State {
 
@@ -8,8 +9,9 @@ class Menu extends Phaser.State {
   }
 
   create() {
-    this.game.global.theme = Phaser.ArrayUtils.getRandomItem(themes.themes);
-    this.game.global.title = titleGenerator(this.game.global.theme);
+    const theme = Phaser.ArrayUtils.getRandomItem(themes.themes);
+    this.game.global.title = titleGenerator(theme);
+    this.game.global.slideTitles = relatedWords(theme, this.game.config.total_slides + 1);
     var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, this.game.global.title, {
       font: '42px Arial',
       fill: '#ffffff',
