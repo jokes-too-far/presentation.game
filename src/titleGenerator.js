@@ -12,7 +12,6 @@ const generateTitle = () => {
   grammar.addModifiers(tracery.baseEngModifiers);
 
   const output = grammar.flatten('#generated-title#');
-  console.log(output);
   return toTitleCase(output);
 }
 

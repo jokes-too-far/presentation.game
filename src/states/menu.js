@@ -21,7 +21,7 @@ class Menu extends Phaser.State {
   update() {}
 
   startGame() {
-    this.game.state.start('game');
+    this.game.state.start('slide');
   }
 
 }
