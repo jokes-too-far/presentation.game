@@ -1,9 +1,9 @@
-const generateTitle = () => {
+const generateTitle = (theme) => {
   var grammar = tracery.createGrammar({
     'presentation': ['presentment', 'demonstration', 'display', 'introduction', 'intro', 'attitude', 'ceremony', 'informing', 'making known', 'position', 'posture', 'proposal', 'proposition', 'representation', 'show'],
     'on': ['on', 'about', 'regarding', 'concerning'],
     'importance': ['the future of', 'the importance of', 'the uselessness of'],
-    'theme': ['ducks', 'synergy', 'robots', 'the economy', '12th century spanish literature', 'aliens', 'a well-rounded diet', 'cat ears'],
+    'theme': theme,
     'ridiculous-claim': ['will save your life', 'is ruining the future', 'is the future', 'will change everything'],
     'question': ['why', 'how'],
     'generated-title': ['#presentation.a# #on# #importance# #theme#', '#question# #theme# #ridiculous-claim#'],
