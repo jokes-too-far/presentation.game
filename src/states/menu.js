@@ -5,17 +5,16 @@ class Menu extends Phaser.State {
   }
 
   create() {
-
-
     var grammar = tracery.createGrammar({
-      'animal': ['panda','fox','capybara','iguana'],
-      'emotion': ['sad','happy','angry','jealous'],
-      'origin':['I am #emotion.a# #animal#.'],
+      'presentation': ['presentment',' demonstration',' display',' introduction',' intro',' attitude',' ceremony',' informing',' making known',' position',' posture',' proposal',' proposition',' representation', 'show'],
+      'on': ['on', 'about', 'regarding'],
+      'theme': ['ducks', 'synergy', 'robots', 'the future', 'why our economy is failing', '12th century spanish literature'],
+      'generated-title':['#presentation.a# #on# #theme#'],
     });
 
     grammar.addModifiers(tracery.baseEngModifiers);
 
-    const output = grammar.flatten('#origin#');
+    const output = grammar.flatten('#generated-title#');
     console.log(output);
 
 
