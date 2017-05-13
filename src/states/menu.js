@@ -1,4 +1,4 @@
-import titleGenerator from '../titleGenerator'
+import titleGenerator from '../contentGeneration/titleGenerator'
 
 class Menu extends Phaser.State {
 
