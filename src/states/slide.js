@@ -4,6 +4,10 @@ class Slide extends Phaser.State {
     super();
   }
 
+  init(slideNumber) {
+    this.slideNumber = slideNumber || (slideNumber === 0 ? 0 : 10)
+  }
+
   create() {
     var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, 'Game', {
       font: '42px Arial', fill: '#ffffff', align: 'center'
@@ -20,8 +24,10 @@ class Slide extends Phaser.State {
   progress() {
     var transitions = ['SlideLeft', 'SlideRight', 'SlideTop', 'SlideBottom', 'ScaleUp']
     var transitionName = Phaser.ArrayUtils.getRandomItem(transitions)
-    //TODO: make this go to another slide until the timer is up.
-    this.game.state.start('gameover', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName]);
+    if(this.slideNumber && this.slideNumber > 0){
+      return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], false, false, this.slideNumber -1);
+    }
+    this.game.state.start('gameover', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName])
   }
 
 }
