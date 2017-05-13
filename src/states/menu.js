@@ -1,3 +1,4 @@
+import themes from '../contentGeneration/themes'
 import titleGenerator from '../contentGeneration/titleGenerator'
 
 class Menu extends Phaser.State {
@@ -7,8 +8,8 @@ class Menu extends Phaser.State {
   }
 
   create() {
-
-    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, titleGenerator(), {
+    const theme = Phaser.ArrayUtils.getRandomItem(themes);
+    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, titleGenerator(theme), {
       font: '42px Arial',
       fill: '#ffffff',
       align: 'center'
