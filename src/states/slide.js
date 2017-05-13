@@ -5,7 +5,7 @@ class Slide extends Phaser.State {
   }
 
   init(slideNumber) {
-    this.slideNumber = slideNumber || (slideNumber === 0 ? 0 : 10)
+    this.slideNumber = slideNumber || (slideNumber === 0 ? 0 : this.game.config.total_slides)
   }
 
   create() {
@@ -13,8 +13,8 @@ class Slide extends Phaser.State {
       font: '42px Arial', fill: '#ffffff', align: 'center'
     });
     text.anchor.set(0.5);
-
-    this.input.onDown.add(this.progress, this);
+    console.log("Slide:", this.slideNumber, "(of ", this.game.config.total_slides, ") Timeout: ", this.game.config.transition_timeout)
+    this.game.time.events.add(this.game.config.transition_timeout, this.progress, this);
   }
 
   update() {

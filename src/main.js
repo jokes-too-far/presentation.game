@@ -4,7 +4,11 @@ import Menu from './states/menu';
 import Preloader from './states/preloader';
 import Gameover from './states/gameover';
 
-const game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, 'presentation.game-game');
+var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, 'presentation.game-game');
+game.config = {
+    total_slides: 10,
+    transition_timeout: 30*1000
+}
 
 game.state.add('boot', new Boot());
 game.state.add('slide', new Slide());
