@@ -3,11 +3,15 @@ import Slide from './states/slide';
 import Menu from './states/menu';
 import Preloader from './states/preloader';
 import Gameover from './states/gameover';
+import Transitions from './transitions'
 
 var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, 'presentation.game-game');
+var transistions = new Transitions()
+transistions.initCustomTransitions()
 game.config = {
     total_slides: 10,
-    transition_timeout: 30*1000
+    transition_timeout: 4000,
+    transition_list: transistions.getTransitions()
 }
 
 game.state.add('boot', new Boot());
