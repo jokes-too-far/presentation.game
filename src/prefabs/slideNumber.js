@@ -1,9 +1,10 @@
 //Documentation for Phaser's (2.6.2) text:: phaser.io/docs/2.6.2/Phaser.Text.html
-class SlideTitle extends Phaser.Text {
+class SlideNumber extends Phaser.Text {
 
   //initialization code in the constructor
-  constructor(game, title) {
-    super(game, game.width * 0.5, 20, title, {
+  constructor(game, number) {
+    const text = (game.config.total_slides - number + 1) + '/' + game.config.total_slides
+    super(game, game.width - 20, game.height - 20, text, {
       font: '16px Arial',
       fill: '#ffffff',
       align: 'center'
@@ -19,4 +20,4 @@ class SlideTitle extends Phaser.Text {
 
 }
 
-export default SlideTitle;
+export default SlideNumber;

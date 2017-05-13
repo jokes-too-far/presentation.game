@@ -1,4 +1,5 @@
 import Title from '../prefabs/slideTitle'
+import SlideNumber from '../prefabs/slideNumber'
 
 class Slide extends Phaser.State {
 
@@ -14,6 +15,7 @@ class Slide extends Phaser.State {
 
   create() {
     new Title(this.game, this.presentationTitle);
+    new SlideNumber(this.game, this.slideNumber);
     console.log("Slide:", this.slideNumber, "(of ", this.game.config.total_slides, ") Timeout: ", this.game.config.transition_timeout)
     this.game.time.events.add(this.game.config.transition_timeout, this.progress, this);
   }
