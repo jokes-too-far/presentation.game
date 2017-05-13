@@ -18,7 +18,7 @@ class Menu extends Phaser.State {
     console.log(output);
 
 
-    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, output, {
+    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, toTitleCase(output), {
       font: '42px Arial',
       fill: '#ffffff',
       align: 'center'
@@ -34,6 +34,11 @@ class Menu extends Phaser.State {
     this.game.state.start('game');
   }
 
+}
+
+function toTitleCase(str)
+{
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
 export default Menu;
