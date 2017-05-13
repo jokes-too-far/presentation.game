@@ -8,7 +8,7 @@ class Menu extends Phaser.State {
   }
 
   create() {
-    this.theme = Phaser.ArrayUtils.getRandomItem(themes);
+    this.theme = Phaser.ArrayUtils.getRandomItem(themes.themes);
     this.title = titleGenerator(this.theme);
     var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, this.title, {
       font: '42px Arial',
