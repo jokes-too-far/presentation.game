@@ -6,7 +6,8 @@ class SlideTitle extends Phaser.Text {
     super(game, game.width * 0.5, 20, title, {
       font: '16px Arial',
       fill: '#ffffff',
-      align: 'center'
+      align: 'center',
+      strokeThickness: 5,
     });
     this.anchor.set(0.5);
     game.add.existing(this);

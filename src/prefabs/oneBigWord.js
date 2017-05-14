@@ -7,7 +7,8 @@ class OneBigWord extends Phaser.Text {
     super(game, game.world.centerX, game.world.centerY, text, {
       font: '42px Arial',
       fill: '#ffffff',
-      align: 'center'
+      align: 'center',
+      strokeThickness: 5,
     });
     this.anchor.set(0.5);
     game.add.existing(this);

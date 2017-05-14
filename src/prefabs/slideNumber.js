@@ -7,7 +7,8 @@ class SlideNumber extends Phaser.Text {
     super(game, game.width - 20, game.height - 20, text, {
       font: '16px Arial',
       fill: '#ffffff',
-      align: 'center'
+      align: 'center',
+      strokeThickness: 3,
     });
     this.anchor.set(0.5);
     game.add.existing(this);
