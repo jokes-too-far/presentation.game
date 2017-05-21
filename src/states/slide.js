@@ -18,7 +18,7 @@ class Slide extends Phaser.State {
     // Meta slide stuff
     new SlideTitle(this.game, this.game.global.title);
     new SlideNumber(this.game, this.slideNumber);
-    const event = this.game.time.events.add(this.game.config.transition_timeout, this.progress, this);
+    const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
     new SlideTimer(this.game, event);
 
     // Actual content
@@ -30,8 +30,8 @@ class Slide extends Phaser.State {
   }
 
   progress() {
-    var transitionName = Phaser.ArrayUtils.getRandomItem(this.game.config.transition_list)
-    console.log("Slide:", this.slideNumber, "(of ", this.game.config.total_slides, ") Timeout: ", this.game.config.transition_timeout, 'Using:', transitionName)
+    var transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
+    console.log("Slide:", this.slideNumber, "(of ", this.game.global.total_slides, ") Timeout: ", this.game.global.transition_timeout, 'Using:', transitionName)
     if(this.slideNumber && this.slideNumber > 0){
       return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, this.slideNumber - 1);
     }

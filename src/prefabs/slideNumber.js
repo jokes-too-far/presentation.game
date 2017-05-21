@@ -3,7 +3,7 @@ class SlideNumber extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, number) {
-    const text = (game.config.total_slides - number + 1) + '/' + game.config.total_slides
+    const text = (game.global.total_slides - number + 1) + '/' + game.global.total_slides
     super(game, game.width - 20, game.height - 20, text, {
       font: '16px Arial',
       fill: '#ffffff',

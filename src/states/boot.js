@@ -1,3 +1,5 @@
+import Transitions from '../transitions'
+
 class Boot extends Phaser.State {
 
   constructor() {
@@ -31,8 +33,13 @@ class Boot extends Phaser.State {
   }
 
   initGlobalVariables(){
+    var transistions = new Transitions()
+    transistions.initCustomTransitions()
     this.game.global = {
-
+      title: 'a placeholder title for a talk',
+      total_slides: 10,
+      transition_timeout: 4000,
+      transition_list: transistions.getTransitions()
     };
   }
 
