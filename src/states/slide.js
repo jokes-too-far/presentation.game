@@ -1,6 +1,7 @@
 import Title from '../prefabs/slideTitle'
 import SlideNumber from '../prefabs/slideNumber'
 import OneBigWord from '../prefabs/oneBigWord'
+import SlideTimer from '../prefabs/slideTimer'
 
 class Slide extends Phaser.State {
 
@@ -16,7 +17,8 @@ class Slide extends Phaser.State {
     new Title(this.game, this.game.global.title);
     new SlideNumber(this.game, this.slideNumber);
     new OneBigWord(this.game, this.game.global.slideTitles[this.slideNumber]);
-    this.game.time.events.add(this.game.config.transition_timeout, this.progress, this);
+    const event = this.game.time.events.add(this.game.config.transition_timeout, this.progress, this);
+    new SlideTimer(this.game, event);
   }
 
   update() {
