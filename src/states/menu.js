@@ -3,6 +3,8 @@ import titleGenerator from '../contentGeneration/titleGenerator'
 import relatedWords from '../contentGeneration/relatedWords'
 import uiThemes from '../contentGeneration/uiThemes'
 
+import CenteredContent from '../prefabs/centeredContent'
+
 class Menu extends Phaser.State {
 
   constructor() {
@@ -14,13 +16,7 @@ class Menu extends Phaser.State {
     const theme = Phaser.ArrayUtils.getRandomItem(themes.themes);
     this.game.global.title = titleGenerator(theme);
     this.game.global.slideTitles = relatedWords(theme, this.game.global.total_slides + 1);
-    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, this.game.global.title, {
-      font: '42px Arial',
-      fill: '#ffffff',
-      align: 'center',
-      strokeThickness: 5,
-    });
-    text.anchor.set(0.5);
+    new CenteredContent(this.game, this.game.global.title);
 
     this.input.onDown.add(this.startGame, this);
   }

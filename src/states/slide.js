@@ -2,7 +2,7 @@ import SlideTitle from '../prefabs/slideTitle'
 import SlideNumber from '../prefabs/slideNumber'
 import SlideTimer from '../prefabs/slideTimer'
 
-import OneBigWord from '../prefabs/oneBigWord'
+import CenteredContent from '../prefabs/centeredContent'
 
 class Slide extends Phaser.State {
 
@@ -22,7 +22,7 @@ class Slide extends Phaser.State {
     new SlideTimer(this.game, event);
 
     // Actual content
-    new OneBigWord(this.game, this.game.global.slideTitles[this.slideNumber]);
+    new CenteredContent(this.game, this.game.global.slideTitles[this.slideNumber]);
   }
 
   update() {

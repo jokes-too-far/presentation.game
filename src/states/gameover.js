@@ -1,3 +1,5 @@
+import CenteredContent from '../prefabs/centeredContent'
+
 class Menu extends Phaser.State {
 
   constructor() {
@@ -5,10 +7,7 @@ class Menu extends Phaser.State {
   }
 
   create() {
-    var text = this.add.text(this.game.width * 0.5, this.game.height * 0.5, 'Questions?', {
-      font: '42px Arial', fill: '#ffffff', align: 'center'
-    });
-    text.anchor.set(0.5);
+    new CenteredContent(this.game, 'Questions?');
 
     this.saveVarsToLocalStorage();
 

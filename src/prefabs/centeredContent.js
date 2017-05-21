@@ -1,7 +1,7 @@
 import styles from '../fontStyles'
 
 //Documentation for Phaser's (2.6.2) text:: phaser.io/docs/2.6.2/Phaser.Text.html
-class OneBigWord extends Phaser.Text {
+class CenteredContent extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, text) {
@@ -17,4 +17,4 @@ class OneBigWord extends Phaser.Text {
 
 }
 
-export default OneBigWord;
+export default CenteredContent;
