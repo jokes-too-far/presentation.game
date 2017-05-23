@@ -13,18 +13,15 @@ class Menu extends Phaser.State {
     styles.backgroundColor(this.game);
     const theme = Phaser.ArrayUtils.getRandomItem(contentGeneration.themes);
     this.game.global.title = contentGeneration.generateTitle(theme);
-    this.game.global.slides = contentGeneration.getWords(this.game, theme, this.game.global.total_slides + 1);
+    const slides = contentGeneration.getWords(this.game, theme, this.game.global.total_slides + 1);
     new CenteredContent(this.game, this.game.global.title);
 
-    this.input.onDown.add(this.startGame, this);
+    this.input.onDown.add(() => {
+      this.game.state.start('slide', null, null, true, false, slides);
+    });
   }
 
   update() {}
-
-  startGame() {
-    this.game.state.start('slide', null, null, true, false, this.game.global.total_slides);
-  }
-
 }
 
 export default Menu;

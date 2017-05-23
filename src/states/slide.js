@@ -4,12 +4,10 @@ import SlideTimer from '../prefabs/slideTimer'
 
 class Slide extends Phaser.State {
 
-  constructor() {
-    super();
-  }
-
-  init(slideNumber) {
-    this.slideNumber = slideNumber;
+  init(slides) {
+    this.slides = slides;
+    this.slideNumber = this.game.global.total_slides - (this.slides.length - 2);
+    console.log('slides:', slides);
   }
 
   create() {
@@ -20,19 +18,17 @@ class Slide extends Phaser.State {
     new SlideTimer(this.game, event);
 
     // Actual content
-    const content = this.game.global.slides[this.slideNumber];
+    const content = this.slides[0];
     this.game.add.existing(content);
   }
 
-  update() {
-
-  }
+  update() {}
 
   progress() {
-    var transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
-    console.log("Slide:", this.slideNumber, "(of ", this.game.global.total_slides, ") Timeout: ", this.game.global.transition_timeout, 'Using:', transitionName)
-    if(this.slideNumber && this.slideNumber > 0){
-      return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, this.slideNumber - 1);
+    const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
+    const remainingSlides = this.slides.splice(1, this.slides.length - 1);
+    if(remainingSlides.length){
+      return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, remainingSlides);
     }
     this.game.state.start('gameover', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false)
   }
