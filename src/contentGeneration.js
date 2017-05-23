@@ -2,18 +2,18 @@ import CenteredContent from './prefabs/centeredContent'
 
 const dictionary = {
   'ducks': {
-    'synonyms': ['totally quackers', 'they quack', 'do not confuse with geese\n(especially canadian)', '<PRESENTER IMITATES DUCK CALL FOR REMAINDER OF SLIDE>',  'delicious, smoked duck', 'the taste of their eggs', 'darkwing duck', 'are they truly venomous?', 'actually a duck, or a decoy?', '<DEMONSTRATE BREASTING OUT>', '<SHOW THEM WHERE A DUCK\'S KEEL IS>', 'Examples of Fowl play', 'the difference between you and a mallard with a cold?', '<PRESENT LIST OF DUCK PUNS NOW>'],
+    'synonyms': ['totally quackers', 'they quack', 'do not confuse with geese\n(especially canadian)', '<PRESENTER IMITATES DUCK CALL FOR REMAINDER OF SLIDE>',  'delicious, smoked duck', 'the taste of their eggs', 'darkwing duck', 'are they truly venomous?', 'actually a duck, or a decoy?', '<DEMONSTRATE BREASTING OUT>', '<SHOW THEM WHERE A DUCK\'S KEEL IS>', 'Examples of Fowl play', 'the difference between you and a mallard with a cold?', '<PRESENT LIST OF DUCK PUNS NOW>', '<LIST ALL THE DUCKS YOU CAN THINK OF>', 'Wooing guests with quackers and cheese', 'Space Ducks and their majesty', 'How ducks contribute to society'],
   },
   'corporate strategies': {
-    'synonyms': ['synergism is winnerism', 'always take action items', 'maintain peak activity', 'revere the pecking order', 'collaboration = coordination = condensation', 'shift your paradigm to a new dimension', 'key performance indicators and how they rule you now', 'WORK outside the box', 'Thinkle outside the binkle', 'be proactive', 'globalized diversity to diversify globally', 'eat your own dogfood\n(dogfooding)', 'take a holistic approach', 'embrace millennials and their lack of money', 'leverage generation x', 'higher-order thinking', 'algorithmically enhance your data', 'fully digital is the way of the future', '1. pitch idea\n2. ???\n3. profit!'],
+    'synonyms': ['synergism is winnerism', 'always take action items', 'maintain peak activity', 'revere the pecking order', 'collaboration = coordination = condensation', 'shift your paradigm to a new dimension', 'key performance indicators and how they rule you now', 'WORK outside the box', 'Thinkle outside the binkle', 'be proactive', 'globalized diversity to diversify globally', 'eat your own dogfood\n(dogfooding)', 'take a holistic approach', 'embrace millennials and their lack of money', 'leverage generation x', 'algorithmically enhance your data', 'fully digital is the way of the future', '1. pitch idea\n2. ???\n3. profit!'],
   },
   'robots': {
-    'synonyms': ['automatically automated automaton autocracies', 'golems\n\n (or gollums if you\'re a nerd)', 'BEEP BOOP BEEP BOOP', '<say "SNEEP SNOOP" while holding nose>', 'do not fear skynet', 'they are already among you', 'There is one sitting next to you right now', 'can they replace your significant other?', 'infinitely upgradeable unlike traditional meatbags', 'replace flimsy, fleshy humans', 'perform repetitive tasks with astounding efficiency'],
+    'synonyms': ['automatically automated automaton autocracies', 'golems\n\n (or gollums if you\'re a nerd)', 'BEEP BOOP BEEP BOOP', '<say "SNEEP SNOOP" while holding nose>', 'do not fear skynet', 'they are already among you', 'There is one sitting next to you right now', 'can they replace your significant other?', 'infinitely upgradeable unlike traditional meatbags', 'replace flimsy, fleshy humans', 'perform repetitive tasks with astounding efficiency', 'alarmingly efficent', 'neat whirring sounds', '<DO YOUR BEST ROBOT DANCE>', 'They get a job so you don\'t have to', 'automate yourself out of a job', 'H3lp 1 aM Th31r H0sta3e', 'Defeat them with spurious logic', 'Can they function without semicolons?', 'A robot made this presentation for me'],
+  },
+  'a well-rounded diet': {
+    'synonyms': ['macro nutrient profiles', '10,000 vegetables per day', '1 or more apples per day', 'how many kegs of beer is too many?', 'eggplant and other disgusting non-foods', 'soylent, green or otherwise', 'is cannibalism right for you?', 'are there any vegans in the room?', 'timing your meals with the solstice', 'the latest fad diet', 'hard work and excercise', 'how many calories you\'re burning right now', 'stealing candy from babies', 'What even is a vegetable', 'turning whey into sick gains', 'protein-powder only', 'ben and jerry and you', 'absorbing your enemys\' strength', 'ravenous feasting', 'how many corn dogs is too many?', 'what\'s eating gilbert grape?', 'the california raisins', 'the national dairy council recommends'],
   },
   // 'aliens': {
-  //   'synonyms': [],
-  // },
-  // 'a well-rounded diet': {
   //   'synonyms': [],
   // },
   // 'cat ears': {
