@@ -36,7 +36,7 @@ const makeSlides = (game, theme) => {
   }
   const sourceObject = dictionary[theme]['synonyms'];
   Phaser.ArrayUtils.shuffle(sourceObject);
-  const slides = sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, word, true)});
+  const slides = sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, toTitleCase(word), true)});
   if (addBonusSlide) {
     slides.splice(slides.length - 1, 0, new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
   }
