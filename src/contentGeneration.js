@@ -28,7 +28,8 @@ const dictionary = {
 };
 const themes = Object.keys(dictionary);
 
-const getWords = (game, theme, n) => {
+const makeSlides = (game, theme) => {
+  const n = game.global.total_slides + 1;
   const sourceObject = dictionary[theme]['synonyms'];
   Phaser.ArrayUtils.shuffle(sourceObject);
   return sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, word, true)});
@@ -60,6 +61,6 @@ const toTitleCase = (str) => {
 module.exports = {
   themes: themes,
   dictionary: dictionary,
-  getWords: getWords,
+  makeSlides: makeSlides,
   generateTitle: generateTitle,
 };
