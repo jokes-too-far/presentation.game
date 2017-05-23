@@ -6,7 +6,7 @@ class Slide extends Phaser.State {
 
   init(slides) {
     this.slides = slides;
-    this.slideNumber = this.game.global.total_slides - (this.slides.length - 2);
+    this.slideNumber = this.game.global.total_slides - (this.slides.length - 1);
     console.log('slides:', slides);
   }
 

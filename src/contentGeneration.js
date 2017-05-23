@@ -29,10 +29,18 @@ const dictionary = {
 const themes = Object.keys(dictionary);
 
 const makeSlides = (game, theme) => {
-  const n = game.global.total_slides + 1;
+  let n = game.global.total_slides;
+  const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
+  if (addBonusSlide) {
+    n++;
+  }
   const sourceObject = dictionary[theme]['synonyms'];
   Phaser.ArrayUtils.shuffle(sourceObject);
-  return sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, word, true)});
+  const slides = sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, word, true)});
+  if (addBonusSlide) {
+    slides.splice(slides.length - 1, 0, new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
+  }
+  return slides;
 };
 
 const generateTitle = (theme) => {
