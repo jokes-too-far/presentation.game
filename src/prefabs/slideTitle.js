@@ -6,7 +6,7 @@ class SlideTitle extends Phaser.Text {
   //initialization code in the constructor
   constructor(game, title) {
     super(game, game.width * 0.5, 20, title, styles.fonts.small);
-    this.anchor.set(0.5);
+    this.anchor.set(0.5, 0);
     game.add.existing(this);
   }
 

@@ -13,9 +13,7 @@ class CenteredContent extends Phaser.Text {
   }
 
   //Code ran on each frame of game
-  update() {
-
-  }
+  update() {}
 
 }
 

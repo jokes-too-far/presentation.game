@@ -3,6 +3,8 @@ const titleSizedFont = {
       fill: '#ffffff',
       align: 'center',
       strokeThickness: 5,
+      wordWrap: true,
+      wordWrapWidth: 500,
     };
 
 const supportingSizedFont = {
@@ -10,6 +12,7 @@ const supportingSizedFont = {
       fill: '#ffffff',
       align: 'center',
       strokeThickness: 3,
+      wordWrap: true,
     };
 
 const randomTheme = (game) => {
