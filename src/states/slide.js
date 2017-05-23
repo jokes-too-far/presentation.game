@@ -2,8 +2,6 @@ import SlideTitle from '../prefabs/slideTitle'
 import SlideNumber from '../prefabs/slideNumber'
 import SlideTimer from '../prefabs/slideTimer'
 
-import CenteredContent from '../prefabs/centeredContent'
-
 class Slide extends Phaser.State {
 
   constructor() {
@@ -22,7 +20,8 @@ class Slide extends Phaser.State {
     new SlideTimer(this.game, event);
 
     // Actual content
-    new CenteredContent(this.game, this.game.global.slideTitles[this.slideNumber]);
+    const content = this.game.global.slides[this.slideNumber];
+    this.game.add.existing(content);
   }
 
   update() {

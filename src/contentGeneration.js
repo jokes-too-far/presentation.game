@@ -1,3 +1,5 @@
+import CenteredContent from './prefabs/centeredContent'
+
 const dictionary = {
   'ducks': {
     'synonyms': ['quackers', 'quack', 'mallard', 'delicious, smoked duck', 'eggs', 'darkwing duck', 'venomous?', 'decoy', 'breasting out', 'keel', 'waterfowl'],
@@ -26,10 +28,10 @@ const dictionary = {
 };
 const themes = Object.keys(dictionary);
 
-const getWords = (theme, n) => {
+const getWords = (game, theme, n) => {
   const sourceObject = dictionary[theme]['synonyms'];
   Phaser.ArrayUtils.shuffle(sourceObject);
-  return sourceObject.slice(0, n);
+  return sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, word, true)});
 };
 
 const generateTitle = (theme) => {

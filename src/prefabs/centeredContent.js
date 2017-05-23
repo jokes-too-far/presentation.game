@@ -4,10 +4,12 @@ import styles from '../styles'
 class CenteredContent extends Phaser.Text {
 
   //initialization code in the constructor
-  constructor(game, text) {
+  constructor(game, text, delayedAdd) {
     super(game, game.world.centerX, game.world.centerY, text, styles.fonts.big);
     this.anchor.set(0.5);
-    game.add.existing(this);
+    if (!delayedAdd) {
+      game.add.existing(this);
+    }
   }
 
   //Code ran on each frame of game

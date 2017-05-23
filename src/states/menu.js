@@ -13,7 +13,7 @@ class Menu extends Phaser.State {
     styles.backgroundColor(this.game);
     const theme = Phaser.ArrayUtils.getRandomItem(contentGeneration.themes);
     this.game.global.title = contentGeneration.generateTitle(theme);
-    this.game.global.slideTitles = contentGeneration.getWords(theme, this.game.global.total_slides + 1);
+    this.game.global.slides = contentGeneration.getWords(this.game, theme, this.game.global.total_slides + 1);
     new CenteredContent(this.game, this.game.global.title);
 
     this.input.onDown.add(this.startGame, this);
