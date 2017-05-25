@@ -64,9 +64,13 @@ const toTitleCase = (str) => {
   });
 }
 
+const pickTheme = () => {
+  return Phaser.ArrayUtils.getRandomItem(themes);
+}
+
 module.exports = {
-  themes: themes,
   dictionary: dictionary,
   makeSlides: makeSlides,
   generateTitle: generateTitle,
+  pickTheme: pickTheme,
 };

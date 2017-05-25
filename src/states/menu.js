@@ -11,7 +11,7 @@ class Menu extends Phaser.State {
 
   create() {
     styles.backgroundColor(this.game);
-    const theme = Phaser.ArrayUtils.getRandomItem(contentGeneration.themes);
+    const theme = contentGeneration.pickTheme();
     this.game.global.title = contentGeneration.generateTitle(theme);
     const slides = contentGeneration.makeSlides(this.game, theme);
     new CenteredContent(this.game, this.game.global.title);
