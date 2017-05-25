@@ -31,7 +31,7 @@ const makeSlides = (game, theme) => {
   if (addBonusSlide) {
     n++;
   }
-  const sourceObject = dictionary[theme]['synonyms'];
+  const sourceObject = dictionary[theme.primary]['synonyms'];
   Phaser.ArrayUtils.shuffle(sourceObject);
   const slides = sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, toTitleCase(word), true)});
   if (addBonusSlide) {
@@ -45,7 +45,7 @@ const generateTitle = (theme) => {
     'presentation': ['presentment', 'demonstration', 'display', 'introduction', 'ceremony', 'informing', 'making known', 'defense', 'proposal', 'proposition', 'survey'],
     'on': ['on', 'about', 'regarding', 'concerning'],
     'importance': ['the future of', 'the importance of', 'the uselessness of'],
-    'theme': theme,
+    'theme': theme.primary,
     'ridiculous-claim': ['saved my life', 'will ruin the future', 'will change everything', 'are so 1999'],
     'question': ['why', 'how'],
     'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing'],
@@ -65,7 +65,11 @@ const toTitleCase = (str) => {
 }
 
 const pickTheme = () => {
-  return Phaser.ArrayUtils.getRandomItem(themes);
+  Phaser.ArrayUtils.shuffle(themes);
+  return {
+    primary: themes[0],
+    secondary: themes[1],
+  };
 }
 
 module.exports = {
