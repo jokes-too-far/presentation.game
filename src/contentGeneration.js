@@ -40,16 +40,24 @@ const makeSlides = (game, theme) => {
   return slides;
 };
 
-const generateTitle = (theme) => {
+const generateTitle = (game, theme) => {
   var grammar = tracery.createGrammar({
-    'presentation': ['presentment', 'demonstration', 'display', 'introduction', 'ceremony', 'informing', 'making known', 'defense', 'proposal', 'proposition', 'survey'],
-    'on': ['on', 'about', 'regarding', 'concerning'],
-    'importance': ['the future of', 'the importance of', 'the uselessness of'],
-    'theme': theme.primary,
-    'ridiculous-claim': ['saved my life', 'will ruin the future', 'will change everything', 'are so 1999'],
-    'question': ['why', 'how'],
-    'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing'],
-    'generated-title': ['#presentation.a# #on# #importance# #theme#', '#question# #theme# #ridiculous-claim#', '10 Amazing slides about #theme#', '#theme# and you\n #presentation.a##'],
+    'primary-theme': theme.primary,
+    'secondary-theme': theme.secondary,
+    'ridiculous-claim': ['saved my life', 'will ruin #affected#', 'will change #affected#', 'are so 1999', 'are a match made in heaven'],
+    'question': ['why', 'how', 'when'],
+    'linking': ['the #superlative# link between', 'what you don\'t know about', 'the truth behind', 'examining', 'the future of', 'the importance of', 'the uselessness of'],
+    'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing', 'hidden'],
+    'affected': ['you', 'the future', 'the world of tomorrow', 'everything', 'nothing'],
+    'x-will-y-z': ['will forever change', 'is interlocked with', ''],
+    'meme': ['MIND BLOWN', 'Amazeballs', 'when?'],
+    'generated-title': [
+      '#linking# #primary-theme# and #secondary-theme#',
+      '#question# #secondary-theme# #x-will-y-z# #primary-theme#',
+      '#question# #primary-theme# and #secondary-theme# #ridiculous-claim#',
+      '#primary-theme# + #secondary-theme# = #meme#',
+      game.global.total_slides + ' #superlative# slides about #primary-theme#, #secondary-theme#, and #affected#',
+      ],
   });
 
   grammar.addModifiers(tracery.baseEngModifiers);
