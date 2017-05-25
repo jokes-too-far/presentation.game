@@ -41,7 +41,7 @@ const makeSlides = (game, theme) => {
 };
 
 const generateTitle = (game, theme) => {
-  var grammar = tracery.createGrammar({
+  const source = {
     'primary-theme': theme.primary,
     'secondary-theme': theme.secondary,
     'ridiculous-claim': ['saved my life', 'will ruin #affected#', 'will change #affected#', 'are so 1999', 'are a match made in heaven'],
@@ -58,12 +58,15 @@ const generateTitle = (game, theme) => {
       '#primary-theme# + #secondary-theme# = #meme#',
       game.global.total_slides + ' #superlative# slides about #primary-theme#, #secondary-theme#, and #affected#',
       ],
-  });
+  };
 
+  return toTitleCase(useGrammar('#generated-title#', source));
+}
+
+const useGrammar = (goal, source) => {
+  const grammar = tracery.createGrammar(source);
   grammar.addModifiers(tracery.baseEngModifiers);
-
-  const output = grammar.flatten('#generated-title#');
-  return toTitleCase(output);
+  return grammar.flatten(goal);
 }
 
 const toTitleCase = (str) => {
