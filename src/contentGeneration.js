@@ -39,8 +39,8 @@ const makeSlides = (game, theme) => {
 
   slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
   slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
-  const slidesRemaining = game.global.total_slides - slides.length;
-  for (let i=0; i < slidesRemaining; ++i) {
+  const slidesRemaining = game.global.total_slides;
+  for (let i=2; i < slidesRemaining; ++i) {
     if (Math.random() < 0.5) {
       slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
     } else {
