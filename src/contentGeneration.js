@@ -14,19 +14,14 @@ const dictionary = {
     'verb': ['synergize with', 'maintain peak', 'dogfood', 'diversify', 'algorithmically enhance', 'leverage'],
   },
   // 'robots': {
-  //   'synonyms': ['automatically automated automaton autocracies', 'golems\n\n (or gollums if you\'re a nerd)', 'BEEP BOOP BEEP BOOP', '<say "SNEEP SNOOP" while holding nose>', 'do not fear skynet', 'they are already among you', 'There is one sitting next to you right now', 'can they replace your significant other?', 'infinitely upgradeable unlike traditional meatbags', 'replace flimsy, fleshy humans', 'perform repetitive tasks with astounding efficiency', 'alarmingly efficent', 'neat whirring sounds', '<DO YOUR BEST ROBOT DANCE>', 'They get a job so you don\'t have to', 'automate yourself out of a job', 'H3lp 1 aM Th31r H0stag3', 'Defeat them with spurious logic', 'Can they function without semicolons?', 'A robot made this presentation for me', '001100010010011110100001101101110011'],
   // },
   // 'a well-rounded diet': {
-  //   'synonyms': ['macro nutrient profiles', '10,000 vegetables per day', '1 or more apples per day', 'how many kegs of beer is too many?', 'eggplant and other disgusting non-foods', 'soylent, green or otherwise', 'is cannibalism right for you?', 'are there any vegans in the room?', 'timing your meals with the solstice', 'the latest fad diet', 'hard work and excercise', 'how many calories you\'re burning right now', 'stealing candy from babies', 'What even is a vegetable', 'turning whey into sick gains', 'protein-powder only', 'ben and jerry and you', 'absorbing your enemys\' strength', 'ravenous feasting', 'how many corn dogs is too many?', 'what\'s eating gilbert grape?', 'the california raisins', 'the national dairy council recommends'],
   // },
   // 'aliens': {
-  //   'synonyms': [],
   // },
   // 'cat ears': {
-  //   'synonyms': [],
   // },
   // 'the economy': {
-  //   'synonyms': ['trickle down economics', 'fiscally sound', 'balanced budget', 'bank panic', 'fiscal new year', 'budget surplus', 'demand-pull inflation', 'a new great depression', 'foreign exchange moguls', 'the invisible hand', 'free enterprise', 'Laissez-faire', 'mandatory spending', 'scarcity'],
   // },
 };
 
