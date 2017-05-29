@@ -4,10 +4,10 @@ const commonWordSlides = ['My list of #noun# puns', 'A list of all the #noun# I 
 
 const dictionary = {
    'ducks': {
-    'slides': ['They quack, but do they #verb#? with #noun#?', 'do not confuse #noun# with geese (especially canadian)', '<PRESENTER WILL NOW IMITATE #noun# DUCK CALL FOR REMAINDER OF SLIDE>', 'replace traditional decoys with #noun#', 'The difference between your mother and a mallard with a #noun#', 'woo your houseguests with quakers and #noun#','do they fly south just to #verb#?','attract ducks to your local park with #noun#'],
+    'slides': ['They quack, but do they #verb#? with #noun#?', 'do not confuse #noun# with geese (especially canadian)', '<PRESENTER WILL NOW IMITATE #noun# DUCK CALL FOR REMAINDER OF SLIDE>', 'replace traditional decoys with #noun#', 'The difference between your mother and a mallard with a #noun#', 'woo your houseguests with quackers and #noun#','do they fly south just to #verb#?','attract ducks to your local park with #noun#'],
     'noun': ['mallard', 'duck eggs', 'darkwing duck', 'majestic space duck', 'quackers', 'delicious, smoked duck', 'fowl play', 'duck call', 'bread crumbs'],
-    'verb': ['quack', 'fly','roast','migrate','nest'],
-    'gerund':['flying','roasting','quacking','migrating','nesting'],
+    'verb': ['quack', 'fly','roast','migrate','nest', 'frolick'],
+    'gerund':['flying','roasting','quacking','migrating','nesting', 'frolicking'],
   },
   'corporate strategies': {
     'slides': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration =\ncoordination =\n#noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace #noun# and their lack of #noun#', 'be proactive; #verb# with #noun#', 'forming storming norming #gerund#','your company needs to #verb#! right now!!'],
@@ -28,7 +28,7 @@ const dictionary = {
     'gerund':['diluting','vomiting','coughing'],
   },
   'heartthrobs': {
-    'slides':['tall, dark & #noun#','everyone wants to meet #noun#, but what about #noun#?','does your crush #verb#?','meet your crush:\n1.#verb# him\n2.find #noun#\n3. happily ever after','#noun# and unrealistic body standards','do all movie stars #verb#?','unique names like #noun# George = more popular with teen girls','#noun# in hollywood','#verb# + #verb# = 24-pack in days!'],
+    'slides':['tall, dark & #noun#','everyone wants to meet #noun#, but what about #noun#?','does your crush #verb#?','meet your crush:\n1. #verb# him\n2. find #noun#\n3. happily ever after','#noun# and unrealistic body standards','do all movie stars #verb#?','unique names like "#noun# George" = more popular with teen girls','#noun# in hollywood','#verb# + #verb# = 24-pack in days!'],
     'noun':['celebrity crush','movie stars','sexy movie villains','rogue with a heart of gold','dreamboat'],
     'verb':['weightlift','stalk','moisturize','date','idolize','crush on'],
     'gerund':['weightlifting','idolizing','stalking'],
@@ -64,7 +64,7 @@ const dictionary = {
     'gerund':['marketing','recruiting','evangelizing','profiting','fleeing'],
   },
   'greek mythology':{
-    'slides':['did zeus just turn #noun# into #noun#?','myths to explain the origin of #noun#','greek gods and their #gerund# escapades','poseidon is also the god of #noun#','hera punishes infidelity with #gerund#','tragedy, comedy, and #gerund# #noun#','#noun#: all greek to me!','athena sprung full-formed from the #noun# of zeus','hades, persephone, and #gerund# =  why we have winter now','cronus likes to #verb#. Yes, even his kids'],
+    'slides':['did zeus just turn #noun# into #noun#?','myths to explain the origin of #noun#','greek gods and their #gerund# escapades','poseidon is also the god of #noun#','hera punishes infidelity with #gerund#','tragedy, comedy, and #gerund# #noun#','#noun#: all greek to me!','athena sprung full-formed from the #noun# of zeus','hades, persephone, and #gerund# =  why we have winter now','cronus likes to #verb#. Yes, even his kids', '#noun#, god of the #noun#'],
     'noun':['chariot','doric, ionic, and corinthian columns','extra-marital babby','satyr','mount olympus'],
     'verb':['murder','get it on','kidnap','cannibalize'],
     'gerund':['murdering','getting it on','kidnapping','cannibalizing'],
