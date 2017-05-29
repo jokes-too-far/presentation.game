@@ -33,18 +33,32 @@ const dictionary = {
 const themes = Object.keys(dictionary);
 
 const makeSlides = (game, theme) => {  
-  let n = game.global.total_slides;
-  const grammar = createGrammar(dictionary[theme.secondary]);
-  const templates = dictionary[theme.primary]['slides'];
+  const primaryTemplates = dictionary[theme.primary]['slides'];
+  const secondaryTemplates = dictionary[theme.secondary]['slides'];
+  const primaryWords = createGrammar(dictionary[theme.primary]);
+  const secondaryWords = createGrammar(dictionary[theme.secondary]);
+  Phaser.ArrayUtils.shuffle(primaryTemplates);
+  Phaser.ArrayUtils.shuffle(secondaryTemplates);
+
   const slides = [];
-  for (let i=0; i < n; ++i) {
-    slides.push(makeWordSlide(game, templates[i], grammar));
-  }  
+
+  slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
+  slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
+  const slidesRemaining = game.global.total_slides - slides.length;
+  for (let i=0; i < slidesRemaining; ++i) {
+    if (Math.random() < 0.5) {
+      slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
+    } else {
+      slides.push(makeWordSlide(game, secondaryTemplates[i], primaryWords));
+    }
+  }
+
   const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
   if (addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
-    slides.push(makeWordSlide(game, templates[game.global.total_slides], grammar));
+    slides.push(makeWordSlide(game, primaryTemplates[game.global.total_slides], secondaryWords));
   }
+
   return slides;
 };
 
@@ -62,6 +76,7 @@ const generateTitle = (game, theme) => {
     'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing', 'hidden'],
     'affected': ['you', 'the future', 'the world of tomorrow', 'everything', 'nothing'],
     'x-will-y-z': ['will forever change', 'is interlocked with', ''],
+    'meme': ['MIND BLOWN', 'Amazeballs', 'when?'],
     'generated-title': [
       '#linking# #primary-theme# and #secondary-theme#',
       '#question# #secondary-theme# #x-will-y-z# #primary-theme#',
