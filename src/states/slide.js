@@ -14,6 +14,22 @@ class Slide extends Phaser.State {
     // Meta slide stuff
     new SlideTitle(this.game, this.game.global.title);
     new SlideNumber(this.game, this.slideNumber);
+
+    const timer = this.game.time.create(true);
+    timer.add(this.game.global.transition_timeout - 3000, () => {
+      this.game.sound.play('boop');
+    });
+    timer.add(this.game.global.transition_timeout - 2000, () => {
+      this.game.sound.play('boop');
+    });
+    timer.add(this.game.global.transition_timeout - 1000, () => {
+      this.game.sound.play('boop');
+    });
+    timer.add(this.game.global.transition_timeout, () => {
+      this.game.sound.play('beep');
+    });
+    timer.start();
+
     const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
     new SlideTimer(this.game, event);
 
