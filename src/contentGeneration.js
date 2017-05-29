@@ -4,14 +4,14 @@ const commonWordSlides = ['My list of #noun# puns', 'A list of all the #noun# I 
 
 const dictionary = {
   'ducks': {
-    'word-slide-templates': ['They quack, but do they #verb# #noun#?', 'do not confuse #noun# with geese (especially canadian)', '<PRESENTER WILL NOW IMITATE DUCK CALL FOR REMAINDER OF SLIDE>', 'replace traditional decoys with #noun#', 'The difference between your mother and a mallard with a #noun#', 'woo your houseguests with quakers and #noun#'],
-    'nouns': ['mallard', 'duck eggs', 'darkwing duck', 'the majestic space duck', 'quackers', 'delicious, smoked duck', 'fowl play', 'duck call', 'bread crumbs'],
-    'verbs': ['quack', 'fly'],
+    'slides': ['They quack, but do they #verb# #noun#?', 'do not confuse #noun# with geese (especially canadian)', '<PRESENTER WILL NOW IMITATE DUCK CALL FOR REMAINDER OF SLIDE>', 'replace traditional decoys with #noun#', 'The difference between your mother and a mallard with a #noun#', 'woo your houseguests with quakers and #noun#'],
+    'noun': ['mallard', 'duck eggs', 'darkwing duck', 'the majestic space duck', 'quackers', 'delicious, smoked duck', 'fowl play', 'duck call', 'bread crumbs'],
+    'verb': ['quack', 'fly'],
   },
   'corporate strategies': {
-    'word-slide-templates': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration = coordination = #noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace millennials and their lack of #noun#', 'be proactive; #verb# #noun#', 'forming storming norming #verb#ing'],
-    'nouns': ['synergy', 'key performance indicators', 'action items', 'collaboration', 'paradigm shift', 'diversity', 'a holistic approach', 'big data', 'fully digital strategies', 'generation x', 'millennials', 'globalization', 'outsourced labor'],
-    'verbs': ['synergize with', 'maintain peak', 'dogfood', 'diversify', 'algorithmically enhance', 'leverage'],
+    'slides': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration = coordination = #noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace millennials and their lack of #noun#', 'be proactive; #verb# #noun#', 'forming storming norming #verb#ing'],
+    'noun': ['synergy', 'key performance indicators', 'action items', 'collaboration', 'paradigm shift', 'diversity', 'a holistic approach', 'big data', 'fully digital strategies', 'generation x', 'millennials', 'globalization', 'outsourced labor'],
+    'verb': ['synergize with', 'maintain peak', 'dogfood', 'diversify', 'algorithmically enhance', 'leverage'],
   },
   // 'robots': {
   //   'synonyms': ['automatically automated automaton autocracies', 'golems\n\n (or gollums if you\'re a nerd)', 'BEEP BOOP BEEP BOOP', '<say "SNEEP SNOOP" while holding nose>', 'do not fear skynet', 'they are already among you', 'There is one sitting next to you right now', 'can they replace your significant other?', 'infinitely upgradeable unlike traditional meatbags', 'replace flimsy, fleshy humans', 'perform repetitive tasks with astounding efficiency', 'alarmingly efficent', 'neat whirring sounds', '<DO YOUR BEST ROBOT DANCE>', 'They get a job so you don\'t have to', 'automate yourself out of a job', 'H3lp 1 aM Th31r H0stag3', 'Defeat them with spurious logic', 'Can they function without semicolons?', 'A robot made this presentation for me', '001100010010011110100001101101110011'],
@@ -30,23 +30,23 @@ const dictionary = {
   // },
 };
 
-const generateWordSlide = (game, template, otherTheme) => {
-  template = template.replace('#noun#', game.rnd.pick(otherTheme['nouns']));
-  template = template.replace('#verb#', game.rnd.pick(otherTheme['verbs']));
-  return new CenteredContent(game, toTitleCase(template), true);
-};
-
 const themes = Object.keys(dictionary);
 
 const makeSlides = (game, theme) => {  
+
+
   let n = game.global.total_slides;
   const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
   if (addBonusSlide) {
     n++;
   }
-  const sourceObject = dictionary[theme.primary]['word-slide-templates'];
-  Phaser.ArrayUtils.shuffle(sourceObject);
-  const slides = sourceObject.slice(0, n).map((word) => {return generateWordSlide(game, word, dictionary[theme.secondary])});
+  const grammar = createGrammar(dictionary[theme.secondary]);
+  const templates = dictionary[theme.primary]['slides'];
+  Phaser.ArrayUtils.shuffle(templates);
+  const slides = templates.slice(0, n).map((word) => {
+    console.log(word, grammar);
+    return new CenteredContent(game, toTitleCase(grammar.flatten(word)), true);
+  });
   if (addBonusSlide) {
     slides.splice(slides.length - 1, 0, new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
   }
@@ -73,13 +73,13 @@ const generateTitle = (game, theme) => {
       ],
   };
 
-  return toTitleCase(useGrammar('#generated-title#', source));
+  return toTitleCase(createGrammar(source).flatten('#generated-title#'));
 }
 
-const useGrammar = (goal, source) => {
+const createGrammar = (source) => {
   const grammar = tracery.createGrammar(source);
   grammar.addModifiers(tracery.baseEngModifiers);
-  return grammar.flatten(goal);
+  return grammar;
 }
 
 const toTitleCase = (str) => {
