@@ -33,25 +33,24 @@ const dictionary = {
 const themes = Object.keys(dictionary);
 
 const makeSlides = (game, theme) => {  
-
-
   let n = game.global.total_slides;
-  const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
-  if (addBonusSlide) {
-    n++;
-  }
   const grammar = createGrammar(dictionary[theme.secondary]);
   const templates = dictionary[theme.primary]['slides'];
-  Phaser.ArrayUtils.shuffle(templates);
-  const slides = templates.slice(0, n).map((word) => {
-    console.log(word, grammar);
-    return new CenteredContent(game, toTitleCase(grammar.flatten(word)), true);
-  });
+  const slides = [];
+  for (let i=0; i < n; ++i) {
+    slides.push(makeWordSlide(game, templates[i], grammar));
+  }  
+  const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
   if (addBonusSlide) {
-    slides.splice(slides.length - 1, 0, new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
+    slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
+    slides.push(makeWordSlide(game, templates[game.global.total_slides], grammar));
   }
   return slides;
 };
+
+const makeWordSlide = (game, template, grammar) => {
+  return new CenteredContent(game, toTitleCase(grammar.flatten(template)), true);
+}
 
 const generateTitle = (game, theme) => {
   const source = {
@@ -63,7 +62,6 @@ const generateTitle = (game, theme) => {
     'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing', 'hidden'],
     'affected': ['you', 'the future', 'the world of tomorrow', 'everything', 'nothing'],
     'x-will-y-z': ['will forever change', 'is interlocked with', ''],
-    'meme': ['MIND BLOWN', 'Amazeballs', 'when?'],
     'generated-title': [
       '#linking# #primary-theme# and #secondary-theme#',
       '#question# #secondary-theme# #x-will-y-z# #primary-theme#',
