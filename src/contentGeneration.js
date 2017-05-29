@@ -10,7 +10,7 @@ const dictionary = {
     'gerund':['flying','roasting','quacking','migrating','nesting'],
   },
   'corporate strategies': {
-    'slides': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration =\ncoordination =\n#noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace #noun# and their lack of #noun#', 'be proactive; #verb# #noun#', 'forming storming norming #gerund#','your company needs to #verb#! right now!!'],
+    'slides': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration =\ncoordination =\n#noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace #noun# and their lack of #noun#', 'be proactive; #verb# with #noun#', 'forming storming norming #gerund#','your company needs to #verb#! right now!!'],
     'noun': ['synergy', 'key performance indicators', 'action items', 'collaboration', 'paradigm shift', 'diversity', 'a holistic approach', 'big data', 'fully digital strategies', 'generation x', 'millennials', 'globalization', 'outsourced labor'],
     'verb': ['synergize', 'maintain peak', 'dogfood', 'diversify', 'algorithmically enhance', 'leverage'],
     'gerund': ['synergizing','diversifying','leveraging'],
@@ -19,7 +19,7 @@ const dictionary = {
     'slides': ['top extracurricular activities:\n1. #noun# club\n2. sports\n3. #gerund# with #noun#', 'do you need to supervise #verb# time?', '#noun# concerns:\n 1. Safety\n 2. Morality\n 3. #noun#', 'making time to #verb# together','condoms, condoms, condoms!','tough love vs #noun#','their future depends on #noun#','parenting studies on #noun#','do their friends #verb#?'],
     'noun':['your teen','drugs','top colleges','parties','family values','family dinnertime','ankle monitor'],
     'verb':['rebel','nurture','spend quality time','heart to heart','ground','spank','love','discipline','sex'],
-    'gerund':['spending quality time with','rebelling','grounding','spanking'],
+    'gerund':['spending quality time','rebelling','grounding','spanking'],
   },
   'treating illnesses': {
     'slides': ['the uncommon cold and your #noun#', 'doctors hate him! one neat trick about #noun#', '#noun# and side effects?', 'when do you need to call for #noun#?', 'living with chronic #noun#','10 glasses of #noun# a day','controversial studies on adults who #verb#','suffering from #noun#? try #noun#!','consult your doctor if you #verb#','#gerund#: how much is enough?','do apples help you #verb#?','can vaccines cause #noun#?'],
@@ -46,7 +46,7 @@ const dictionary = {
     'gerund':['frolfing','playing','trend-setting','socializing'],
   },
   'modern city life':{
-    'slides':['keeping #noun# off your lawn','high-rises and #noun#','where is my flying #noun#?','#verb# or public transportation?','lost in a crowd? try\n1.#gerund#\n2.seeking #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#'],
+    'slides':['keeping #noun# off your lawn','high-rises and #noun#','where is my flying #noun#?','#verb# or take public transportation?','feeling lost in a crowd? try\n1.#gerund#\n2.seeking #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#'],
     'noun':['robocop','nightclub','skyscraper','urban blight','smog','tindr'],
     'verb':['rent','party','work','live','retire'],
     'gerund':['renting','working','living','retiring'],
@@ -58,7 +58,7 @@ const dictionary = {
     'gerund':['prancing','resolving conflict','racing','cantering','neighing'],
   },
   'multi-level marketing':{
-    'slides':['never say "pyramid": try "#noun#" instead!','growing your percentages by #gerund#','attend my #gerund# seminar on march 19th!','how to talk to police about #noun#','when the jig is up, #verb#','desperate + #noun# = ideal hire', '#noun# = trickle-up','#noun# and employee attrition','look reputable by #gerund#','sell to friends, family, #noun#'],
+    'slides':['never say "pyramid": try "#noun#" instead!','growing your percentages by #gerund#','attend my #gerund# seminar on march 19th!','how to talk to police about #noun#','when the jig is up, #verb#','desperate + #noun# = ideal hire', '#noun# = trickle-up','#noun# and employee attrition','look reputable by #gerund#','sell to friends, family, #noun#','it is not illegal if you #verb#'],
     'noun':['quality product','obscene profit','salesperson','unemployed youth','easy mark','lawyer','college student'],
     'verb':['market','recruit','evangelize','profit','flee'],
     'gerund':['marketing','recruiting','evangelizing','profiting','fleeing'],
@@ -70,10 +70,10 @@ const dictionary = {
     'gerund':['murdering','getting it on','kidnapping','cannibalizing'],
   },
   'reconsidering stereotypes':{
-    'slides':['does every #noun# really #verb#? really?','impressions of #noun# formed in early childhood','try to meet a #noun# yourself!', 'stereotypes are holding you back from #gerund#','going against your gut and #gerund#','top myths about #noun#:\n1. Lazy\n2. Antisocial\n3. Like to #verb#','#verb# and question your preconceptions','imagine how you would feel if someone told you that you #verb#','statistically, #noun# will only rarely #verb#'],
-    'noun':['in-group','sensitive tough guy','shy kid','token <X>','racial stereotype','WASP'],
-    'verb':['bully','wear black', 'pierce extremeties', 'steal','exclude','follow the crowd'],
-    'gerund':['bullying','wearing black', 'piercing extremeties','stealing','excluding','following the crowd'],
+    'slides':['someone once told me that my #noun# will #verb#. really guys? really???','impressions of #noun# formed in early childhood','try to meet #noun# yourself!', 'stereotypes are holding you back from #gerund#','going against your gut and #gerund#','top myths about #noun#:\n1. Lazy\n2. Antisocial\n3. Like to #verb#','#verb# and question your preconceptions','imagine how you would feel if someone told you that you #verb#','statistically, #noun# will only rarely #verb#'],
+    'noun':['in-group','sensitive tough guy','shy kid','token <X>','racial stereotype','W.A.S.P.'],
+    'verb':['bully','wear black', 'pierce', 'steal','exclude','follow the crowd'],
+    'gerund':['bullying','wearing black', 'piercing','stealing','excluding','following the crowd'],
   },
   // 'robots': {
   // },
