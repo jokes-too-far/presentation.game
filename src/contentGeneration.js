@@ -1,18 +1,24 @@
 import CenteredContent from './prefabs/centeredContent'
 
+const commonWordSlides = ['My list of #noun# puns', 'A list of all the #noun# I can think of', 'Examples of #noun#', 'How #noun# contributes to society'];
+
 const dictionary = {
   'ducks': {
-    'synonyms': ['totally quackers', 'they quack', 'do not confuse with geese\n(especially canadian)', '<PRESENTER IMITATES DUCK CALL FOR REMAINDER OF SLIDE>',  'delicious, smoked duck', 'the taste of their eggs', 'darkwing duck', 'are they truly venomous?', 'actually a duck, or a decoy?', '<DEMONSTRATE BREASTING OUT>', '<SHOW THEM WHERE A DUCK\'S KEEL IS>', 'Examples of Fowl play', 'the difference between you and a mallard with a cold?', '<PRESENT LIST OF DUCK PUNS NOW>', '<LIST ALL THE DUCKS YOU CAN THINK OF>', 'Wooing guests with quackers and cheese', 'Space Ducks and their majesty', 'How ducks contribute to society'],
+    'word-slide-templates': ['They quack, but do they #verb# #noun#?', 'do not confuse #noun# with geese (especially canadian)', '<PRESENTER WILL NOW IMITATE DUCK CALL FOR REMAINDER OF SLIDE>', 'replace traditional decoys with #noun#', 'The difference between your mother and a mallard with a #noun#', 'woo your houseguests with quakers and #noun#'],
+    'nouns': ['mallard', 'duck eggs', 'darkwing duck', 'the majestic space duck', 'quackers', 'delicious, smoked duck', 'fowl play', 'duck call', 'bread crumbs'],
+    'verbs': ['quack', 'fly'],
   },
   'corporate strategies': {
-    'synonyms': ['synergism is winnerism', 'always take action items', 'maintain peak activity', 'revere the pecking order', 'collaboration = coordination = condensation', 'shift your paradigm to a new dimension', 'key performance indicators and how they rule you now', 'WORK outside the box', 'Thinkle outside the binkle', 'be proactive', 'globalized diversity to diversify globally', 'eat your own dogfood\n(dogfooding)', 'take a holistic approach', 'embrace millennials and their lack of money', 'leverage generation x', 'algorithmically enhance your data', 'fully digital is the way of the future', '1. pitch idea\n2. ???\n3. profit!'],
+    'word-slide-templates': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration = coordination = #noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace millennials and their lack of #noun#', 'be proactive; #verb# #noun#', 'forming storming norming #verb#ing'],
+    'nouns': ['synergy', 'key performance indicators', 'action items', 'collaboration', 'paradigm shift', 'diversity', 'a holistic approach', 'big data', 'fully digital strategies', 'generation x', 'millennials', 'globalization', 'outsourced labor'],
+    'verbs': ['synergize with', 'maintain peak', 'dogfood', 'diversify', 'algorithmically enhance', 'leverage'],
   },
-  'robots': {
-    'synonyms': ['automatically automated automaton autocracies', 'golems\n\n (or gollums if you\'re a nerd)', 'BEEP BOOP BEEP BOOP', '<say "SNEEP SNOOP" while holding nose>', 'do not fear skynet', 'they are already among you', 'There is one sitting next to you right now', 'can they replace your significant other?', 'infinitely upgradeable unlike traditional meatbags', 'replace flimsy, fleshy humans', 'perform repetitive tasks with astounding efficiency', 'alarmingly efficent', 'neat whirring sounds', '<DO YOUR BEST ROBOT DANCE>', 'They get a job so you don\'t have to', 'automate yourself out of a job', 'H3lp 1 aM Th31r H0stag3', 'Defeat them with spurious logic', 'Can they function without semicolons?', 'A robot made this presentation for me', '001100010010011110100001101101110011'],
-  },
-  'a well-rounded diet': {
-    'synonyms': ['macro nutrient profiles', '10,000 vegetables per day', '1 or more apples per day', 'how many kegs of beer is too many?', 'eggplant and other disgusting non-foods', 'soylent, green or otherwise', 'is cannibalism right for you?', 'are there any vegans in the room?', 'timing your meals with the solstice', 'the latest fad diet', 'hard work and excercise', 'how many calories you\'re burning right now', 'stealing candy from babies', 'What even is a vegetable', 'turning whey into sick gains', 'protein-powder only', 'ben and jerry and you', 'absorbing your enemys\' strength', 'ravenous feasting', 'how many corn dogs is too many?', 'what\'s eating gilbert grape?', 'the california raisins', 'the national dairy council recommends'],
-  },
+  // 'robots': {
+  //   'synonyms': ['automatically automated automaton autocracies', 'golems\n\n (or gollums if you\'re a nerd)', 'BEEP BOOP BEEP BOOP', '<say "SNEEP SNOOP" while holding nose>', 'do not fear skynet', 'they are already among you', 'There is one sitting next to you right now', 'can they replace your significant other?', 'infinitely upgradeable unlike traditional meatbags', 'replace flimsy, fleshy humans', 'perform repetitive tasks with astounding efficiency', 'alarmingly efficent', 'neat whirring sounds', '<DO YOUR BEST ROBOT DANCE>', 'They get a job so you don\'t have to', 'automate yourself out of a job', 'H3lp 1 aM Th31r H0stag3', 'Defeat them with spurious logic', 'Can they function without semicolons?', 'A robot made this presentation for me', '001100010010011110100001101101110011'],
+  // },
+  // 'a well-rounded diet': {
+  //   'synonyms': ['macro nutrient profiles', '10,000 vegetables per day', '1 or more apples per day', 'how many kegs of beer is too many?', 'eggplant and other disgusting non-foods', 'soylent, green or otherwise', 'is cannibalism right for you?', 'are there any vegans in the room?', 'timing your meals with the solstice', 'the latest fad diet', 'hard work and excercise', 'how many calories you\'re burning right now', 'stealing candy from babies', 'What even is a vegetable', 'turning whey into sick gains', 'protein-powder only', 'ben and jerry and you', 'absorbing your enemys\' strength', 'ravenous feasting', 'how many corn dogs is too many?', 'what\'s eating gilbert grape?', 'the california raisins', 'the national dairy council recommends'],
+  // },
   // 'aliens': {
   //   'synonyms': [],
   // },
@@ -23,17 +29,24 @@ const dictionary = {
   //   'synonyms': ['trickle down economics', 'fiscally sound', 'balanced budget', 'bank panic', 'fiscal new year', 'budget surplus', 'demand-pull inflation', 'a new great depression', 'foreign exchange moguls', 'the invisible hand', 'free enterprise', 'Laissez-faire', 'mandatory spending', 'scarcity'],
   // },
 };
+
+const generateWordSlide = (game, template, otherTheme) => {
+  template = template.replace('#noun#', game.rnd.pick(otherTheme['nouns']));
+  template = template.replace('#verb#', game.rnd.pick(otherTheme['verbs']));
+  return new CenteredContent(game, toTitleCase(template), true);
+};
+
 const themes = Object.keys(dictionary);
 
-const makeSlides = (game, theme) => {
+const makeSlides = (game, theme) => {  
   let n = game.global.total_slides;
   const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
   if (addBonusSlide) {
     n++;
   }
-  const sourceObject = dictionary[theme.primary]['synonyms'];
+  const sourceObject = dictionary[theme.primary]['word-slide-templates'];
   Phaser.ArrayUtils.shuffle(sourceObject);
-  const slides = sourceObject.slice(0, n).map((word) => {return new CenteredContent(game, toTitleCase(word), true)});
+  const slides = sourceObject.slice(0, n).map((word) => {return generateWordSlide(game, word, dictionary[theme.secondary])});
   if (addBonusSlide) {
     slides.splice(slides.length - 1, 0, new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
   }
