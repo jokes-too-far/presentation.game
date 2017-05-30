@@ -5,19 +5,19 @@ const commonWordSlides = ['My list of #noun# puns', 'A list of all the #noun# I 
 const dictionary = {
    'ducks': {
     'slides': ['They quack, but do they #verb#? with #noun#?', 'do not confuse #noun# with geese (especially canadian)', '<PRESENTER WILL NOW IMITATE #noun# DUCK CALL FOR REMAINDER OF SLIDE>', 'replace traditional decoys with #noun#', 'The difference between your mother and a mallard with a #noun#', 'woo your houseguests with quackers and #noun#','do they fly south just to #verb#?','attract ducks to your local park with #noun#'],
-    'noun': ['mallard', 'duck eggs', 'darkwing duck', 'majestic space duck', 'quackers', 'delicious, smoked duck', 'fowl play', 'duck call', 'bread crumbs'],
+    'noun': ['mallard', 'duck egg', 'darkwing duck', 'majestic space duck', 'quackers', 'delicious, smoked duck', 'fowl play', 'duck call', 'bread crumbs'],
     'verb': ['quack', 'fly','roast','migrate','nest', 'frolick'],
     'gerund':['flying','roasting','quacking','migrating','nesting', 'frolicking'],
   },
   'corporate strategies': {
-    'slides': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration =\ncoordination =\n#noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace #noun# and their lack of #noun#', 'be proactive; #verb# with #noun#', 'forming storming norming #gerund#','your company needs to #verb#! right now!!'],
-    'noun': ['synergy', 'key performance indicators', 'action items', 'collaboration', 'paradigm shift', 'diversity', 'a holistic approach', 'big data', 'fully digital strategies', 'generation x', 'millennials', 'globalization', 'outsourced labor'],
+    'slides': ['synergy via #noun#', '1. pitch idea\n2. #verb#\n3. ???\n4. profit!', 'collaboration =\ncoordination =\n#noun#', 'key performance indicators for your #noun#', 'Think outside the #noun#', 'embrace #noun# and their lack of #noun#', 'be proactive; #verb# with #noun#', 'forming storming norming #gerund#','your company needs to #verb#! right now!!','90% of successful companies #verb#','shareholders are watching for #noun#'],
+    'noun': ['synergy', 'key performance indicator', 'action item', 'collaboration', 'paradigm shift', 'diversity', 'holistic approach', 'big data', 'fully digital strategy', 'generation x', 'millennial', 'globalization', 'outsourced labor'],
     'verb': ['synergize', 'maintain peak', 'dogfood', 'diversify', 'algorithmically enhance', 'leverage'],
     'gerund': ['synergizing','diversifying','leveraging'],
   },
   'parenting a teen': {
     'slides': ['top extracurricular activities:\n1. #noun# club\n2. sports\n3. #gerund# with #noun#', 'do you need to supervise #verb# time?', '#noun# concerns:\n 1. Safety\n 2. Morality\n 3. #noun#', 'making time to #verb# together','condoms, condoms, condoms!','tough love vs #noun#','their future depends on #noun#','parenting studies on #noun#','do their friends #verb#?'],
-    'noun':['your teen','drugs','top colleges','parties','family values','family dinnertime','ankle monitor'],
+    'noun':['your teen','drugs','top college','party','family values','family dinnertime','ankle monitor'],
     'verb':['rebel','nurture','spend quality time','heart to heart','ground','spank','love','discipline','sex'],
     'gerund':['spending quality time','rebelling','grounding','spanking'],
   },
@@ -29,15 +29,15 @@ const dictionary = {
   },
   'heartthrobs': {
     'slides':['tall, dark & #noun#','everyone wants to meet #noun#, but what about #noun#?','does your crush #verb#?','meet your crush:\n1. #verb# him\n2. find #noun#\n3. happily ever after','#noun# and unrealistic body standards','do all movie stars #verb#?','unique names like "#noun# George" = more popular with teen girls','#noun# in hollywood','#verb# + #verb# = 24-pack in days!'],
-    'noun':['celebrity crush','movie stars','sexy movie villains','rogue with a heart of gold','dreamboat'],
-    'verb':['weightlift','stalk','moisturize','date','idolize','crush on'],
-    'gerund':['weightlifting','idolizing','stalking'],
+    'noun':['celebrity crush','movie stars','sexy movie villains','daring rogues','dreamboat'],
+    'verb':['weightlift','stalk','moisturize','date','idolize','flex'],
+    'gerund':['weightlifting','idolizing','stalking','flexing'],
   },
   'product reviews':{
-    'slides':['the dreaded one-star: did you remember to #verb#?','10% of reviewers actually tried #noun#','flashy packaging vs\ncontent vs\n#noun#','#gerund# increases word of mouth','search engine optimization with #noun#','successful unboxing videos #verb#!','check for #noun# daily','#noun# making cheap knock-offs','is it ever okay to #verb# for likes?'],
-    'noun':['target audience','competitive price','craftsmanship','cheap foreign knock-offs','giveaway'],
-    'verb':['unbox','complain','return','review','bribe'],
-    'gerund':['complaining','reviewing','bribing'],
+    'slides':['the dreaded one-star: did you remember to #verb#?','10% of reviewers actually tried #noun#','flashy packaging vs\ncontent vs\n#noun#','#gerund# increases word of mouth','search engine optimization with #noun#','successful unboxing videos #verb#!','check for #noun# daily','#noun.s# making cheap knock-offs','is it ever okay to #verb# for likes?','get #noun# from wholesalers','listen to your customers: they need #noun.s#!','fast shipping = higher #noun.s#'],
+    'noun':['target audience','competitive price','craftsmanship','cheap foreign knock-offs','giveaway','ratings','rave reviews'],
+    'verb':['unbox','complain','return','review','bribe','ship'],
+    'gerund':['complaining','reviewing','bribing','shipping'],
   },
   'millennials':{
     'slides':['harry potter and the #noun# of the #noun#','#noun# in coffeeshops','locally-produced #noun#','bigger eyeglasses make for bolder #noun#','#verb# with "that internet thing"','#noun#: sign of the apocalypse?','entry level #noun#','#gerund#: new fad!','appeal to millennials with #noun#!','top millennial attractors:\n1. #noun#\n2. green #noun#\n3. easy to #verb#'],
@@ -46,19 +46,19 @@ const dictionary = {
     'gerund':['frolfing','playing','trend-setting','socializing'],
   },
   'modern city life':{
-    'slides':['keeping #noun# off your lawn','high-rises and #noun#','where is my flying #noun#?','#verb# or take public transportation?','feeling lost in a crowd? try\n1.#gerund#\n2.seeking #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#'],
+    'slides':['keeping #noun# off your lawn','high-rises and #noun#','where is my flying #noun#?','#verb# or take public transportation?','feeling lost in a crowd? try\n1. #gerund#\n2. seeking #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun.s#','fire: a real risk in #noun.s#','carry spare change to cover #gerund#'],
     'noun':['robocop','nightclub','skyscraper','urban blight','smog','tindr'],
     'verb':['rent','party','work','live','retire'],
     'gerund':['renting','working','living','retiring'],
   },
   'ponies':{
-    'slides':['every little girl dreams of #noun# of her own','my little pony: friendship is #noun#','everyone likes ponies that #verb#','preteens and #gerund# ponies','pony colors:\n1. Pink\n2. Purple\n3. #noun# blue','merchandising and #noun#!','could boys like ponies if they #verb#?','#gerund# the "brony" demographic'],
-    'noun':['magic','rainbow','sparkle','shy mares','best friends'],
+    'slides':['every little girl dreams of #noun.a# of her own','my little pony: friendship is #noun#','everyone likes ponies that #verb#','preteens and #gerund# ponies','pony colors:\n1. Pink\n2. Purple\n3. #noun# blue','merchandising and #noun#!','could boys like ponies if they #verb#?','#gerund# the "brony" demographic','hooves and cute #noun.s#'],
+    'noun':['magic','rainbow','sparkle','shy mare','best friends'],
     'verb':['prance','resolve conflict','race','canter','neigh'],
     'gerund':['prancing','resolving conflict','racing','cantering','neighing'],
   },
   'multi-level marketing':{
-    'slides':['never say "pyramid": try "#noun#" instead!','growing your percentages by #gerund#','attend my #gerund# seminar on march 19th!','how to talk to police about #noun#','when the jig is up, #verb#','desperate + #noun# = ideal hire', '#noun# = trickle-up','#noun# and employee attrition','look reputable by #gerund#','sell to friends, family, #noun#','it is not illegal if you #verb#'],
+    'slides':['never say "pyramid": try "#noun#" instead!','growing your percentages by #gerund#','attend my #gerund# seminar on march 19th!','how to talk to police about #noun#','when the jig is up, #verb#','desperate + #noun# = ideal hire', '#noun# = trickle-up','#noun# and employee attrition','look reputable by #gerund#','sell to friends, family, #noun#','it is not illegal if you #verb#','own it! be proud when you #verb#','what product to pick? top sellers include #noun.s# and #noun.s#'],
     'noun':['quality product','obscene profit','salesperson','unemployed youth','easy mark','lawyer','college student'],
     'verb':['market','recruit','evangelize','profit','flee'],
     'gerund':['marketing','recruiting','evangelizing','profiting','fleeing'],
@@ -66,8 +66,8 @@ const dictionary = {
   'greek mythology':{
     'slides':['did zeus just turn #noun# into #noun#?','myths to explain the origin of #noun#','greek gods and their #gerund# escapades','poseidon is also the god of #noun#','hera punishes infidelity with #gerund#','tragedy, comedy, and #gerund# #noun#','#noun#: all greek to me!','athena sprung full-formed from the #noun# of zeus','hades, persephone, and #gerund# =  why we have winter now','cronus likes to #verb#. Yes, even his kids', '#noun#, god of the #noun#'],
     'noun':['chariot','doric, ionic, and corinthian columns','extra-marital babby','satyr','mount olympus'],
-    'verb':['murder','get it on','kidnap','cannibalize'],
-    'gerund':['murdering','getting it on','kidnapping','cannibalizing'],
+    'verb':['murder','get it on','kidnap','cannibalize','court','curse'],
+    'gerund':['murdering','getting it on','kidnapping','cannibalizing','courting','cursing'],
   },
   'reconsidering stereotypes':{
     'slides':['someone once told me that my #noun# will #verb#. really guys? really???','impressions of #noun# formed in early childhood','try to meet #noun# yourself!', 'stereotypes are holding you back from #gerund#','going against your gut and #gerund#','top myths about #noun#:\n1. Lazy\n2. Antisocial\n3. Like to #verb#','#verb# and question your preconceptions','imagine how you would feel if someone told you that you #verb#','statistically, #noun# will only rarely #verb#'],
@@ -75,6 +75,26 @@ const dictionary = {
     'verb':['bully','wear black', 'pierce', 'steal','exclude','follow the crowd'],
     'gerund':['bullying','wearing black', 'piercing','stealing','excluding','following the crowd'],
   },
+  'computer literacy':{
+    'slides':['#gerund# the mouse can be intimidating','monitor, keyboard, and #noun#','a #gerund# speed of 120 is quite respectable','be careful what you #verb# while navigating the internet','secure #noun#:\n1. > 8 characters\n2. > 1 #noun#\n3. capital and #gerund# case','search engines help you find #noun.a#','antivirus or #noun#?','your own printer, or a shared #noun#?','your grandchildren can answer questions about #noun#','do not be discouraged if you #verb# your #noun# once or twice'],
+    'noun':['mouse','keyboard','password','username','advertisement','wobsite','internet browser','file system'],
+    'verb':['mis-type','forget','key','click','open','doubleclick','restart'],
+    'gerund':['mis-typing','forgetting','keying','clicking','opening','doubleclicking','restarting'],
+  },
+  'pop music':{
+    'slides':['"baby, baby, #noun#"','"#gerund# my heart"','chart-topper: "i want to #verb#"','why so many songs about #noun#?','top artist of 2017: justin #noun#','vocals > guitar > #noun#','lip-synching and #gerund#','revenue:\n1. #noun# sales\n2. concerts \n3. #noun.s#','#noun.s#: they just do not get it','#verb#: so last year','grammy-nominated #noun.s#','live in concert! "#noun# and the #noun.s#','free tickets: worth your #noun#?','"#noun# and the #noun.s#: better than the beatles?'],
+    'noun':['heart','pure love','sweetie pie','sugar daddy','honey baby','favorite truck','guitarist','teen idol','teeny-bopper'],
+    'verb':['break','love','miss you, baby','need you','sing','lip-synch','croon'],
+    'gerund':['breaking','loving','missing you','needing you','singing','lip-synching','crooning'],
+  },
+'just desserts':{
+  'slides':['behind the perfect petit-fours: #noun#','choosing between trifles and #noun.s#','#verb# your #noun# ahead of time = better pies!','is #noun# overrated?','avoid "raw-inside" bakes by #gerund#','baking the perfect #noun# takes patience','if the temperature is off, your #noun# may #verb#','over 1,000 calories in each #noun#!','#noun# has a long history in the British Isles','#verb# cookies, or #verb# brownies?','top bakers like to #verb#','top your #noun# creation with #noun.s#!'],
+  'noun':['chocolate','buttercream','raspberry','sponge','cake','icing','cookie'],
+  'verb':['bake','mix','taste','decorate','whip','burn','glaze','spin sugar'],
+  'gerund':['baking','mixing','whipping','decorating','burning','glazing','spinning sugar'],
+},
+
+
   // 'robots': {
   // },
   // 'a well-rounded diet': {
