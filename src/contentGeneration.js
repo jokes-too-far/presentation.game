@@ -134,8 +134,7 @@ const makeSlides = (game, theme) => {
     }
   }
 
-  const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
-  if (addBonusSlide) {
+  if (game.global.addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
     if (primariesUsed < Object.keys(primaryTemplates).length){
     slides.push(makeWordSlide(game, primaryTemplates[game.global.total_slides], secondaryWords));
