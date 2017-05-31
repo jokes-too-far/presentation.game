@@ -121,19 +121,27 @@ const makeSlides = (game, theme) => {
 
   slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
   slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
+  let primariesUsed = 2;
   const slidesRemaining = game.global.total_slides;
   for (let i=2; i < slidesRemaining; ++i) {
-    if (Math.random() < 0.5) {
+    if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
       slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
+      primariesUsed++;
+      //console.log('primary', i, Object.keys(primaryTemplates).length);
     } else {
-      slides.push(makeWordSlide(game, secondaryTemplates[i], primaryWords));
+      slides.push(makeWordSlide(game, secondaryTemplates[i - primariesUsed], primaryWords));
+      //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
     }
   }
 
   const addBonusSlide = Math.random() < game.global.bonusSlideChancePercent / 100;
   if (addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
+    if (primariesUsed < Object.keys(primaryTemplates).length){
     slides.push(makeWordSlide(game, primaryTemplates[game.global.total_slides], secondaryWords));
+    } else {
+    slides.push(makeWordSlide(game, secondaryTemplates[game.global.total_slides], primaryWords));
+    }
   }
 
   return slides;
