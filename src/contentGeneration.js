@@ -1,9 +1,11 @@
 import CenteredContent from './prefabs/centeredContent'
 
-const commonWordSlides = ['My list of #noun# puns', 'A list of all the #noun# I can think of', 'Examples of #noun#', 'How #noun# contributes to society','#gerund#: how much is enough?'];
-const commmonWordNoun = ['freedom','happiness','your mom','children','young adults','older adults','distant ancestors'];
-const commonWordVerb = ['live','work','play','eat','replace','concern'];
-const commonWordGerund = ['living','working','playing','eating','replacing','concerning'];
+const commonTheme = {
+  'slides': ['My list of #noun# puns', 'A list of all the #noun# I can think of', 'Examples of #noun#', 'How #noun# contributes to society','#gerund#: how much is enough?'],
+  'noun': ['freedom','happiness','your mom','children','young adults','older adults','distant ancestors'],
+  'verb': ['live','work','play','eat','replace','concern'],
+  'gerund': ['living','working','playing','eating','replacing','concerning'],
+};
 
 const dictionary = {
    'ducks': {
@@ -125,41 +127,32 @@ const dictionary = {
 const themes = Object.keys(dictionary);
 
 const makeSlides = (game, theme) => {
-  const primaryTemplates = dictionary[theme.primary]['slides'];
-  const secondaryTemplates = dictionary[theme.secondary]['slides'];
-  const primaryWords = createGrammar(dictionary[theme.primary]);
-  const secondaryWords = createGrammar(dictionary[theme.secondary]);
-  Phaser.ArrayUtils.shuffle(primaryTemplates);
-  Phaser.ArrayUtils.shuffle(secondaryTemplates);
+  const themes = combineThemes(theme);
+  const templates = commonTheme.slides.concat(dictionary[theme.primary].slides, dictionary[theme.secondary].slides);
+  Phaser.ArrayUtils.shuffle(templates);
 
   const slides = [];
 
-  slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
-  slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
-  let primariesUsed = 2;
   const slidesRemaining = game.global.total_slides;
-  for (let i=2; i < slidesRemaining; ++i) {
-    if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
-      slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
-      primariesUsed++;
-      //console.log('primary', i, Object.keys(primaryTemplates).length);
-    } else {
-      slides.push(makeWordSlide(game, secondaryTemplates[i - primariesUsed], primaryWords));
-      //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
-    }
+  for (let i=0; i < slidesRemaining; ++i) {
+    slides.push(makeWordSlide(game, templates[i], themes));
   }
 
   if (game.global.addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
-    if (primariesUsed < Object.keys(primaryTemplates).length){
-    slides.push(makeWordSlide(game, primaryTemplates[game.global.total_slides], secondaryWords));
-    } else {
-    slides.push(makeWordSlide(game, secondaryTemplates[game.global.total_slides], primaryWords));
-    }
+    slides.push(makeWordSlide(game, templates[i], themes));
   }
 
   return slides;
 };
+
+const combineThemes = (themes) => {
+  const amalgam = {};  
+  amalgam.noun = commonTheme.noun.concat(dictionary[themes.primary].noun, dictionary[themes.secondary].noun);
+  amalgam.verb = commonTheme.verb.concat(dictionary[themes.primary].verb, dictionary[themes.secondary].verb);
+  amalgam.gerund = commonTheme.gerund.concat(dictionary[themes.primary].gerund, dictionary[themes.secondary].gerund);
+  return createGrammar(amalgam);
+}
 
 const makeWordSlide = (game, template, grammar) => {
   return new CenteredContent(game, toTitleCase(grammar.flatten(template)), true);
