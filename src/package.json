@@ -1,0 +1,9 @@
+{
+  "name": "presentation game",
+  "main": "main.js",
+  "dependencies": {
+    "phaser": "^2.6.2",
+    "phaser-state-transition": "^2.4.3",
+    "tracery-grammar": "^2.7.3"
+  }
+}

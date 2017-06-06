@@ -1,0 +1,8 @@
+{
+  "productName": "Presentation Game",
+  "electronVersion": "1.4.13",
+  "appDir": "src",
+  "itchTargets": {
+    "release": "icbat/presentation-game"
+  }
+}
