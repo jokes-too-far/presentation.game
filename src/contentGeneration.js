@@ -127,32 +127,49 @@ const dictionary = {
 const themes = Object.keys(dictionary);
 
 const makeSlides = (game, theme) => {
-  const themes = combineThemes(theme);
-  const templates = commonTheme.slides.concat(dictionary[theme.primary].slides, dictionary[theme.secondary].slides);
-  Phaser.ArrayUtils.shuffle(templates);
+  const primaryTemplates = dictionary[theme.primary]['slides'];
+  const secondaryTemplates = dictionary[theme.secondary]['slides'];
+  const commonTemplates = commonTheme.slides;
+  const primaryWords = createGrammar(dictionary[theme.primary]);
+  const secondaryWords = createGrammar(dictionary[theme.secondary]);
+  Phaser.ArrayUtils.shuffle(primaryTemplates);
+  Phaser.ArrayUtils.shuffle(secondaryTemplates);
 
   const slides = [];
 
+  slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
+  slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
+  let primariesUsed = 2;
+  let commonsUsed = 0;
   const slidesRemaining = game.global.total_slides;
-  for (let i=0; i < slidesRemaining; ++i) {
-    slides.push(makeWordSlide(game, templates[i], themes));
+  for (let i=2; i < slidesRemaining; ++i) {
+    if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
+      slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
+      primariesUsed++;
+      //console.log('primary', i, Object.keys(primaryTemplates).length);
+    } else {
+      if (Math.random() >= 0.7 && i <= Object.keys(commonTemplates).length){
+        slides.push(makeWordSlide(game, commonTemplates[i - commonsUsed], primaryWords));
+        commonsUsed++;
+      } else {
+        slides.push(makeWordSlide(game, secondaryTemplates[i - primariesUsed], primaryWords));
+        //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
+
+      }
+    }
   }
 
   if (game.global.addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
-    slides.push(makeWordSlide(game, templates[i], themes));
+    if (primariesUsed < Object.keys(primaryTemplates).length){
+    slides.push(makeWordSlide(game, primaryTemplates[game.global.total_slides], secondaryWords));
+    } else {
+    slides.push(makeWordSlide(game, secondaryTemplates[game.global.total_slides], primaryWords));
+    }
   }
 
   return slides;
 };
-
-const combineThemes = (themes) => {
-  const amalgam = {};
-  amalgam.noun = commonTheme.noun.concat(dictionary[themes.primary].noun, dictionary[themes.secondary].noun);
-  amalgam.verb = commonTheme.verb.concat(dictionary[themes.primary].verb, dictionary[themes.secondary].verb);
-  amalgam.gerund = commonTheme.gerund.concat(dictionary[themes.primary].gerund, dictionary[themes.secondary].gerund);
-  return createGrammar(amalgam);
-}
 
 const makeWordSlide = (game, template, grammar) => {
   return new CenteredContent(game, toTitleCase(grammar.flatten(template)), true);
