@@ -5,7 +5,7 @@ class CenteredContent extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, text, delayedAdd) {
-    super(game, game.world.centerX, game.world.centerY, text, styles.fonts.big);
+    super(game, game.world.centerX, game.world.centerY, text, styles.fonts.big(game));
     this.anchor.set(0.5);
     if (!delayedAdd) {
       game.add.existing(this);
