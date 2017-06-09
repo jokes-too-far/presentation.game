@@ -1,10 +1,10 @@
 import CenteredContent from './prefabs/centeredContent'
 
 const commonTheme = {
-  'slides': ['My list of #noun# puns', 'A list of all the #noun# I can think of', 'Examples of #noun#', 'How #noun# contributes to society','#gerund#: how much is enough?'],
-  'noun': ['freedom','happiness','your mom','children','young adults','older adults','distant ancestors'],
-  'verb': ['live','work','play','eat','replace','concern'],
-  'gerund': ['living','working','playing','eating','replacing','concerning'],
+  'slides': ['My list of #noun# puns', 'Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#'],
+  'noun': [],
+  'verb': [],
+  'gerund': [],
 };
 
 const dictionary = {
@@ -27,7 +27,7 @@ const dictionary = {
     'gerund':['spending quality time','rebelling','grounding','spanking','nurturing'],
   },
   'treating illnesses': {
-    'slides': ['the uncommon cold and your #noun#', 'doctors hate him! one neat trick about #noun#', '#noun# and side effects?', 'when do you need to call for #noun#?', 'living with chronic #noun#','10 glasses of #noun# a day','controversial studies on adults who #verb#','suffering from #noun#? try #gerund#!','consult your doctor if you #verb#','#gerund#: how much is enough?','do apples help you #verb#?','can vaccines cause #noun#?'],
+    'slides': ['the uncommon cold and your #noun#', 'doctors hate him! one neat trick about #noun#', '#noun# and serious side effects?', 'when do you need to call for #noun#?', 'living with chronic #noun#','10 glasses of #noun# a day','controversial health studies on adults who #verb#','suffering from #noun#? try #gerund#!','consult your doctor if you #verb#','do apples help you #verb#?','can vaccines cause #noun#?'],
     'noun':['fatigue','homeopathic remedies','cure for cancer','balanced diet','headache','cramps','ancient chinese remedies','jaundice','western medicine'],
     'verb':['sneeze','cough','dilute','home-brew','vomit','vaccinate','diagnose','juice-cleanse'],
     'gerund':['diluting','vomiting','coughing','diagnosing','juice-cleansing'],
@@ -83,7 +83,7 @@ const dictionary = {
   'computer literacy':{
     'slides':['#gerund# the mouse is easier than it looks!','monitor, keyboard, and #noun#','#gerund.a# speed of 120 is quite respectable','be careful not to #verb# while navigating the internet','secure #noun#:\n1. at least 8 characters\n2. at least 1 #noun#\n3. capital and lower case','search engines help you find #noun#','antivirus or #noun#?','your own printer, or shared #noun#?','your grandchildren can answer questions about #noun#','don\'t be discouraged if you #verb# once in a while'],
     'noun':['mouse','keyboard','password','username','advertisement','wobsite','internet browser','file system','monitor','central processing unit','graphics card','computer fan'],
-    'verb':['mis-type','forget','key','click','doubleclick','restart','brick','diassemble'],
+    'verb':['mis-type','forget','key','click','doubleclick','restart','brick','disassemble'],
     'gerund':['mis-typing','forgetting','keying','clicking','doubleclicking','restarting','bricking','disassembling'],
   },
   'pop music':{
@@ -147,7 +147,7 @@ const makeSlides = (game, theme) => {
 };
 
 const combineThemes = (themes) => {
-  const amalgam = {};  
+  const amalgam = {};
   amalgam.noun = commonTheme.noun.concat(dictionary[themes.primary].noun, dictionary[themes.secondary].noun);
   amalgam.verb = commonTheme.verb.concat(dictionary[themes.primary].verb, dictionary[themes.secondary].verb);
   amalgam.gerund = commonTheme.gerund.concat(dictionary[themes.primary].gerund, dictionary[themes.secondary].gerund);
