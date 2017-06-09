@@ -51,7 +51,7 @@ const dictionary = {
     'gerund':['frolfing','playing on phones','trend-setting','socializing','coloring'],
   },
   'modern city life':{
-    'slides':['keeping #noun# off your lawn','high-rises and #noun#','whatever happened to my flying #noun#?','should you #verb#, or take public transportation?','feeling lost in a crowd? try\n1. #gerund#\n2. seek #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#','fire: a serious #noun# risk','carry spare change to cover #gerund#','prestigious #noun# condos: the best place to #verb#'],
+    'slides':['keeping #noun# off your lawn','high-rises and #noun#','whatever happened to my flying #noun#?','should you #verb#, or take public transportation?','feeling lost in a crowd? try\n1. #gerund#\n2. seek #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#','fire: a serious #noun# risk','carry spare change to cover #gerund#','#noun# condos: the best place to #verb#'],
     'noun':['robocop','nightclubs','skyscraper','urban blight','smog','tindr','mayor','department store','traffic jam'],
     'verb':['rent','party','retire','scooter','dine','date','ride-share','recycle'],
     'gerund':['renting','partying','retiring','scootering','dining','dating','ride-sharing','recycling'],
@@ -134,6 +134,7 @@ const makeSlides = (game, theme) => {
   const secondaryWords = createGrammar(dictionary[theme.secondary]);
   Phaser.ArrayUtils.shuffle(primaryTemplates);
   Phaser.ArrayUtils.shuffle(secondaryTemplates);
+  Phaser.ArrayUtils.shuffle(commonTemplates);
 
   const slides = [];
 
@@ -148,7 +149,7 @@ const makeSlides = (game, theme) => {
       primariesUsed++;
       //console.log('primary', i, Object.keys(primaryTemplates).length);
     } else {
-      if (Math.random() >= 0.7 && i <= Object.keys(commonTemplates).length){
+      if (Math.random() >= 0.8 && commonsUsed <= Object.keys(commonTemplates).length){
         slides.push(makeWordSlide(game, commonTemplates[commonsUsed], primaryWords));
         commonsUsed++;
       } else {
