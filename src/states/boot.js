@@ -39,7 +39,7 @@ class Boot extends Phaser.State {
       title: 'a placeholder title for a talk',
       bonusSlideChancePercent: 10,
       total_slides: 10,
-      transition_timeout: 10000,
+      transition_timeout: 20000,
       transition_list: transistions.getTransitions()
     };
   }
