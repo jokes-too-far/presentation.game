@@ -149,7 +149,7 @@ const makeSlides = (game, theme) => {
       //console.log('primary', i, Object.keys(primaryTemplates).length);
     } else {
       if (Math.random() >= 0.7 && i <= Object.keys(commonTemplates).length){
-        slides.push(makeWordSlide(game, commonTemplates[i - commonsUsed], primaryWords));
+        slides.push(makeWordSlide(game, commonTemplates[commonsUsed], primaryWords));
         commonsUsed++;
       } else {
         slides.push(makeWordSlide(game, secondaryTemplates[i - primariesUsed], primaryWords));
