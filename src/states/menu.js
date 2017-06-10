@@ -1,6 +1,7 @@
 import contentGeneration from '../contentGeneration'
 import styles from '../styles'
 
+import GradientBG from '../prefabs/gradientBG'
 import CenteredContent from '../prefabs/centeredContent'
 
 class Menu extends Phaser.State {
@@ -9,8 +10,10 @@ class Menu extends Phaser.State {
     super();
   }
 
-  create() {
+  create() {    
     styles.backgroundColor(this.game);
+    new GradientBG(this.game);
+  
     const theme = contentGeneration.pickTheme();
     this.game.global.title = contentGeneration.generateTitle(this.game, theme);
     const slides = contentGeneration.makeSlides(this.game, theme);

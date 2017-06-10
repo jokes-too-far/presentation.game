@@ -1,3 +1,4 @@
+import GradientBG from '../prefabs/gradientBG'
 import CenteredContent from '../prefabs/centeredContent'
 
 class Menu extends Phaser.State {
@@ -7,6 +8,7 @@ class Menu extends Phaser.State {
   }
 
   create() {
+    new GradientBG(this.game);
     new CenteredContent(this.game, 'Questions?');
 
     this.saveVarsToLocalStorage();

@@ -1,3 +1,4 @@
+import GradientBG from '../prefabs/gradientBG'
 import SlideTitle from '../prefabs/slideTitle'
 import SlideNumber from '../prefabs/slideNumber'
 import SlideTimer from '../prefabs/slideTimer'
@@ -15,6 +16,7 @@ class Slide extends Phaser.State {
   }
 
   create() {
+    new GradientBG(this.game);
     // Meta slide stuff
     new SlideTitle(this.game, this.game.global.title);
     new SlideNumber(this.game, this.slideNumber);

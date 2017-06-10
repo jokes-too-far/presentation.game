@@ -19,6 +19,8 @@ class Preloader extends Phaser.State {
   loadResources() {
        this.game.load.audio('boop', 'assets/boop.ogg');
        this.game.load.audio('beep', 'assets/beep.ogg');
+
+       this.game.load.image('gradient', 'assets/gradient.png');
   }
 
   onLoadComplete() {
