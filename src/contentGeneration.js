@@ -15,7 +15,7 @@ const presenterName = {
 };
 
 const feedbackQuestions = {
-  'question':['presenter knew the subject matter well','pacing of the presentation was good','i learned a lot from this presentation','presenter captured my interest','presenter was able to answer questions','presenter was devilishly handsome','appropriate use of visual aids','presentation was appropriate for my age group','presentation was coherent','presentation was relevant to my interests','presenter made good use of the daily vocabulary words'],
+  'question':['presenter knew the subject matter well','pacing of the presentation was good','i learned a lot from this presentation','presenter captured my interest','presenter was able to answer questions','presenter was devilishly handsome','appropriate use of visual aids','presentation was appropriate for my age group','presentation was coherent','presentation was relevant to my interests','presenter made good use of the daily vocabulary words','i can apply what i learned from this presentation to my daily life'],
 };
 
 const dictionary = {
@@ -128,7 +128,7 @@ const dictionary = {
     'gerund':['brushing','flossing','gargling','pulling teeth','drilling cavities','using mouthwash'],
   },
   'agriculture':{
-  'slides':['do you, or i, or anyone know\n how oats, peas, beans, and #noun# grow?','in the northern hemisphere, early march is prime #noun# season','pros of genetically modified crops:\n1. bigger #noun#\n2. resistant to #gerund#\n3. lovely color','cons of genetically modified crops: \n1. risk of #noun#\n2. health concerns\n3. worth the #noun#?','never use tractors in #noun# fields!','#noun#: easy blue ribbon at the state fair','fertilize with #noun#?','you may disagree, but I say radishes > #noun#','leftover biomatter can fuel #noun#','#gerund#: good or bad for your fields?','believe it or not, eggs come from the #noun# of the chicken'],
+  'slides':['do you, or i, or anyone know\n how oats, peas, beans, and #noun# grow?','in the northern hemisphere, early march is prime #noun# season','pros of genetically modified crops:\n1. bigger #noun#\n2. resistant to #gerund#\n3. lovely color','cons of genetically modified crops: \n1. risk of #noun#\n2. health concerns\n3. worth the #noun#?','never use tractors in fields with #noun#!','#noun# = easy blue ribbon at the state fair','fertilize with #noun#?','you may disagree, but I say radishes > #noun#','leftover biomatter can fuel #noun#','#gerund#: good or bad for your fields?','believe it or not, eggs come from the #noun# of the chicken'],
   'noun':['corn','combine harvester','heritage tomatoes','orchards','G.m.o.s (genetically modified organisms)','cows','sheep','prize-winning cucumber'],
   'verb':['harvest','fertilize','mulch','spray pesticide','till fields','genetically engineer'],
   'gerund':['harvesting','fertilizing','mulching','spraying pesticide','tilling fields','genetically engineering'],
@@ -173,11 +173,12 @@ const makeSlides = (game, theme) => {
   slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
   slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
   let primariesUsed = 2;
+  let secondariesUsed = 0;
   let commonsUsed = 0;
   const slidesRemaining = game.global.total_slides;
-  for (let i=2; i < slidesRemaining; ++i) {
+  for (let i=primariesUsed; i < slidesRemaining; ++i) {
     if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
-      slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
+      slides.push(makeWordSlide(game, primaryTemplates[primariesUsed], secondaryWords));
       primariesUsed++;
       //console.log('primary', i, Object.keys(primaryTemplates).length);
     } else {
@@ -185,7 +186,8 @@ const makeSlides = (game, theme) => {
         slides.push(makeWordSlide(game, commonTemplates[commonsUsed], primaryWords));
         commonsUsed++;
       } else {
-        slides.push(makeWordSlide(game, secondaryTemplates[i - primariesUsed], primaryWords));
+        slides.push(makeWordSlide(game, secondaryTemplates[secondariesUsed], primaryWords));
+        secondariesUsed++;
         //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
 
       }
