@@ -21,11 +21,9 @@ const supportingSizedFont = (game) => {
 };
 
 const randomTheme = (game) => {
-  const backroundColors = ['#34495e', '#8e44ad', '#c0392b', '#16a085', '#7f8c8d', '#d35400'];
-  const bgColor = Phaser.ArrayUtils.getRandomItem(backroundColors);
+  const bgColor = '#' + Math.random().toString(16).slice(2,8);
   game.stage.backgroundColor = bgColor;
 };
-
 
 
 module.exports = {
