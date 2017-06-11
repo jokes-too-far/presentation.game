@@ -1,7 +1,7 @@
 {
   "productName": "Presentation Game",
-  "electronVersion": "1.4.13",
-  "appDir": "src",
+  "appDir": "build",
+  "buildDir": "electronBuild",
   "itchTargets": {
     "release": "icbat/presentation-game"
   }

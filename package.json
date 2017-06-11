@@ -1,7 +1,8 @@
 {
   "name": "presentation.game",
   "version": "0.1.0",
-  "description": "",
+  "description": "Give a talk on the spot",
+  "repository": "https://github.com/jokes-too-far/presentation.game",
   "scripts": {
     "start": "budo src/main.js:bundle.js --live -- -d -e src/main.js -t [babelify --comments false --presets es2015]",
     "prebuild": "mkdirp build",
@@ -9,9 +10,11 @@
     "build:js": "browserify -d -e src/main.js -t [babelify --comments false --presets es2015] > build/bundle.min.js",
     "build:css": "cleancss css/main.css -o build/main.min.css",
     "build:html": "htmlprocessor index.html -o build/index.html",
-    "copy:all": "npm run copy:assets && npm run copy:phaser",
+    "copy:all": "npm run copy:assets && npm run copy:phaser && npm run copy:package-for-electron",
     "copy:assets": "ncp assets build/assets/",
-    "copy:phaser": "ncp node_modules/phaser/build/phaser.min.js build/phaser.min.js"
+    "copy:phaser": "ncp node_modules/phaser/build/phaser.min.js build/phaser.min.js",
+    "copy:package-for-electron": "ncp electron.package.json build/package.json",
+    "publish": "npm run build && node_modules/itchy-electron/bin/itchy.js build osx"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +30,7 @@
     "browserify": "^14.3.0",
     "budo": "^10.0.3",
     "clean-css": "^3.4.17",
-    "electron-prebuilt": "^1.4.13",
+    "electron-prebuilt": "1.4.13",
     "htmlprocessor": "^0.2.3",
     "itchy-electron": "^0.2.1",
     "mkdirp": "^0.5.1",

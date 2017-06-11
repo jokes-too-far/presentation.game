@@ -1,6 +1,6 @@
 {
   "name": "presentation game",
-  "main": "main.js",
+  "main": "bundle.min.js",
   "dependencies": {
     "phaser": "^2.6.2",
     "phaser-state-transition": "^2.4.3",
