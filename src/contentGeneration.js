@@ -1,4 +1,5 @@
 import CenteredContent from './prefabs/centeredContent'
+import tracery from './vendor/tracery'
 
 const commonTheme = {
   'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >'],
