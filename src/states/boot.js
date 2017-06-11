@@ -37,9 +37,9 @@ class Boot extends Phaser.State {
     transistions.initCustomTransitions()
     this.game.global = {
       title: 'a placeholder title for a talk',
-      bonusSlideChancePercent: 10,
+      bonusSlideChancePercent: 20,
       total_slides: 10,
-      transition_timeout: 20000,
+      transition_timeout: 25000,
       transition_list: transistions.getTransitions()
     };
   }

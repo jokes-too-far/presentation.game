@@ -1,3 +1,4 @@
+import contentGeneration from '../contentGeneration'
 import GradientBG from '../prefabs/gradientBG'
 import CenteredContent from '../prefabs/centeredContent'
 
@@ -11,24 +12,14 @@ class Menu extends Phaser.State {
     new GradientBG(this.game);
     new CenteredContent(this.game, 'Questions?');
 
-    this.saveVarsToLocalStorage();
-
-    this.input.onDown.add(this.restartGame, this);
+    this.input.onDown.add(this.displayFeedback, this);
   }
 
-  saveVarsToLocalStorage(){
-
-  }
-
-  resetGlobalVariables(){
-
-  }
 
   update() {}
 
-  restartGame () {
-    this.resetGlobalVariables();
-    this.game.state.start('menu');
+  displayFeedback () {
+    this.game.state.start('feedback')
   }
 
 }

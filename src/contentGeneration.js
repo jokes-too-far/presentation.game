@@ -7,6 +7,17 @@ const commonTheme = {
   'gerund': [],
 };
 
+const presenterName = {
+  'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol'],
+  'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east'],
+  'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski'],
+  'profession':['housewife','architect','beekeeper','scientist','self employed','businessman','president'],
+};
+
+const feedbackQuestions = {
+  'question':['presenter knew the subject matter well','pacing of the presentation was good','i learned a lot from this presentation','presenter captured my interest','presenter was able to answer questions','presenter was devilishly handsome','appropriate use of visual aids','presentation was appropriate for my age group','presentation was coherent'],
+};
+
 const dictionary = {
    'ducks': {
     'slides': ['They quack, but can they #verb#?', 'don\'t ever #verb# with geese (especially canadian)', '<PRESENTER WILL NOW DEMONSTRATE #noun# DUCK CALL>', 'replace traditional decoys with #noun#', 'The difference between a female duck and a mallard: #noun#', 'woo orinthologists with quackers and #noun#','do they fly south just to #verb#?','attract ducks to your local park with #noun#','visit ponds in early spring to catch a glimpse of #noun# nests','rubber vs real: a tale of #noun#'],
@@ -32,8 +43,8 @@ const dictionary = {
     'verb':['sneeze','cough','dilute','home-brew','vomit','vaccinate','diagnose','juice-cleanse'],
     'gerund':['diluting','vomiting','coughing','diagnosing','juice-cleansing'],
   },
-  'heartthrobs': {
-    'slides':['tall, dark & #noun#','does your crush #verb#?','how to meet your crush:\n1. #verb# him\n2. find #noun#\n3. happily ever after','#noun# and unrealistic body standards','do all movie stars #verb#?','unique names like "#noun# George" = way hotter','#noun# in hollywood','what if papparazzi caught your crush #gerund#?','most movie stars = secretly #verb# fans!','#noun# = squeeeeeee!','you know you want your crush to #verb#...\n and (spoiler!) he probably already does!','learn what your crush likes:\n1. #noun#\n2. shy girls\n3. #gerund#','have you read "Sunset: [gerund]"?'],
+  'romance': {
+    'slides':['tall, dark & #noun#','does your crush #verb#?','how to meet your crush:\n1. #verb# him\n2. find #noun#\n3. happily ever after','do all movie stars #verb#?','unique names like "#noun# George" = way hotter','#noun# in hollywood','what if papparazzi caught your crush #gerund#?','most movie stars = secretly #verb# fans!','#noun# = squeeeeeee!','you know you want your crush to #verb#...\n and (spoiler!) he probably already does!','learn what your crush likes:\n1. #noun#\n2. shy girls\n3. #gerund#','have you read "early evening: #gerund#"?','robert #noun#: hottest man of the year'],
     'noun':['celebrity crush','single movie stars','sexy movie villains','dreamy blondes','dreamboat','mr. right','badonk-a-donk','sea-blue eyes','perfect teeth'],
     'verb':['stalk','moisturize','date','idolize','gossip','propose','break up'],
     'gerund':['idolizing','dating','stalking','gossipping','proposing','breaking up'],
@@ -45,19 +56,19 @@ const dictionary = {
     'gerund':['unboxing','bribing','shipping', 'copyrighting','manufacturing','advertising','complaining on the internet','returning your product','leaving bad reviews'],
   },
   'millennials':{
-    'slides':['harry potter and the #noun# of the #noun#','#noun# in coffeeshops?','locally-produced #noun#','bigger eyeglasses make for bolder #noun#','#verb# with "that internet thing" millennials like','#noun#: sign of the apocalypse?','college degree = entry level #noun#','#gerund#: new fad with the college crowd!','appeal to millennials with #noun#!','top millennial attractors:\n1. #noun#\n2. green #noun#\n3. easy to #verb#','coloring books and #verb# time = comfort','how many millennials really #verb#?','show millennials #noun#, and they\'ll look away from their phones'],
-    'noun':['hipsters','cell phones','social media','coffee','artisanal pizza','craft beer','safe spaces'],
+    'slides':['the "harry potter" generation and the #noun# of the #noun#','#noun# in coffeeshops?','locally-produced #noun#','bigger eyeglasses make for bolder #noun#','#verb# with "that internet thing" millennials like','#noun#: sign of the apocalypse?','college degree = entry level #noun#','#gerund#: new fad with the college crowd!','appeal to millennials with #noun#!','top millennial attractors:\n1. #noun#\n2. green #noun#\n3. easy to #verb#','coloring books and #verb# time = comfort','how many millennials really #verb#?','show millennials #noun#, and they\'ll look away from their phones'],
+    'noun':['hipsters','cell phones','social media','coffee','artisanal pizza','craft beer','safe spaces','fidget spinner'],
     'verb':['frolf','socialize','color','post on facebook','trend-set','use social media'],
-    'gerund':['frolfing','playing on phones','trend-setting','socializing','coloring','using social media'],
+    'gerund':['frolfing','playing on phones','trend-setting','socializing','coloring','using social media','dabbing'],
   },
   'modern city life':{
-    'slides':['keeping #noun# off your lawn','high-rises and #noun#','it\'s the 21st century.\nwhatever happened to my flying #noun#?','should you #verb#, or take public transportation?','feeling lost in a crowd? try\n1. #gerund#\n2. seek #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#','fire: a serious #noun# risk','carry spare change to cover #gerund#','condos: the best place to #verb#','[noun] in the urban jungle','longing for the suburbs? remember, in the city you can [verb]'],
+    'slides':['keeping #noun# off your lawn','high-rises and #noun#','it\'s the 21st century.\nwhatever happened to my flying #noun#?','should you #verb#, or take public transportation?','feeling lost in a crowd? try\n1. #gerund#\n2. seek #noun#\n 3. never ever #verb#!','the dating scene: singles that #verb#','renting vs #gerund#','the blight of urban #noun#','fire: a serious #noun# risk','carry spare change to cover #gerund#','condos: the best place to #verb#','#noun# in the urban jungle','longing for the suburbs? remember, in the city you can #verb#'],
     'noun':['robocop','nightlife','skyscrapers','urban blight','smog','tindr','your mayor','department stores','traffic jams','crowds','city parks'],
     'verb':['rent','work downtown','scooter','eat out','find love in the city','ride-share','recycle'],
     'gerund':['renting','working downtown','scootering','eating out','finding love in the city','ride-sharing','recycling'],
   },
   'ponies':{
-    'slides':['every little girl dreams of #noun# of her very own','my little pony: friendship is #noun#','everyone likes ponies that #verb#','preteens and #gerund# ponies','top pony colors:\n1. Pink\n2. Purple\n3. #noun# blue','merchandising and #noun#!','could boys like ponies if they #verb#?','#gerund# for the "brony" demographic','hooves and cute #noun#','can you #verb# with ponies? yes. but should you?','#noun# can teach girls self-esteem'],
+    'slides':['every little girl dreams of #noun# of her very own','my pony\'s friendship is #noun#','everyone likes ponies that #verb#','preteens and #gerund# ponies','top pony colors:\n1. Pink\n2. Purple\n3. #noun# blue','merchandising and #noun#!','could boys like ponies if they #verb#?','#gerund# for the "brony" demographic','hooves and cute #noun#','can you #verb# with ponies? yes. but should you?','#noun# can teach girls self-esteem'],
     'noun':['magic','rainbows','sparkles','pretty mares','best friends','friendship','unicorns','pegasus','herd'],
     'verb':['prance','resolve conflict','canter','neigh','gallop','trot'],
     'gerund':['prancing','resolving conflict','cantering','neighing','galloping','trotting'],
@@ -241,9 +252,17 @@ const pickTheme = () => {
   };
 }
 
+const makeFeedbackSlide = () => {
+  const questions = feedbackQuestions.question;
+  Phaser.ArrayUtils.shuffle(questions);
+  const str = 'Audience: please discuss and answer the following questions:\n\n1. ' + questions[0] + '\n2. ' + questions[1] + '\n3. ' + questions[2]  + '\n4. name one thing you learned from this presentation';
+  return toTitleCase(str);
+}
+
 module.exports = {
   dictionary: dictionary,
   makeSlides: makeSlides,
   generateTitle: generateTitle,
   pickTheme: pickTheme,
+  makeFeedbackSlide: makeFeedbackSlide,
 };
