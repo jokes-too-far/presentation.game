@@ -19,6 +19,11 @@ h1 {
 h2 {
   font-size: 30pt;
 }
+h3 {
+  text-align: center;
+  margin: 0;
+  margin-top:10px;;
+}
 
 @keyframes grow-shrink {
   0% {
@@ -39,15 +44,42 @@ h2 {
   font-size: 30px;
 }
 
-section {
-  border: 2px solid black;
+section {  
   background-color: white;
   margin: 50px;
   margin-bottom: 20px;
-  margin-top: 20px;
   padding:20px;
+  max-width: 800px;
+  margin:20px auto;
 }
 
 #newsletter {
   text-align: centered;
+}
+
+#image-wrapper {
+  background-color: #333;
+  margin: auto;
+}
+#image-wrapper, #image-wrapper img {
+  max-width: 700px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
+    font-size: 40px;
+}
+.slick-next {
+    right: -45px;
+}
+.slick-prev {
+    left: -45px;
+}
+
+.slick-prev, .slick-next {
+  width: 40px;
+}
+
+section, img {
+  border: 2px solid black;
 }
