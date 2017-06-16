@@ -39,7 +39,7 @@ h3 {
   animation: grow-shrink 1s infinite;
   animation-direction: alternate;
   position: absolute;
-  right: -10px;
+  left: 65%;
   top: 10px;
   font-size: 30px;
 }
