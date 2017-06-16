@@ -6,15 +6,16 @@
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
- 
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 </head>
 
 <body>
   <header>
-    <h1>Presentation Game</h1>
+    <h2 id="slanty-hype-word">Procedural!</h2>
+    <h1 id="game-title">Presentation Game</h1>
   </header>
   <section>
     <div id="image-wrapper">
@@ -23,13 +24,24 @@
       <div>three</div>
     </div>
   </section>
+  <h2>Give a talk on the spot</h2>
+  <section>    
+    <span>Pre-order on Itch.io</span>
+    <span>Coming soon to Steam</span>
+  </section>
   <section>
-    <h2>Give a talk on the spot</h2>
     Ad voluptas pariatur et. Beatae praesentium adipisci dicta laudantium atque. Nobis consequatur laborum molestias tempora incidunt quo ut.
     Ab ea quis veritatis consequatur consequatur fuga nisi ex. Ut autem consequatur nostrum praesentium quia quia. Hic numquam quis aut magni dolore. Esse dolor praesentium non fuga id ea. A inventore voluptatem nam quos non mollitia esse. Debitis ex pariatur dolore ut.
     Magni dignissimos adipisci voluptates corrupti sed. Sed et quis quidem ut distinctio nesciunt. Ut repellendus placeat sapiente repellat et earum cupiditate. Voluptas aspernatur exercitationem et et modi enim. Officia quis consequatur et. Itaque cumque unde et.
     Mollitia sed sunt quasi id nisi facilis. Est dolores perspiciatis architecto. Consequatur harum esse suscipit aut debitis tenetur. Necessitatibus consequuntur officiis blanditiis. Eum expedita dolor natus.
     Accusantium omnis eum et exercitationem. Sit commodi aperiam quidem ex repudiandae expedita voluptatem ratione. Ad aliquid dolores aliquid. Tempore consectetur quisquam cumque fuga repudiandae corrupti omnis qui.
+  </section>
+  <section>
+    <ul>
+      <li>Over 150 possible presentations!</li>
+      <li>Windows, Mac, and Linux support!</li>
+      <li>Other important specifications, probably!</li>
+    <ul>
   </section>
 
   <footer>
@@ -38,6 +50,25 @@
 
   <script>
     $('#image-wrapper').slick();
+
+    var from = '#' + Math.random().toString(16).slice(2,8);
+    var to = '#' + Math.random().toString(16).slice(2,8);
+    document.body.style.background = from; // old browsers
+    document.body.style.background = 'linear-gradient(0, '+from+', '+to+')'; // new hotness
+
+    const possibleHypeWords = [
+      'Procedural!',
+      'Exclamitory!',
+      'Mathematical!',
+      'Radical!',
+      'Presenty!',
+      'Omniscient!',
+      'Ever-present!',
+      'All-consuming!',
+      'Corporate!',
+    ];
+    const hypeWord = possibleHypeWords[Math.floor(Math.random() * possibleHypeWords.length)];
+    document.getElementById('slanty-hype-word').innerText = hypeWord;
   </script>
 </body>
 </html>

@@ -2,9 +2,48 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow: hidden;  
+  font-family: sans-serif;
 }
-canvas {
-  display: block;
-  cursor: none;
+h1, h2 {
+  color: white;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+   text-align: center;
+}
+
+h1 {
+  font-size: 45pt;
+}
+h2 {
+  font-size: 30pt;
+}
+
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1) rotate(30deg);
+  }
+  100% {
+    transform: scale(0.8) rotate(30deg);
+  } 
+}
+
+#slanty-hype-word {
+  transform: rotate(30deg);
+  animation: grow-shrink 1s infinite;
+  animation-direction: alternate;
+  position: absolute;
+  right: -10px;
+  top: 10px;
+  font-size: 30px;
+}
+
+section {
+  border: 2px solid black;
+  background-color: white;
+  margin: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding:20px;
 }
