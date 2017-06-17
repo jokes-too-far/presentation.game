@@ -1,7 +1,7 @@
 import CenteredContent from './prefabs/centeredContent'
 
 const commonTheme = {
-  'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >'],
+  'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >','#noun#: have you tried #gerund#?',"#noun# + #noun#?"],
   'noun': [],
   'verb': [],
   'gerund': [],
@@ -11,11 +11,12 @@ const presenterName = {
   'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol'],
   'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east'],
   'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski'],
-  'profession':['housewife','architect','beekeeper','scientist','self employed','businessman','president'],
+  'profession':['housewife','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer'],
+  'trivia':['2 kids','avid gardener','72 teeth','this is my 200th presentation!','raise corgis','related to abraham lincoln','visited 6 continents','no hobbies of interest'],
 };
 
 const feedbackQuestions = {
-  'question':['presenter knew the subject matter well','pacing of the presentation was good','i learned a lot from this presentation','presenter captured my interest','presenter was able to answer questions','presenter was devilishly handsome','appropriate use of visual aids','presentation was appropriate for my age group','presentation was coherent','presentation was relevant to my interests','presenter made good use of the daily vocabulary words','i can apply what i learned from this presentation to my daily life'],
+  'question':['presenter knew the subject matter well','pacing of the presentation was good','i learned a lot from this presentation','presenter captured my interest','presenter was able to answer questions','presenter was devilishly handsome','appropriate use of visual aids','presentation was appropriate for my age group','presentation was coherent','presentation was relevant to my interests','presenter made good use of the daily vocabulary words','i can apply what i learned from this presentation to my daily life','presentation reinforced family values','presentation seemed well rehearsed','presentation inspired me to give 110 %','presenter covered both sides of the controversy'],
 };
 
 const dictionary = {
@@ -80,7 +81,7 @@ const dictionary = {
     'gerund':['marketing','recruiting for the company','evangelizing company values','profiting','fleeing investigations','lying','money-laundering'],
   },
   'greek mythology':{
-    'slides':['did zeus just turn himself into #noun#?','myths to explain the origin of #noun#','greek gods and their #gerund# escapades','poseidon is also the god of #noun#','hera punishes infidelity with #gerund#','tragedy, comedy, and #gerund# with #noun#','#noun#: all greek to me!','athena sprang full-formed from the #noun# of zeus','hades, persephone, and #gerund# =  why we have winter now','cronus likes to #verb#. Yes, even his kids', '#noun#, god of the #noun#','#noun# + #noun# = pegasus'],
+    'slides':['did zeus just turn himself into #noun#?','myths to explain the origin of #noun#','greek gods and their #gerund# escapades','poseidon is also the god of #noun#','hera punishes infidelity with #gerund#','tragedy, comedy, and #gerund# with #noun#','#noun#: all greek to me!','athena sprang full-formed from the #noun# of zeus','hades, persephone, and #gerund# =  why we have winter now','cronus likes to #verb#. Yes, even his kids', '#noun#, god of the #noun#','#noun# + #noun# = pegasus','the ancient greeks would worship aphrodite by #gerund#'],
     'noun':['fiery chariot','doric, ionic, and corinthian columns','extra-marital demigod babby','oracle','cerberus','river styx','lightning bolt','homemade, heat-sensitive wings'],
     'verb':['murder','seduce','kidnap','cannibalize','curse','prophesy','escape','throw lightningbolts'],
     'gerund':['murdering','seducing','kidnapping','cannibalizing','cursing','prophesying','escaping','throwing lightningbolts'],
@@ -116,25 +117,47 @@ const dictionary = {
     'gerund':['silencing us','uncovering conspiracing','exposing the truth','genociding','"disappearing"','sleuthing','abducting','torturing'],
   },
   'extreme fitness':{
-    'slides':['real men #verb#! every day!','#noun#: what your muscles crave!','even my grandma could crossfit. That\'s why I #verb#!','crossfit guru Mike says you should #verb# 2 hours a day','#noun# before bros (but after lifting)','never skip #verb# day!','want an eight-pack? spend time #gerund#','#verb# + #verb# = 8-pack in days!','can you ever get so swole that you cannot #verb# anymore?','let\'s talk diet: #noun# for protein','how to deal with being called shallow: show them your #noun#','getting discouraged? #verb# for a day to mix up your exercise routine','studies show #noun# highest in early twenties.\n start early for more gains!','lifting > #gerund#'],
+    'slides':['real men #verb#! every day!','#noun#: what your muscles crave!','even my grandma could crossfit. That\'s why I #verb#!','fitness guru Mike says you should #verb# 2 hours a day','#noun# before bros (but after lifting)','never skip #verb# day!','want an eight-pack? spend time #gerund#','#verb# + #verb# = 8-pack in days!','can you ever get so swole that you cannot #verb# anymore?','let\'s talk diet: #noun# for protein','how to deal with being called shallow: show them your #noun#','getting discouraged? #verb# for a day to mix up your exercise routine','studies show #noun# highest in early twenties.\n start early for more gains!','lifting > #gerund#'],
     'noun':['protein powder','whey','barbells','man-mode','parkour','crossfit','sick gainz','quads','pecs','eight-pack','testosterone','brawn'],
     'verb':['crossfit','pump up','swell','bulk','cut calories','weightlift','sprint','chin-up','flex'],
     'gerund':['crossfitting','pumping up','swelling','bulking','cutting calories','weightlifting','sprinting','flexing'],
   },
   'dental hygiene':{
-    'slides':['so you\'re inconsistent about flossing. make up for it by #gerund#','#noun#: full of cavity-causing sugar!','#verb# twice a day for great breath','modern dentist offices will have #noun#','yellowing teeth? consider #gerund#','#noun# now, or dentures in ten years?','use a pea-sized amount of toothpaste when you #verb#','toothache? your dentist may suggest #gerund#','alternatives to daily flossing: \n1. mouthwash\n2. #gerund#\n3. #noun#','be careful! sugary foods cause #noun#','local anesthesia or laughing gas for #noun# surgery?'],
-    'noun':['toothbrush','toothpaste','silk floss','mouthwash','cavity','shiny chompers','dental fillings','root canal','bad breath','yellow teeth','canine teeth','wisdom teeth'],
+    'slides':['so you\'re inconsistent about flossing.\nmake up for it by #gerund#','#noun#: full of cavity-causing sugar!','#verb# twice a day for great breath','modern dentist offices will have #noun#','yellowing teeth? consider #gerund#','#noun# now, or dentures in ten years?','use a pea-sized amount of toothpaste when you #verb#','toothache? your dentist may suggest #gerund#','alternatives to daily flossing: \n1. mouthwash\n2. #gerund#\n3. #noun#','be careful! sugary foods cause #noun#','local anesthesia or laughing gas for #noun# surgery?'],
+    'noun':['toothbrush','toothpaste','silk floss','mouthwash','cavities','shiny chompers','dental fillings','root canal','bad breath','yellow teeth','canine teeth','wisdom teeth'],
     'verb':['brush','floss','gargle','pull teeth','drill cavities','use mouthwash'],
     'gerund':['brushing','flossing','gargling','pulling teeth','drilling cavities','using mouthwash'],
   },
   'agriculture':{
   'slides':['do you, or i, or anyone know\n how oats, peas, beans, and #noun# grow?','in the northern hemisphere, early march is prime #noun# season','pros of genetically modified crops:\n1. bigger #noun#\n2. resistant to #gerund#\n3. lovely color','cons of genetically modified crops: \n1. risk of #noun#\n2. health concerns\n3. worth the #noun#?','never use tractors in fields with #noun#!','#noun# = easy blue ribbon at the state fair','fertilize with #noun#?','you may disagree, but I say radishes > #noun#','leftover biomatter can fuel #noun#','#gerund#: good or bad for your fields?','believe it or not, eggs come from the #noun# of the chicken'],
-  'noun':['corn','combine harvester','heritage tomatoes','orchards','G.m.o.s (genetically modified organisms)','cows','sheep','prize-winning cucumber'],
-  'verb':['harvest','fertilize','mulch','spray pesticide','till fields','genetically engineer'],
-  'gerund':['harvesting','fertilizing','mulching','spraying pesticide','tilling fields','genetically engineering'],
+  'noun':['corn','combine harvesters','heritage tomatoes','G.m.o.s (genetically modified organisms)','cows','sheep','prize-winning cucumber','rutabagas','sweetpeas','strawberries'],
+  'verb':['harvest crops','fertilize','mulch','spray pesticide','till fields','genetically engineer'],
+  'gerund':['harvesting crops','fertilizing','mulching','spraying pesticide','tilling fields','genetically engineering'],
 },
-
-
+'balanced breakfast':{
+'slides':['new marshmallow shape: #noun#!','why fry up boring old eggs when you can #verb#?','#gerund# takes too long for a weekday breakfast','for a balanced breakfast:\n1. #noun#\n2. #noun#\n3. never forget to #verb# afterwards!','bangers and #noun#: the british way','need some citrus with your pancakes? try #noun#','#noun#: absolutely belongs in the most important meal of the day','#noun# > sugary cereals','#gerund#= more fiber in each bowl', 'can you still enjoy #noun# if it\'s after 10am?','kids love the taste of #noun#','#noun# for breakfast???','#noun# and diabetes in breakfast-loving youths'],
+'noun':['sugar','wheat bran','burnt toast','milk and cereal','pancakes','breakfast','bacon and eggs','grapefruit','loaded omelettes'],
+'verb':['pour cereal','juice oranges','chew bacon','fry flapjacks','peel oranges','sizzle','sniff savory aromas'],
+'gerund':['pouring cereal', 'juicing oranges','chewing bacon','frying flapjacks','breakfasting','sizzling','sniffing savory aromas'],
+},
+'marine biology':{
+'slides':['loch ness monster: new kind of #noun#?','can whales really #verb#?','#gerund# in the Atlantic ocean','whaling ships, #gerund#, and the environmental devastation','find missing clownfish by #gerund#','underwater caves: home to #noun# and #noun#','top-selling Pacific catch: #noun#','#gerund#: how the lanternfish finds prey','electric eels #verb# to generate 500 volts', 'are there more mysteries waiting in the depths of the oceans?\nonly #noun# can tell','treat jellyfish stings by #gerund#','snorkeling is a popular way to encounter #noun#','the deep ocean has over 50,000 different kinds of #noun#','whales "sing" to #verb#','healhty coral will have plenty of #noun#'],
+'noun':['shark','octopus','angelfish','loch ness monster','great old ones in the deep','undiscovered species','shark cage','mermaids','coral','starfish','whales'],
+'verb':['swim with dolphins','scuba dive','fish','splash around','use sonar'],
+'gerund':['swimming with dolphins','scuba diving','fishing','splashing around','submarining','using sonar'],
+},
+  'beard care':{
+  'slides':['5 inches > 2 inches > #noun#','do beards make you #noun#?','flower beards and #noun#','maintain manly stubble by #gerund#','help! my beard is #gerund#!','beard wash: worth giving up #gerund#?','save crumbs for later with your majestic chin-bush!','#noun# style beards: manliest thing ever?','for thicker beards, try\n1. #gerund#\n2. testosterone supplements\n3. #gerund#','men with beards = #noun#','why did all my hair migrate to my #noun#?','if you have 5 o\'clock shadows by 1, you may be #noun#','beard going gray? try #gerund#','#noun# or beard implants?','how often does your beard need to #verb#?','do you have to like #gerund# if you have a majestic beard?\n technically no. but maybe you should anyway.'],
+  'noun':['wizard beard','muttonchops','soul patch','neckbeard','handlebar mustache','goatee'],
+  'verb':['shave','trim','hedge-clip','proudly display your facial hair','tickle','groom'],
+  'gerund':['shaving','trimming','hedge-clipping','proudly displaying your facial hair','tickling','balding','grooming'],
+},
+  'life with pets':{
+  'slides':['fido barking too much? try #gerund#','cats mark their territory by #gerund#','cats + dogs = #noun#','#noun# and birds: great apartment pets','saying goodbye: when your pet has #noun#','obedience school tip: always #verb# before walks','that "free" puppy might have #noun#','corgis: little legs, big #noun#','exotic pet concerns:\n1. #noun#\n2. finding a vet\n3. #gerund#','your dog shows he really loves you by #gerund#','#verb# with your pet to make new friends!','leash-training a cat: easier to #verb#!','rabbits need #noun# to really thrive','fuzzy companionship and #noun#'],
+  'noun':['german shepherds','little yappy dogs','fluffballs','doggie doo-doo','birdcage','great danes','yellow labs','bulldogs','siamese cats','hamsters','tropical fish'],
+  'verb':['kennel','crate-train','play fetch','rub fuzzy bellies','sniff butts', 'clean litterboxes','teach tricks','scold with newspaper'],
+  'gerund':['kennelling','crate-training','playing fetch','rubbing fuzzy bellies','sniffing butts','cleaning litterboxes','teaching tricks','scolding with newspaper'],
+},
   /* --template for new slide topic
     '':{
     'slides':[],
