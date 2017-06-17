@@ -1,14 +1,16 @@
+import phaserStateTransition from 'phaser-state-transition'
+
 class Transitions {
     constructor(){
         this.transitions = [
             'SlideLeft',
-            'SlideRight', 
-            'SlideTop', 
-            'SlideBottom', 
-            'ScaleUp', 
-            'BounceLeft', 
+            'SlideRight',
+            'SlideTop',
+            'SlideBottom',
+            'ScaleUp',
+            'BounceLeft',
             'BounceRight',
-            'BounceDown', 
+            'BounceDown',
             'BounceUp',
             'ElasticRight',
             'ElasticLeft'

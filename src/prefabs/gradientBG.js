@@ -7,12 +7,11 @@ class GradientBG extends Phaser.Sprite {
     super(game, 0, 0, 'gradient');
     this.width = game.width;
     this.height = game.height;
-    this.tint = Phaser.Color.hexToRGB(this.darkerColor(game.stage.backgroundColor, 0.3));
+    this.tint = Phaser.Color.hexToRGB(this.gradientDestination(game.stage.backgroundColor, 0.3));
     game.add.existing(this);
   }
 
-  darkerColor (hexString, percentDarker) {
-    console.log(hexString.toString(16));
+  gradientDestination (hexString, percentChange) {
     const trimmed = hexString.toString(16).replace('#', '');
     const rString = trimmed.substring(0,2);
     const gString = trimmed.substring(2,4);
@@ -21,14 +20,18 @@ class GradientBG extends Phaser.Sprite {
     const g = parseInt(gString, 16);
     const b = parseInt(bString, 16);
     const hsl = Phaser.Color.RGBtoHSL(r,g,b);
-    hsl.l = Math.max(0, hsl.l - (percentDarker));
+    if (hsl.l < 0.5) {
+      hsl.l = Math.min(1, hsl.l + (percentChange));
+    } else {
+      hsl.l = Math.max(0, hsl.l - (percentChange));
+    }
     const darker = Phaser.Color.HSLtoRGB(hsl.h, hsl.s, hsl.l);
     let newR = darker.r.toString(16);
     let newG = darker.g.toString(16);
     let newB = darker.b.toString(16);
     newR = '0' + newR;
     newG = '0' + newG;
-    newB = '0' + newB;    
+    newB = '0' + newB;
     return '#' + newR.slice(-2) + newG.slice(-2) + newB.slice(-2);
   };
 
