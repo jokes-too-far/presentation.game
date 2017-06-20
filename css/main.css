@@ -83,3 +83,19 @@ section {
 section, img {
   border: 2px solid black;
 }
+
+img.vendor-logo {
+  /* Forces img to stay inside parent */
+  max-width: 100%;
+}
+
+#stores {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+#stores span {
+  padding: 20px;
+}
+
