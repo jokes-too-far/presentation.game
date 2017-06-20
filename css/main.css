@@ -99,3 +99,14 @@ img.vendor-logo {
   padding: 20px;
 }
 
+#stores span a, #stores span a:visited  {
+  text-decoration: none;
+  color: black;
+}
+
+#stores span h2 {
+  color: black;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0;
+}
+
