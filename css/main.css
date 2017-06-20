@@ -114,3 +114,10 @@ img.vendor-logo {
 #specs li {
   padding-bottom: 5px;
 }
+
+#pitch {
+    font-size: 1.2em;
+    padding: 30px;
+    word-spacing: 7px;
+    max-width: 780px;
+}
