@@ -63,7 +63,7 @@ section {
   margin: auto;
 }
 #image-wrapper, #image-wrapper img {
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -71,10 +71,10 @@ section {
     font-size: 40px;
 }
 .slick-next {
-    right: -45px;
+    right: -75px;
 }
 .slick-prev {
-    left: -45px;
+    left: -75px;
 }
 
 .slick-prev, .slick-next {
