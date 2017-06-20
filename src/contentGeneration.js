@@ -42,18 +42,14 @@ const makeSlides = (game, theme) => {
   const slidesRemaining = game.global.total_slides;
   for (let i=primariesUsed; i < slidesRemaining; ++i) {
     if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
-      slides.push(makeWordSlide(game, primaryTemplates[primariesUsed], secondaryWords));
-      primariesUsed++;
+      slides.push(makeSlide(game, primaryTemplates[primariesUsed++], secondaryWords));
       //console.log('primary', i, Object.keys(primaryTemplates).length);
     } else {
       if (Math.random() >= 0.8 && commonsUsed <= Object.keys(commonTemplates).length){
-        slides.push(makeWordSlide(game, commonTemplates[commonsUsed], primaryWords));
-        commonsUsed++;
+        slides.push(makeSlide(game, commonTemplates[commonsUsed++], primaryWords));
       } else {
-        slides.push(makeWordSlide(game, secondaryTemplates[secondariesUsed], primaryWords));
-        secondariesUsed++;
+        slides.push(makeSlide(game, secondaryTemplates[secondariesUsed++], primaryWords));
         //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
-
       }
     }
   }
@@ -61,13 +57,17 @@ const makeSlides = (game, theme) => {
   if (game.global.addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
     if (primariesUsed < Object.keys(primaryTemplates).length){
-    slides.push(makeWordSlide(game, primaryTemplates[game.global.total_slides], secondaryWords));
+      slides.push(makeSlide(game, primaryTemplates[primariesUsed++], secondaryWords));
     } else {
-    slides.push(makeWordSlide(game, secondaryTemplates[game.global.total_slides], primaryWords));
+      slides.push(makeSlide(game, secondaryTemplates[secondariesUsed++], primaryWords));
     }
   }
 
   return slides;
+};
+
+const makeSlide = (game, word_template, words) => {
+  return makeWordSlide(game, word_template, words);
 };
 
 const makeWordSlide = (game, template, grammar) => {
