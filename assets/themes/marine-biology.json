@@ -1,0 +1,55 @@
+{
+    "marine biology": {
+        "slides": [
+            "loch ness monster: new kind of #noun#?",
+            "can whales really #verb#?",
+            "#gerund# in the Atlantic ocean",
+            "whaling ships, #gerund#, and the environmental devastation",
+            "find missing clownfish by #gerund#",
+            "underwater caves: home to #noun# and #noun#",
+            "top-selling Pacific catch: #noun#",
+            "#gerund#: how the lanternfish finds prey",
+            "electric eels #verb# to generate 500 volts",
+            "are there more mysteries waiting in the depths of the oceans?\nonly #noun# can tell",
+            "treat jellyfish stings by #gerund#",
+            "snorkeling is a popular way to encounter #noun#",
+            "the deep ocean has over 50,000 different kinds of #noun#",
+            "whales \"sing\" to #verb#",
+            "healhty coral will have plenty of #noun#"
+        ],
+        "noun": [
+            "shark",
+            "octopus",
+            "angelfish",
+            "loch ness monster",
+            "great old ones in the deep",
+            "undiscovered species",
+            "shark cage",
+            "mermaids",
+            "coral",
+            "starfish",
+            "whales",
+            "jellyfish",
+            "krill"
+        ],
+        "verb": [
+            "swim with dolphins",
+            "scuba dive",
+            "fish",
+            "splash around",
+            "use sonar",
+            "sail",
+            "visit aquariums"
+        ],
+        "gerund": [
+            "swimming with dolphins",
+            "scuba diving",
+            "fishing",
+            "splashing around",
+            "submarining",
+            "using sonar",
+            "sailing",
+            "visiting aquariums"
+        ]
+    }
+}

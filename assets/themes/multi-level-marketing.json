@@ -1,0 +1,49 @@
+{
+    "multi-level marketing": {
+        "slides": [
+            "never say \"pyramid\": try \"#noun#\" instead!",
+            "growing your percentages by #gerund#",
+            "attend my #gerund# seminar on march 19th!",
+            "how to talk to police about #noun#",
+            "when the jig is up, #verb#",
+            "desperate + #noun# = ideal hire",
+            "#noun# = trickle-up",
+            "#noun# and salesperson attrition",
+            "look reputable by #gerund#",
+            "sell to friends, family, #noun#",
+            "it isn\"t illegal if you #verb#",
+            "own it! be proud when you #verb#",
+            "#noun# and #noun# = top sellers!",
+            "consider #noun# when picking a product line"
+        ],
+        "noun": [
+            "quality product",
+            "obscene profit",
+            "salesperson",
+            "unemployed youth",
+            "lawyer",
+            "college student",
+            "gullible housewives",
+            "seminar",
+            "start-up fee"
+        ],
+        "verb": [
+            "market",
+            "recruit for the company",
+            "evangelize company values",
+            "profit",
+            "flee investigation",
+            "lie",
+            "money-launder"
+        ],
+        "gerund": [
+            "marketing",
+            "recruiting for the company",
+            "evangelizing company values",
+            "profiting",
+            "fleeing investigations",
+            "lying",
+            "money-laundering"
+        ]
+    }
+}

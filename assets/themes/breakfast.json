@@ -1,0 +1,48 @@
+{
+    "balanced breakfast": {
+        "slides": [
+            "new marshmallow shape: #noun#!",
+            "why fry up boring old eggs when you can #verb#?",
+            "#gerund# takes too long for a weekday breakfast",
+            "for a balanced breakfast:\n1. #noun#\n2. #noun#\n3. never forget to #verb# afterwards!",
+            "bangers and #noun#: the british way",
+            "need some citrus with your pancakes? try #noun#",
+            "#noun#: absolutely belongs in the most important meal of the day",
+            "#noun# > sugary cereals",
+            "#gerund#= more fiber in each bowl",
+            "can you still enjoy #noun# if it\"s after 10am?",
+            "kids love the taste of #noun#",
+            "#noun# for breakfast???",
+            "#noun# and diabetes in breakfast-loving youths"
+        ],
+        "noun": [
+            "sugar",
+            "wheat bran",
+            "burnt toast",
+            "milk and cereal",
+            "pancakes",
+            "breakfast",
+            "bacon and eggs",
+            "grapefruit",
+            "loaded omelettes"
+        ],
+        "verb": [
+            "pour cereal",
+            "juice oranges",
+            "eat bacon",
+            "fry flapjacks",
+            "peel oranges",
+            "sizzle",
+            "smell that bacon"
+        ],
+        "gerund": [
+            "pouring cereal",
+            "juicing oranges",
+            "eating bacon",
+            "frying flapjacks",
+            "breakfasting",
+            "sizzling",
+            "smelling that bacon"
+        ]
+    }
+}

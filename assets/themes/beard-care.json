@@ -1,0 +1,48 @@
+{
+    "beard care": {
+        "slides": [
+            "5 inch beards > 2 inch beards > #noun#",
+            "do beards make you #noun#?",
+            "flower beards and #noun#",
+            "maintain manly stubble by #gerund#",
+            "help! my beard is #gerund#!",
+            "beard wash: worth giving up #gerund#?",
+            "your majestic chin-bush can even let you save #noun# for later enjoyment!",
+            "#noun# beards: manliest thing ever?",
+            "for thicker beards, try\n1. #gerund#\n2. testosterone supplements\n3. #gerund#",
+            "men with beards = #noun#",
+            "why did all my hair migrate to my #noun#?",
+            "if you have 5 o\"clock shadows by 1, check for #noun#",
+            "beard going gray? try #gerund#",
+            "#noun# or beard implants?",
+            "how often does your beard need to #verb#?",
+            "do you have to like #gerund# if you have a majestic beard?\n technically no. but maybe you should anyway."
+        ],
+        "noun": [
+            "wizard beard",
+            "muttonchops",
+            "soul patch",
+            "neckbeard",
+            "handlebar mustache",
+            "goatee",
+            "pencil mustache"
+        ],
+        "verb": [
+            "shave",
+            "trim",
+            "hedge-clip",
+            "proudly display your facial hair",
+            "tickle",
+            "groom"
+        ],
+        "gerund": [
+            "shaving",
+            "trimming",
+            "hedge-clipping",
+            "proudly displaying your facial hair",
+            "tickling",
+            "balding",
+            "grooming"
+        ]
+    }
+}

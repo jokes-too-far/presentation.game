@@ -1,0 +1,47 @@
+{
+    "romance": {
+        "slides": [
+            "tall, dark & #noun#",
+            "does your crush #verb#?",
+            "how to meet your crush:\n1. #verb# him\n2. find #noun#\n3. happily ever after",
+            "do all movie stars #verb#?",
+            "unique names like \"#noun# George\" = way hotter",
+            "#noun# in hollywood",
+            "what if papparazzi caught your crush #gerund#?",
+            "most movie stars = secretly #verb# fans!",
+            "#noun# = squeeeeeee!",
+            "you know you want your crush to #verb#...\n and (spoiler!) he probably already does!",
+            "learn what your crush likes:\n1. #noun#\n2. shy girls\n3. #gerund#",
+            "have you read \"early evening: #gerund#\"?",
+            "robert #noun#: hottest man of the year"
+        ],
+        "noun": [
+            "celebrity crush",
+            "single movie stars",
+            "sexy movie villains",
+            "dreamy blondes",
+            "dreamboat",
+            "mr. right",
+            "badonk-a-donk",
+            "sea-blue eyes",
+            "perfect teeth"
+        ],
+        "verb": [
+            "stalk",
+            "moisturize",
+            "date",
+            "idolize",
+            "gossip",
+            "propose",
+            "break up"
+        ],
+        "gerund": [
+            "idolizing",
+            "dating",
+            "stalking",
+            "gossipping",
+            "proposing",
+            "breaking up"
+        ]
+    }
+}

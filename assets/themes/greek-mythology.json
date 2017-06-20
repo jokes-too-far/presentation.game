@@ -1,0 +1,49 @@
+{
+    "greek mythology": {
+        "slides": [
+            "did zeus just turn himself into #noun#?",
+            "myths to explain the origin of #noun#",
+            "greek gods and their #gerund# escapades",
+            "poseidon is also the god of #noun#",
+            "hera punishes infidelity with #gerund#",
+            "tragedy, comedy, and #gerund# with #noun#",
+            "#noun#: all greek to me!",
+            "athena sprang full-formed from the #noun# of zeus",
+            "hades, persephone, and #gerund# =  why we have winter now",
+            "cronus likes to #verb#. Yes, even his kids",
+            "#noun#, god of the #noun#",
+            "#noun# + #noun# = pegasus",
+            "the ancient greeks would worship aphrodite by #gerund#"
+        ],
+        "noun": [
+            "fiery chariot",
+            "doric, ionic, and corinthian columns",
+            "extra-marital demigod babby",
+            "oracle",
+            "cerberus",
+            "river styx",
+            "lightning bolt",
+            "homemade, heat-sensitive wings"
+        ],
+        "verb": [
+            "murder",
+            "seduce",
+            "kidnap",
+            "cannibalize",
+            "curse",
+            "prophesy",
+            "escape",
+            "throw lightningbolts"
+        ],
+        "gerund": [
+            "murdering",
+            "seducing",
+            "kidnapping",
+            "cannibalizing",
+            "cursing",
+            "prophesying",
+            "escaping",
+            "throwing lightningbolts"
+        ]
+    }
+}

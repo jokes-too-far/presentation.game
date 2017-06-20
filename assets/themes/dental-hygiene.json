@@ -1,0 +1,47 @@
+{
+    "dental hygiene": {
+        "slides": [
+            "so you\"re inconsistent about flossing.\nmake up for it by #gerund#",
+            "#noun#: full of cavity-causing sugar!",
+            "#verb# twice a day for great breath",
+            "modern dentist offices will have #noun#",
+            "yellowing teeth? consider #gerund#",
+            "#noun# now, or dentures in ten years?",
+            "use a pea-sized amount of toothpaste when you #verb#",
+            "toothache? your dentist may suggest #gerund#",
+            "alternatives to daily flossing: \n1. mouthwash\n2. #gerund#\n3. #noun#",
+            "be careful! sugary foods cause #noun#",
+            "local anesthesia or laughing gas for #noun# surgery?"
+        ],
+        "noun": [
+            "toothbrush",
+            "toothpaste",
+            "silk floss",
+            "mouthwash",
+            "cavities",
+            "shiny chompers",
+            "dental fillings",
+            "root canal",
+            "bad breath",
+            "yellow teeth",
+            "canine teeth",
+            "wisdom teeth"
+        ],
+        "verb": [
+            "brush",
+            "floss",
+            "gargle",
+            "pull teeth",
+            "drill cavities",
+            "use mouthwash"
+        ],
+        "gerund": [
+            "brushing",
+            "flossing",
+            "gargling",
+            "pulling teeth",
+            "drilling cavities",
+            "using mouthwash"
+        ]
+    }
+}

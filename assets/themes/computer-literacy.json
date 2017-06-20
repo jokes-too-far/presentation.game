@@ -1,0 +1,48 @@
+{
+    "computer literacy": {
+        "slides": [
+            "#gerund# the mouse is easier than it looks!",
+            "monitor, keyboard, and #noun#",
+            "#gerund.a# speed of 120 is quite respectable",
+            "be careful not to #verb# while navigating the internet",
+            "secure #noun#:\n1. at least 8 characters\n2. at least 1 #noun#\n3. capital and lower case",
+            "search engines help you find #noun#",
+            "antivirus or #noun#?",
+            "your own printer, or shared #noun#?",
+            "your grandchildren can answer questions about #noun#",
+            "don\"t be discouraged if you #verb# once in a while"
+        ],
+        "noun": [
+            "mouse",
+            "keyboard",
+            "password",
+            "username",
+            "advertisement",
+            "wobsite",
+            "internet browser",
+            "file system",
+            "monitor",
+            "central processing unit",
+            "graphics card",
+            "computer fan"
+        ],
+        "verb": [
+            "mis-type",
+            "forget",
+            "key",
+            "click",
+            "doubleclick",
+            "restart",
+            "disassemble"
+        ],
+        "gerund": [
+            "mis-typing",
+            "forgetting",
+            "keying",
+            "clicking",
+            "doubleclicking",
+            "restarting",
+            "disassembling"
+        ]
+    }
+}

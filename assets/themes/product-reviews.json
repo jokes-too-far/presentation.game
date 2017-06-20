@@ -1,0 +1,52 @@
+{
+    "product reviews": {
+        "slides": [
+            "the dreaded one-star review: did you remember to #verb#?",
+            "10% of reviewers actually tried your #noun#",
+            "flashy packaging vs\ncontent vs\n#noun#",
+            "#gerund# increases word of mouth",
+            "search engine optimization with #noun#",
+            "successful unboxing videos #verb#!",
+            "check your virtual storefront for #noun# daily",
+            "#noun# making cheap knock-offs",
+            "is it ever okay to #verb# for likes?",
+            "get #noun# from wholesalers",
+            "listen to your customers: they need #noun#!",
+            "fast shipping = higher #noun# (on average)",
+            "get your friends and family to leave you #noun# reviews"
+        ],
+        "noun": [
+            "target audiences",
+            "competitive price",
+            "craftsmanship",
+            "cheap foreign knock-offs",
+            "giveaway",
+            "ratings",
+            "rave reviews",
+            "unbelievable deals",
+            "return policy"
+        ],
+        "verb": [
+            "unbox",
+            "bribe",
+            "ship",
+            "copyright",
+            "manufacture",
+            "advertise",
+            "complain on the internet",
+            "return your product",
+            "leave bad reviews"
+        ],
+        "gerund": [
+            "unboxing",
+            "bribing",
+            "shipping",
+            "copyrighting",
+            "manufacturing",
+            "advertising",
+            "complaining on the internet",
+            "returning your product",
+            "leaving bad reviews"
+        ]
+    }
+}

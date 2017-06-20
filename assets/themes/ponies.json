@@ -1,0 +1,44 @@
+{
+    "ponies": {
+        "slides": [
+            "every little girl dreams of #noun# of her very own",
+            "my pony\"s friendship is #noun#",
+            "everyone likes ponies that #verb#",
+            "preteens and #gerund# ponies",
+            "top pony colors:\n1. Pink\n2. Purple\n3. #noun# blue",
+            "merchandising and #noun#!",
+            "could boys like ponies if they #verb#?",
+            "#gerund# for the \"brony\" demographic",
+            "hooves and cute #noun#",
+            "can you #verb# with ponies? yes. but should you?",
+            "#noun# can teach girls self-esteem"
+        ],
+        "noun": [
+            "magic",
+            "rainbows",
+            "sparkles",
+            "pretty mares",
+            "best friends",
+            "friendship",
+            "unicorns",
+            "pegasus",
+            "herd"
+        ],
+        "verb": [
+            "prance",
+            "resolve conflict",
+            "canter",
+            "neigh",
+            "gallop",
+            "trot"
+        ],
+        "gerund": [
+            "prancing",
+            "resolving conflict",
+            "cantering",
+            "neighing",
+            "galloping",
+            "trotting"
+        ]
+    }
+}

@@ -14,7 +14,7 @@ class Menu extends Phaser.State {
     styles.backgroundColor(this.game);
     new GradientBG(this.game);
 
-    const theme = contentGeneration.pickTheme();
+    const theme = contentGeneration.pickTheme(this.game);
     this.game.global.title = contentGeneration.generateTitle(this.game, theme);
     if (Math.random() < (this.game.global.bonusSlideChancePercent/100)){
       this.game.global.addBonusSlide = 1;

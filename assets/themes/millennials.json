@@ -1,0 +1,46 @@
+{
+    "millennials": {
+        "slides": [
+            "the \"harry potter\" generation and the #noun# of the #noun#",
+            "#noun# in coffeeshops?",
+            "locally-produced #noun#",
+            "bigger eyeglasses make for bolder #noun#",
+            "#verb# with \"that internet thing\" millennials like",
+            "#noun#: sign of the apocalypse?",
+            "college degree = entry level #noun#",
+            "#gerund#: new fad with the college crowd!",
+            "appeal to millennials with #noun#!",
+            "top millennial attractors:\n1. #noun#\n2. green #noun#\n3. easy to #verb#",
+            "coloring books and #verb# time = comfort",
+            "how many millennials really #verb#?",
+            "show millennials #noun#, and they\"ll look away from their phones"
+        ],
+        "noun": [
+            "hipsters",
+            "cell phones",
+            "social media",
+            "coffee",
+            "artisanal pizza",
+            "craft beer",
+            "safe spaces",
+            "fidget spinner"
+        ],
+        "verb": [
+            "frolf",
+            "socialize",
+            "color",
+            "post on facebook",
+            "trend-set",
+            "use social media"
+        ],
+        "gerund": [
+            "frolfing",
+            "playing on phones",
+            "trend-setting",
+            "socializing",
+            "coloring",
+            "using social media",
+            "dabbing"
+        ]
+    }
+}

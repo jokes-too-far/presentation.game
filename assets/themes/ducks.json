@@ -1,0 +1,46 @@
+{
+    "ducks": {
+        "slides": [
+            "They quack, but can they #verb#?",
+            "don\"t ever #verb# with geese (especially canadian)",
+            "<PRESENTER WILL NOW DEMONSTRATE #noun# DUCK CALL>",
+            "replace traditional decoys with #noun#",
+            "The difference between a female duck and a mallard: #noun#",
+            "woo orinthologists with quackers and #noun#",
+            "do they fly south just to #verb#?",
+            "attract ducks to your local park with #noun#",
+            "visit ponds in early spring to catch a glimpse of #noun# nests",
+            "rubber vs real: a tale of #noun#"
+        ],
+        "noun": [
+            "mallard",
+            "duck egg",
+            "darkwing duck",
+            "majestic space duck",
+            "delicious, smoked duck",
+            "fowl play",
+            "duck call",
+            "bread crumbs",
+            "feathered friends",
+            "flocks"
+        ],
+        "verb": [
+            "quack",
+            "fly",
+            "roast",
+            "migrate",
+            "nest",
+            "frolick",
+            "flock"
+        ],
+        "gerund": [
+            "flying",
+            "roasting",
+            "quacking",
+            "migrating",
+            "nesting",
+            "frolicking",
+            "flocking"
+        ]
+    }
+}

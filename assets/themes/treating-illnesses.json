@@ -1,0 +1,45 @@
+{
+    "treating illnesses": {
+        "slides": [
+            "the uncommon cold and your #noun#",
+            "doctors hate him!\n one neat trick about #noun#",
+            "#noun# and serious side effects?",
+            "when do you need to call for #noun#?",
+            "living with chronic #noun#",
+            "10 glasses of #noun# a day",
+            "controversial health studies on adults who #verb#",
+            "suffering from #noun#? try #gerund#!",
+            "consult your doctor if you #verb#",
+            "do apples help you #verb#?",
+            "can vaccines cause #noun#?"
+        ],
+        "noun": [
+            "fatigue",
+            "homeopathic remedies",
+            "cure for cancer",
+            "balanced diet",
+            "headache",
+            "cramps",
+            "ancient chinese remedies",
+            "jaundice",
+            "western medicine"
+        ],
+        "verb": [
+            "sneeze",
+            "cough",
+            "dilute",
+            "home-brew",
+            "vomit",
+            "vaccinate",
+            "diagnose",
+            "juice-cleanse"
+        ],
+        "gerund": [
+            "diluting",
+            "vomiting",
+            "coughing",
+            "diagnosing",
+            "juice-cleansing"
+        ]
+    }
+}

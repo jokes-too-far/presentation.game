@@ -1,0 +1,50 @@
+{
+    "modern city life": {
+        "slides": [
+            "keeping #noun# off your lawn",
+            "high-rises and #noun#",
+            "it\"s the 21st century.\nwhatever happened to my flying #noun#?",
+            "should you #verb#, or take public transportation?",
+            "feeling lost in a crowd? try\n1. #gerund#\n2. seek #noun#\n 3. never ever #verb#!",
+            "the dating scene: singles that #verb#",
+            "renting vs #gerund#",
+            "the blight of urban #noun#",
+            "fire: a serious #noun# risk",
+            "carry spare change to cover #gerund#",
+            "condos: the best place to #verb#",
+            "#noun# in the urban jungle",
+            "longing for the suburbs? remember, in the city you can #verb#"
+        ],
+        "noun": [
+            "robocop",
+            "nightlife",
+            "skyscrapers",
+            "urban blight",
+            "smog",
+            "tindr",
+            "your mayor",
+            "department stores",
+            "traffic jams",
+            "crowds",
+            "city parks"
+        ],
+        "verb": [
+            "rent",
+            "work downtown",
+            "scooter",
+            "eat out",
+            "find love in the city",
+            "ride-share",
+            "recycle"
+        ],
+        "gerund": [
+            "renting",
+            "working downtown",
+            "scootering",
+            "eating out",
+            "finding love in the city",
+            "ride-sharing",
+            "recycling"
+        ]
+    }
+}

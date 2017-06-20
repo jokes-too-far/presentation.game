@@ -1,0 +1,52 @@
+{
+    "pop music": {
+        "slides": [
+            "\"baby, baby, #noun#\"",
+            "\"don\"t go #gerund# my heart\"",
+            "chart-topper: \"i want to #verb#\"",
+            "why so many songs about #noun#?",
+            "top-selling artist of 2017: \"justin #noun#\"",
+            "vocals > guitar > #noun#",
+            "lip-synching and #gerund#",
+            "sources of band revenue:\n1. #noun# sales\n2. concerts \n3. #noun#",
+            "#noun#: they just don\"t get it",
+            "#gerund#: so last year",
+            "grammy-nominated #noun#",
+            "live in concert! \"#noun# and the #noun#\"",
+            "free tickets: are they worth your #noun#?",
+            "\"#noun# and the #noun#\": better than the beatles?"
+        ],
+        "noun": [
+            "heart",
+            "sweet love",
+            "li\"l somethin-somethin",
+            "sugar daddy",
+            "teen idol",
+            "teeny-bopper",
+            "raving fans",
+            "teenage girls",
+            "lips",
+            "eyes",
+            "hair",
+            "heartbreak"
+        ],
+        "verb": [
+            "love 5-ever",
+            "smooch",
+            "sing",
+            "lip-synch",
+            "croon",
+            "touch",
+            "\"dance\" (you know what it really means)"
+        ],
+        "gerund": [
+            "loving 5-ever",
+            "smooching",
+            "singing",
+            "lip-synching",
+            "crooning",
+            "touching",
+            "\"dancing\" (you know what it really means)"
+        ]
+    }
+}

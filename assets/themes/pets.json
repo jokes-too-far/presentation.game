@@ -1,0 +1,53 @@
+{
+    "life with pets": {
+        "slides": [
+            "fido barking too much? try #gerund#",
+            "cats mark their territory by #gerund#",
+            "cats + dogs = #noun#",
+            "#noun# and birds: great apartment pets",
+            "saying goodbye: when your pet has #noun#",
+            "obedience school tip: always #verb# before walks",
+            "that \"free\" puppy might have #noun#",
+            "corgis: little legs, big #noun#",
+            "exotic pet concerns:\n1. #noun#\n2. finding a vet\n3. #gerund#",
+            "your dog shows he really loves you by #gerund#",
+            "#verb# with your pet to make new friends!",
+            "leash-training a cat: easier to #verb#!",
+            "rabbits need #noun# to really thrive",
+            "fuzzy companionship and #noun#"
+        ],
+        "noun": [
+            "german shepherds",
+            "little yappy dogs",
+            "fluffballs",
+            "doggie doo-doo",
+            "birdcage",
+            "great danes",
+            "yellow labs",
+            "bulldogs",
+            "siamese cats",
+            "hamsters",
+            "tropical fish"
+        ],
+        "verb": [
+            "kennel",
+            "crate-train",
+            "play fetch",
+            "rub fuzzy bellies",
+            "sniff butts",
+            "clean litterboxes",
+            "teach tricks",
+            "scold with newspaper"
+        ],
+        "gerund": [
+            "kennelling",
+            "crate-training",
+            "playing fetch",
+            "rubbing fuzzy bellies",
+            "sniffing butts",
+            "cleaning litterboxes",
+            "teaching tricks",
+            "scolding with newspaper"
+        ]
+    }
+}

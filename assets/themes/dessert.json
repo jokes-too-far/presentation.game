@@ -1,0 +1,48 @@
+{
+    "just desserts": {
+        "slides": [
+            "behind the perfect petit-fours: #noun#",
+            "choosing between trifles and #noun#",
+            "#verb# ahead of time = crisper pies!",
+            "#noun#: overrepresented in the dessert course?",
+            "avoid \"raw-inside\" bakes by #gerund#",
+            "baking the perfect #noun# takes patience",
+            "#noun# problems mean your souffle may deflate",
+            "#noun#: over 1,000 calories!",
+            "#noun# has a long history in the British Isles",
+            "do cookies or brownies benefit more from #gerund#?",
+            "wedding cakes need to #verb#",
+            "top your delicious #noun# creation with #noun#!",
+            "top chefs agree: you simply must #verb#"
+        ],
+        "noun": [
+            "chocolate",
+            "buttercream",
+            "raspberry",
+            "sponge",
+            "cake",
+            "icing",
+            "cookie",
+            "fondant",
+            "crisp crust",
+            "nutty goodness"
+        ],
+        "verb": [
+            "bake",
+            "mix",
+            "taste",
+            "decorate",
+            "whip",
+            "burn",
+            "glaze"
+        ],
+        "gerund": [
+            "baking",
+            "mixing",
+            "whipping",
+            "decorating",
+            "burning",
+            "glazing"
+        ]
+    }
+}

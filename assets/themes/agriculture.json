@@ -1,0 +1,45 @@
+{
+    "agriculture": {
+        "slides": [
+            "do you, or i, or anyone know\n how oats, peas, beans, and #noun# grow?",
+            "in the northern hemisphere,\nearly march is prime #noun# season",
+            "pros of genetically modified crops:\n1. bigger \n2. resistant to #gerund#\n3. lovely color",
+            "cons of genetically modified crops: \n1. risk of #noun#\n2. \"#noun#\"\n3. worth the bad press?",
+            "never use tractors in fields with #noun#!",
+            "#noun# = easy blue ribbon at the state fair",
+            "fertilize strawberry fields with #noun#?",
+            "you may disagree,\nbut I say radishes are superior to #noun#",
+            "leftover biomatter can fuel #noun#",
+            "#gerund#: good or bad for your rutabaga fields?",
+            "believe it or not,\neggs come from the #noun# of the chicken"
+        ],
+        "noun": [
+            "corn",
+            "combine harvesters",
+            "heritage tomatoes",
+            "G.m.o.s (genetically modified organisms)",
+            "cows",
+            "sheep",
+            "prize-winning cucumber",
+            "rutabagas",
+            "sweetpeas",
+            "strawberries"
+        ],
+        "verb": [
+            "harvest crops",
+            "fertilize",
+            "mulch",
+            "spray pesticide",
+            "till fields",
+            "genetically engineer"
+        ],
+        "gerund": [
+            "harvesting crops",
+            "fertilizing",
+            "mulching",
+            "spraying pesticide",
+            "tilling fields",
+            "genetically engineering"
+        ]
+    }
+}
