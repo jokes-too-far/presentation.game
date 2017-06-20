@@ -26,6 +26,12 @@ class Preloader extends Phaser.State {
        for (const theme of themeList) {
         this.game.load.json('theme-' + theme, 'assets/themes/'+theme+'.json');
        }
+
+       for (const theme of themeList) {
+         for (let i=1; i<=30; ++i) {
+          this.game.load.image('theme-picture-' + theme + i, 'assets/pictures/'+theme+i+'.jpg');
+         }
+       }
   }
 
   onLoadComplete() {

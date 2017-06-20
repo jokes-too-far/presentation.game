@@ -3,8 +3,11 @@
 class RandomImage extends Phaser.Sprite {
 
   //initialization code in the constructor
-  constructor(game, x, y, frame) {
-    super(game, x, y, 'randomImage', frame);
+  constructor(game, theme) {
+    const i = Math.ceil(Math.random() * 30);
+    console.log(i);
+    super(game, game.world.centerX, game.world.centerY, 'theme-picture-' + theme + i);
+    this.anchor.set(0.5);
   }
 
   //Code ran on each frame of game

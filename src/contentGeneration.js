@@ -1,4 +1,5 @@
 import CenteredContent from './prefabs/centeredContent'
+import RandomImage from './prefabs/randomImage'
 import tracery from './vendor/tracery'
 
 const commonTheme = {
@@ -23,6 +24,7 @@ const feedbackQuestions = {
 let dictionary = {};
 
 const makeSlides = (game, theme) => {
+  console.log(dictionary);
   const primaryTemplates = dictionary[theme.primary]['slides'];
   const secondaryTemplates = dictionary[theme.secondary]['slides'];
   const commonTemplates = commonTheme.slides;
@@ -42,13 +44,13 @@ const makeSlides = (game, theme) => {
   const slidesRemaining = game.global.total_slides;
   for (let i=primariesUsed; i < slidesRemaining; ++i) {
     if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
-      slides.push(makeSlide(game, primaryTemplates[primariesUsed++], secondaryWords));
+      slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], primaryTemplates[primariesUsed++], secondaryWords));
       //console.log('primary', i, Object.keys(primaryTemplates).length);
     } else {
       if (Math.random() >= 0.8 && commonsUsed <= Object.keys(commonTemplates).length){
-        slides.push(makeSlide(game, commonTemplates[commonsUsed++], primaryWords));
+        slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], commonTemplates[commonsUsed++], primaryWords));
       } else {
-        slides.push(makeSlide(game, secondaryTemplates[secondariesUsed++], primaryWords));
+        slides.push(makeSlide(game, dictionary[theme.secondary]['internal_id'], secondaryTemplates[secondariesUsed++], primaryWords));
         //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
       }
     }
@@ -57,17 +59,21 @@ const makeSlides = (game, theme) => {
   if (game.global.addBonusSlide) {
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
     if (primariesUsed < Object.keys(primaryTemplates).length){
-      slides.push(makeSlide(game, primaryTemplates[primariesUsed++], secondaryWords));
+      slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], primaryTemplates[primariesUsed++], secondaryWords));
     } else {
-      slides.push(makeSlide(game, secondaryTemplates[secondariesUsed++], primaryWords));
+      slides.push(makeSlide(game, dictionary[theme.secondary]['internal_id'], secondaryTemplates[secondariesUsed++], primaryWords));
     }
   }
 
   return slides;
 };
 
-const makeSlide = (game, word_template, words) => {
-  return makeWordSlide(game, word_template, words);
+const makeSlide = (game, internal_id, word_template, words) => {
+  if (Math.random() < 0.2) {
+    return new RandomImage(game, internal_id);
+  } else {
+    return makeWordSlide(game, word_template, words);
+  }
 };
 
 const makeWordSlide = (game, template, grammar) => {
@@ -114,7 +120,14 @@ const pickTheme = (game) => {
 
   // TODO - extract method for initing dictionary
   for (const theme of game.global.themes) {
-    dictionary = Object.assign(dictionary, game.cache.getJSON('theme-' + theme));
+    const annotatedTheme = Object.assign({}, game.cache.getJSON('theme-' + theme));
+    for (const prop in annotatedTheme) {
+      console.log(annotatedTheme, prop);
+      if (annotatedTheme.hasOwnProperty(prop))
+        annotatedTheme[prop]['internal_id'] = theme;
+    }
+    console.log(annotatedTheme);
+    dictionary = Object.assign(dictionary, annotatedTheme);
   }
   const themes = Object.keys(dictionary);
   Phaser.ArrayUtils.shuffle(themes);
