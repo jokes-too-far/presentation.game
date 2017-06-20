@@ -111,3 +111,6 @@ img.vendor-logo {
   -webkit-text-stroke-width: 0;
 }
 
+#specs li {
+  padding-bottom: 5px;
+}
