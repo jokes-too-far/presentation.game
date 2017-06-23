@@ -8,11 +8,10 @@ class Slide extends Phaser.State {
   init(slides) {
     this.slides = slides;
     if (this.game.global.addBonusSlide){
-      this.slideNumber = this.game.global.total_slides +2 - (this.slides.length - 1);
+      this.slideNumber = this.game.global.total_slides + 2 - (this.slides.length - 1);
     } else {
       this.slideNumber = this.game.global.total_slides - (this.slides.length - 1);
     }
-    console.log('slides:', slides);
   }
 
   create() {
