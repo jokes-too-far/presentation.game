@@ -3,6 +3,7 @@ import styles from '../styles'
 
 import GradientBG from '../prefabs/gradientBG'
 import CenteredContent from '../prefabs/centeredContent'
+import TextButton from '../prefabs/textButton'
 
 class Menu extends Phaser.State {
 
@@ -25,7 +26,7 @@ class Menu extends Phaser.State {
     const slides = contentGeneration.makeSlides(this.game, theme);
     new CenteredContent(this.game, this.game.global.title);
 
-    this.input.onDown.add(() => {
+    new TextButton(this.game, this.game.world.centerX, this.game.world.height * 0.7, 'Click here to Present', () => {
       this.game.state.start('slide', null, null, true, false, slides);
     });
   }

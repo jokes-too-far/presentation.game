@@ -22,6 +22,7 @@ class Preloader extends Phaser.State {
 
        this.game.load.image('gradient', 'assets/gradient.png');
        this.game.load.image('pixel', 'assets/pixel.png');
+       this.game.load.image('button-border', 'assets/button-border.png');
 
        const themeList = this.game.global.themes; 
        for (const theme of themeList) {
