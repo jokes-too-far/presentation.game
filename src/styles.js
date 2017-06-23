@@ -9,6 +9,15 @@ const titleSizedFont = (game) => {
     };
 };
 
+const labelFont = (game) => {
+    return {
+        font: '32px Arial',
+        fill: '#ffffff',
+        align: 'center',
+        strokeThickness: 4,
+    };
+};
+
 const supportingSizedFont = (game) => {
     return {
         font: '16px Arial',
@@ -30,6 +39,7 @@ module.exports = {
     backgroundColor: randomTheme,
     fonts: {
         big: titleSizedFont,
+        medium: labelFont,
         small: supportingSizedFont,
     }
 };

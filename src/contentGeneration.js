@@ -1,4 +1,5 @@
 import CenteredContent from './prefabs/centeredContent'
+import BarChart from './prefabs/barChart'
 import RandomImage from './prefabs/randomImage'
 import tracery from './vendor/tracery'
 
@@ -24,7 +25,6 @@ const feedbackQuestions = {
 let dictionary = {};
 
 const makeSlides = (game, theme) => {
-  console.log(dictionary);
   const primaryTemplates = dictionary[theme.primary]['slides'];
   const secondaryTemplates = dictionary[theme.secondary]['slides'];
   const commonTemplates = commonTheme.slides;
@@ -71,6 +71,8 @@ const makeSlides = (game, theme) => {
 const makeSlide = (game, internal_id, word_template, words) => {
   if (Math.random() < 0.2) {
     return new RandomImage(game, internal_id);
+  } else if (Math.random() < 0.3) {
+    return new BarChart(game);
   } else {
     return makeWordSlide(game, word_template, words);
   }
@@ -122,11 +124,9 @@ const pickTheme = (game) => {
   for (const theme of game.global.themes) {
     const annotatedTheme = Object.assign({}, game.cache.getJSON('theme-' + theme));
     for (const prop in annotatedTheme) {
-      console.log(annotatedTheme, prop);
       if (annotatedTheme.hasOwnProperty(prop))
         annotatedTheme[prop]['internal_id'] = theme;
     }
-    console.log(annotatedTheme);
     dictionary = Object.assign(dictionary, annotatedTheme);
   }
   const themes = Object.keys(dictionary);
