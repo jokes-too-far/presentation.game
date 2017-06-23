@@ -12,6 +12,20 @@ class TextButtonBorder extends Phaser.Sprite {
     this.inputEnabled = true;
     this.events.onInputDown.add(callback);
 
+    const shiftTween = Phaser.Timer.SECOND * 3/ 5 ;
+    const shiftEase = Phaser.Easing.Exponential.Out;
+
+    this.events.onInputOver.add(() => {
+      if (parent.animation) parent.animation.stop();
+      parent.animation = game.add.tween(parent).to({x: parent.originalX + 20}, shiftTween, shiftEase);
+      parent.animation.start();
+    });
+    this.events.onInputOut.add(() => {
+      if (parent.animation) parent.animation.stop();
+      parent.animation = game.add.tween(parent).to({x: parent.originalX}, shiftTween, shiftEase);
+      parent.animation.start();
+    });
+
     game.add.existing(this);
   }
 
