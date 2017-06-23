@@ -21,6 +21,7 @@ class Preloader extends Phaser.State {
        this.game.load.audio('beep', 'assets/beep.ogg');
 
        this.game.load.image('gradient', 'assets/gradient.png');
+       this.game.load.image('pixel', 'assets/pixel.png');
 
        const themeList = this.game.global.themes; 
        for (const theme of themeList) {
