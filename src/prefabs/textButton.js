@@ -7,7 +7,7 @@ class TextButton extends Phaser.Text {
   //initialization code in the constructor
   constructor(game, x, y, text, callback) {
     super(game, x, y, text, styles.fonts.medium(game));
-    this.anchor.set(0.5);
+    this.anchor.set(0, 0.5);
     this.originalX = x;
 
     game.add.existing(this);

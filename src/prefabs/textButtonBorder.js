@@ -7,10 +7,12 @@ class TextButtonBorder extends Phaser.Sprite {
     super(game, parent.x, parent.y, 'button-border');
     this.width = parent.width * 1.1;
     this.height = parent.height * 1.2;
-    this.anchor.set(0.5);
+    this.anchor.set(parent.anchor.x, parent.anchor.y);
 
     this.inputEnabled = true;
-    this.events.onInputDown.add(callback);
+    this.events.onInputDown.add(() => {
+      callback();
+    });
 
     const shiftTween = Phaser.Timer.SECOND * 3/ 5 ;
     const shiftEase = Phaser.Easing.Exponential.Out;
