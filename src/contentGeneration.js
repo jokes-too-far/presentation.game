@@ -68,13 +68,14 @@ const makeSlides = (game, theme) => {
   return slides;
 };
 
-const makeSlide = (game, internal_id, word_template, words) => {
-  if (Math.random() < 0.2) {
+const makeSlide = (game, internal_id, slides, words) => {
+  const whichSlide = Math.random();
+  if (whichSlide < 0.2) {
     return new RandomImage(game, internal_id);
-  } else if (Math.random() < 0.3) {
-    return new BarChart(game);
+  } else if (whichSlide < 0.3) {
+    return new BarChart(game, words);
   } else {
-    return makeWordSlide(game, word_template, words);
+    return makeWordSlide(game, slides, words);
   }
 };
 
