@@ -14,7 +14,7 @@ const presenterName = {
   'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol','llana','brunhilda','x','pierce','john'],
   'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east'],
   'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski'],
-  'profession':['housewife','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer','flight attendant','handyman','plumber'],
+  'profession':['homemaker','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer','flight attendant','handyman','plumber'],
   'trivia':['2 kids',
             'avid gardener',
             '72 teeth',

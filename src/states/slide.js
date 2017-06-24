@@ -2,6 +2,7 @@ import GradientBG from '../prefabs/gradientBG'
 import SlideTitle from '../prefabs/slideTitle'
 import SlideNumber from '../prefabs/slideNumber'
 import SlideTimer from '../prefabs/slideTimer'
+import TextButton from '../prefabs/textButton'
 
 class Slide extends Phaser.State {
 
@@ -41,6 +42,10 @@ class Slide extends Phaser.State {
     // Actual content
     const content = this.slides[0];
     this.game.add.existing(content);
+
+    new TextButton(this.game, 25, this.game.world.height * 0.8, 'Back to menu', () => {
+      this.game.state.start('menu')
+    });
   }
 
   update() {}
