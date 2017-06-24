@@ -11,15 +11,40 @@ const commonTheme = {
 };
 
 const presenterName = {
-  'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol'],
+  'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol','llana','brunhilda','x','pierce','john'],
   'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east'],
   'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski'],
-  'profession':['housewife','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer'],
-  'trivia':['2 kids','avid gardener','72 teeth','this is my 200th presentation!','raise corgis','related to abraham lincoln','visited 6 continents','no hobbies of interest'],
+  'profession':['housewife','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer','flight attendant','handyman','plumber'],
+  'trivia':['2 kids',
+            'avid gardener',
+            '72 teeth',
+            'this is my 200th presentation!',
+            'raise corgis',
+            'related to abraham lincoln',
+            'visited 6 continents',
+            'no hobbies of interest',
+            'afraid of loud noises',
+            'avid bodybuilder',
+            'rhodes scholar'],
 };
 
 const feedbackQuestions = {
-  'question':['presenter knew the subject matter well','pacing of the presentation was good','i learned a lot from this presentation','presenter captured my interest','presenter was able to answer questions','presenter was devilishly handsome','appropriate use of visual aids','presentation was appropriate for my age group','presentation was coherent','presentation was relevant to my interests','presenter made good use of the daily vocabulary words','i can apply what i learned from this presentation to my daily life','presentation reinforced family values','presentation seemed well rehearsed','presentation inspired me to give 110 %','presenter covered both sides of the controversy'],
+  'question':['presenter knew the subject matter well',
+              'pacing of the presentation was good',
+              'i learned a lot from this presentation',
+              'presenter captured my interest',
+              'presenter was able to answer questions',
+              'presenter was devilishly handsome',
+              'appropriate use of visual aids',
+              'presentation was appropriate for my age group',
+              'presentation was coherent',
+              'presentation was relevant to my interests',
+              'presenter made good use of the daily vocabulary words',
+              'i can apply what i learned from this presentation to my daily life',
+              'presentation reinforced family values',
+              'presentation seemed well rehearsed',
+              'presentation inspired me to give 110 %',
+              'presenter covered both sides of the controversy'],
 };
 
 let dictionary = {};
@@ -36,6 +61,7 @@ const makeSlides = (game, theme) => {
 
   const slides = [];
 
+  slides.push(makeIntroductionSlide(game));
   slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
   slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
   let primariesUsed = 2;
@@ -143,6 +169,19 @@ const makeFeedbackSlide = () => {
   Phaser.ArrayUtils.shuffle(questions);
   const str = 'Audience: please discuss and answer the following questions:\n\n1. ' + questions[0] + '\n2. ' + questions[1] + '\n3. ' + questions[2]  + '\n4. name one thing you learned from this presentation';
   return toTitleCase(str);
+}
+
+const makeIntroductionSlide = (game) => {
+
+    const presenter = presenterName;
+    Phaser.ArrayUtils.shuffle(presenter.firstname);
+    Phaser.ArrayUtils.shuffle(presenter.lastname1);
+    Phaser.ArrayUtils.shuffle(presenter.lastname2);
+    Phaser.ArrayUtils.shuffle(presenter.profession);
+    Phaser.ArrayUtils.shuffle(presenter.trivia);
+    const str = 'First, a little bit about me, ' + presenter.firstname[0] + ' ' + presenter.lastname1[0] + presenter.lastname2[0] +  ':\n\n' +
+                presenter.profession[0] + ' for ' + Math.round(Math.random() * 10) + ' years\n\n' + presenter.trivia[0];
+    return new CenteredContent(game, toTitleCase(str), true) ;
 }
 
 module.exports = {
