@@ -1,7 +1,7 @@
-import CenteredContent from './prefabs/centeredContent'
-import BarChart from './prefabs/barChart'
-import RandomImage from './prefabs/randomImage'
-import tracery from './vendor/tracery'
+const CenteredContent = require('./prefabs/centeredContent')
+const BarChart = require('./prefabs/barChart')
+const RandomImage = require('./prefabs/randomImage')
+const tracery = require('./vendor/tracery')
 
 const commonTheme = {
   'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >','#noun#: have you tried #gerund#?',"#noun# + #noun#?"],

@@ -1,5 +1,5 @@
-import styles from '../styles'
-import TextButtonBorder from './textButtonBorder'
+const styles = require('../styles')
+const TextButtonBorder = require('./textButtonBorder')
 
 //Documentation for Phaser's (2.6.2) text:: phaser.io/docs/2.6.2/Phaser.Text.html
 class TextButton extends Phaser.Text {
@@ -21,4 +21,4 @@ class TextButton extends Phaser.Text {
 
 }
 
-export default TextButton;
+module.exports = TextButton;

@@ -1,5 +1,5 @@
-import BarChartBar from './barChartBar'
-import ChartLabel from './chartLabel'
+const BarChartBar = require('./barChartBar')
+const ChartLabel = require('./chartLabel')
 
 //Documentation for Phaser's (2.6.2) group:: phaser.io/docs/2.6.2/Phaser.Group.html
 class BarChart extends Phaser.Group {
@@ -57,4 +57,4 @@ class BarChart extends Phaser.Group {
   }
 }
 
-export default BarChart;
+module.exports = BarChart;

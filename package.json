@@ -2,8 +2,9 @@
   "name": "presentation.game",
   "version": "0.1.0",
   "description": "",
+  "main": "src/electronStart.js",
   "scripts": {
-    "start": "budo src/main.js:bundle.js --live -- -d -e src/main.js -t [babelify --comments false --presets es2015]",
+    "start": "electron .",
     "prebuild": "mkdirp build",
     "build": "npm run build:js && npm run build:css && npm run build:html && npm run copy:all",
     "build:js": "browserify -d -e src/main.js -t [babelify --comments false --presets es2015] > build/bundle.min.js",
@@ -27,6 +28,7 @@
     "browserify": "^14.3.0",
     "budo": "^10.0.3",
     "clean-css": "^3.4.17",
+    "electron": "^1.6.11",
     "htmlprocessor": "^0.2.3",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",

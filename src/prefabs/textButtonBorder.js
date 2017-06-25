@@ -36,4 +36,4 @@ class TextButtonBorder extends Phaser.Sprite {
 
 }
 
-export default TextButtonBorder;
+module.exports = TextButtonBorder;

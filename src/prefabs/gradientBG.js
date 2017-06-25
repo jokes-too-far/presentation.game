@@ -37,4 +37,4 @@ class GradientBG extends Phaser.Sprite {
 
 }
 
-export default GradientBG;
+module.exports = GradientBG;

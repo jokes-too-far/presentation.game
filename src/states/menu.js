@@ -1,9 +1,9 @@
-import contentGeneration from '../contentGeneration'
-import styles from '../styles'
+const contentGeneration = require('../contentGeneration')
+const styles = require('../styles')
 
-import GradientBG from '../prefabs/gradientBG'
-import CenteredContent from '../prefabs/centeredContent'
-import TextButton from '../prefabs/textButton'
+const GradientBG = require('../prefabs/gradientBG')
+const CenteredContent = require('../prefabs/centeredContent')
+const TextButton = require('../prefabs/textButton')
 
 class Menu extends Phaser.State {
 
@@ -38,4 +38,4 @@ class Menu extends Phaser.State {
   update() {}
 }
 
-export default Menu;
+module.exports = Menu;

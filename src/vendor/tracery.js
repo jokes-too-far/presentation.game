@@ -859,4 +859,4 @@ var tracery = function() {
     return tracery;
 }();
 
-export default tracery;
+module.exports = tracery;

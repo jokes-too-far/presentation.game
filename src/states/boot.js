@@ -1,4 +1,4 @@
-import Transitions from '../transitions'
+const Transitions = require('../transitions')
 
 class Boot extends Phaser.State {
 
@@ -138,4 +138,4 @@ class Boot extends Phaser.State {
 
 }
 
-export default Boot;
+module.exports = Boot;
