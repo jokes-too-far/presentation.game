@@ -11,21 +11,21 @@ const commonTheme = {
 };
 
 const presenterName = {
-  'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol','llana','brunhilda','x','pierce','john'],
-  'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east'],
-  'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski'],
-  'profession':['homemaker','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer','flight attendant','handyman','plumber'],
-  'trivia':['2 kids',
-            'avid gardener',
-            '72 teeth',
-            'this is my 200th presentation!',
-            'raise corgis',
-            'related to abraham lincoln',
-            'visited 6 continents',
-            'no hobbies of interest',
-            'afraid of loud noises',
-            'avid bodybuilder',
-            'rhodes scholar'],
+  'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol','llana','brunhilda','xavier "x"','pierce','john','maryanne','edward','bella',
+                'renesmee','fabio','carlisle','rainbow','lakey','hermione','rusev','sammy','kevin','"fudge"','roman','becky','bayley','charlotte','sasha'],
+  'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east','west','round','dither','shoe','rein'],
+  'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski','y','man','ther','bag'],
+  'profession':['homemaker','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer','flight attendant','handyman','plumber','dentist','retiree',
+                'boat captain','ski-jump instructor','professional wrestler','encyclopedia salesman','acupuncturist','pet psychologist','sports announcer','interpretive dancer','c-list celebrity',
+                'e-sports player','lawyer','med student'],
+  'trivia':['2 kids', 'woodworker','feeling a little sick today','think i\'m losing my voice','allergic to 5 things','amateur wine-taster','coffee addict','sommellier (wine snob)',
+            'avid gardener','speak 4 languages','taking the bar exam right after this','hold a guinness world record: can you guess what it is?','own a chain restaurant','briefly owned an elephant',
+            '39 teeth','had a conjoined twin','scorpio','gemini','halfway between a virgo and a libra','lactose intolerant','8-pack','volunteer mascot','won the lottery',
+            'this is my 200th presentation!', 'this is my first ever presentation','type a blood','little league coach','amateur astronomer','didn\'t get much sleep last night',
+            'raise corgis', 'related to abraham lincoln', 'visited 6 continents','no hobbies of interest','afraid of loud noises','avid bodybuilder','rhodes scholar',
+            'going skydiving after this presentation','I\'m proposing after this presentation','moving across the country after this presentation','forgot to eat breakfast',
+            'looooooooooooooooooooooooove puppies','12 cats','<3 a certain celebrity...','amateur chef','won "best moonshine in the county" 3 years running','have had the hiccups for 3 years',
+            'once met my namesake','love smooth jazz','play the trumpet','donated my spare kidney','make and sell custom handbags','breed chihuahuas','breed finches','collect stuffed animals'],
 };
 
 const feedbackQuestions = {
@@ -44,7 +44,8 @@ const feedbackQuestions = {
               'presentation reinforced family values',
               'presentation seemed well rehearsed',
               'presentation inspired me to give 110 %',
-              'presenter covered both sides of the controversy'],
+              'presenter covered both sides of the controversy',
+              'i could not tell that presenter was in witness protection'],
 };
 
 let dictionary = {};
@@ -179,8 +180,13 @@ const makeIntroductionSlide = (game) => {
     Phaser.ArrayUtils.shuffle(presenter.lastname2);
     Phaser.ArrayUtils.shuffle(presenter.profession);
     Phaser.ArrayUtils.shuffle(presenter.trivia);
+    let duration = 'years';
+    if (Math.random() < 0.5){
+      duration = 'months';
+    };
+
     const str = 'First, a little bit about me, ' + presenter.firstname[0] + ' ' + presenter.lastname1[0] + presenter.lastname2[0] +  ':\n\n' +
-                presenter.profession[0] + ' for ' + Math.round(Math.random() * 10) + ' years\n\n' + presenter.trivia[0];
+                presenter.profession[0] + ' for ' + Math.round(Math.random() * 10) + ' ' + duration + '\n\n' + presenter.trivia[0];
     return new CenteredContent(game, toTitleCase(str), true) ;
 }
 
