@@ -18,6 +18,7 @@ class Preloader extends Phaser.State {
 
   loadResources() {
        this.game.load.audio('boop', 'assets/transition_sounds/boop.ogg');
+       this.game.load.audio('beep', 'assets/transition_sounds/beep.ogg');
 
        for (const key of this.game.global.transition_sounds) {
         this.game.load.audio(key, 'assets/transition_sounds/' + key + '.ogg');
@@ -27,7 +28,7 @@ class Preloader extends Phaser.State {
        this.game.load.image('pixel', 'assets/pixel.png');
        this.game.load.image('button-border', 'assets/button-border.png');
 
-       const themeList = this.game.global.themes; 
+       const themeList = this.game.global.themes;
        for (const theme of themeList) {
         this.game.load.json('theme-' + theme, 'assets/themes/'+theme+'.json');
        }

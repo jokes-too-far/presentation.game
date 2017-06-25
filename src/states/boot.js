@@ -41,8 +41,8 @@ class Boot extends Phaser.State {
       total_slides: 10,
       transition_timeout: 25000,
       transition_list: transistions.getTransitions(),
+      differentSoundPercentChance: 2,
       transition_sounds: [
-        'beep',
         'apple-cut-03',
         'arrow-return-to-quiver-01',
         'arrr',

@@ -32,7 +32,12 @@ class Slide extends Phaser.State {
       this.game.sound.play('boop');
     });
     timer.add(this.game.global.transition_timeout, () => {
-      this.game.sound.play(this.game.rnd.pick(this.game.global.transition_sounds));
+      if (Math.random() < this.game.global.differentSoundPercentChance / 100) {
+        console.log('different');
+        this.game.sound.play(this.game.rnd.pick(this.game.global.transition_sounds));
+      } else {
+        this.game.sound.play('beep');
+      }
     });
     timer.start();
 
