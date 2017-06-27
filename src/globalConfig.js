@@ -1,4 +1,4 @@
-import Transitions from './transitions'
+const Transitions = require('./transitions')
 
 module.exports = (() => {
     var transistions = new Transitions();

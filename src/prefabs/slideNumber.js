@@ -1,4 +1,4 @@
-import styles from '../styles'
+const styles = require('../styles')
 
 //Documentation for Phaser's (2.6.2) text:: phaser.io/docs/2.6.2/Phaser.Text.html
 class SlideNumber extends Phaser.Text {
@@ -18,4 +18,4 @@ class SlideNumber extends Phaser.Text {
 
 }
 
-export default SlideNumber;
+module.exports = SlideNumber;

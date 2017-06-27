@@ -16,4 +16,4 @@ class RandomImage extends Phaser.Sprite {
 
 }
 
-export default RandomImage;
+module.exports = RandomImage;

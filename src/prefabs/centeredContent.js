@@ -1,4 +1,4 @@
-import styles from '../styles'
+const styles = require('../styles')
 
 //Documentation for Phaser's (2.6.2) text:: phaser.io/docs/2.6.2/Phaser.Text.html
 class CenteredContent extends Phaser.Text {
@@ -17,4 +17,4 @@ class CenteredContent extends Phaser.Text {
 
 }
 
-export default CenteredContent;
+module.exports = CenteredContent;

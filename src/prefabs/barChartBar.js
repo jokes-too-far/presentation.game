@@ -11,4 +11,4 @@ class BarChartBar extends Phaser.Sprite {
   update() {}
 }
 
-export default BarChartBar;
+module.exports = BarChartBar;

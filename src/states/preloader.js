@@ -45,4 +45,4 @@ class Preloader extends Phaser.State {
   }
 }
 
-export default Preloader;
+module.exports = Preloader;

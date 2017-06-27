@@ -1,4 +1,4 @@
-import phaserStateTransition from 'phaser-state-transition'
+const phaserStateTransition = require('phaser-state-transition')
 
 class Transitions {
     constructor(){
@@ -63,4 +63,4 @@ class Transitions {
     }
 }
 
-export default Transitions;
+module.exports = Transitions;

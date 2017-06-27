@@ -1,4 +1,4 @@
-import styles from '../styles'
+const styles = require('../styles')
 
 //Documentation for Phaser's (2.6.2) text:: phaser.io/docs/2.6.2/Phaser.Text.html
 class SlideTitle extends Phaser.Text {
@@ -17,4 +17,4 @@ class SlideTitle extends Phaser.Text {
 
 }
 
-export default SlideTitle;
+module.exports = SlideTitle;
