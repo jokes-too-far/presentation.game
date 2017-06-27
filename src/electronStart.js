@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1024, height: 768})
+  mainWindow = new BrowserWindow({width: 1024, height: 768, backgroundColor: '#000000', show: false})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -24,6 +24,10 @@ function createWindow () {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+
+  mainWindow.on('ready-to-show', () => {
+    mainWindow.show();
+  });
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
