@@ -5,7 +5,12 @@
   "main": "src/electronStart.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --all --out build --electronVersion 1.6.11 --overwrite --asar true"
+    "build": "electron-packager . --all --out build --electronVersion 1.6.11 --overwrite --asar true",
+    "publish": "npm run publish:win32 && npm run publish:win64 && npm run publish:linux-x64 && npm run publish:darwin-x64",
+    "publish:darwin-x64": "butler push ./build/presentation.game-darwin-x64/ icbat/presentation-game:osx-x64",
+    "publish:linux-x64": "butler push ./build/presentation.game-linux-x64/ icbat/presentation-game:linux-x64",
+    "publish:win32": "butler push ./build/presentation.game-win32-ia32/ icbat/presentation-game:windows-32",
+    "publish:win64": "butler push ./build/presentation.game-win32-x64/ icbat/presentation-game:windows-64"
   },
   "keywords": [],
   "author": "",
