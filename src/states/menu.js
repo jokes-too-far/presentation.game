@@ -1,7 +1,6 @@
 const contentGeneration = require('../contentGeneration')
 const styles = require('../styles')
 
-const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 const TextButton = require('../prefabs/textButton')
 
@@ -13,7 +12,6 @@ class Menu extends Phaser.State {
 
   create() {
     styles.backgroundColor(this.game);
-    new GradientBG(this.game);
 
     const theme = contentGeneration.pickTheme(this.game);
     this.game.global.title = contentGeneration.generateTitle(this.game, theme);
