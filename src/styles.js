@@ -32,9 +32,11 @@ const supportingSizedFont = (game) => {
 };
 
 const randomTheme = (game) => {
-  const bgColor = '#' + Math.random().toString(16).slice(2,8);
-  game.stage.backgroundColor = bgColor;
-  new GradientBG(game, gradientDestination(game.stage.backgroundColor, 0.3));
+  const newBgColor = parseInt(Math.random().toString(16).slice(2,8), 16);
+  const newGradientColor = gradientDestination(newBgColor, 0.3);
+  const bg = new GradientBG(game, newGradientColor);
+  tweenTint(game, game.stage, game.stage.backgroundColor, newBgColor, Phaser.Timer.SECOND / 2);
+  tweenTint(game, bg, game.stage.backgroundColor, newGradientColor, Phaser.Timer.SECOND / 2);
 };
 
 const gradientDestination = (hexString, percentChange) => {
@@ -60,6 +62,28 @@ const gradientDestination = (hexString, percentChange) => {
     newB = '0' + newB;
     return Phaser.Color.hexToRGB('#' + newR.slice(-2) + newG.slice(-2) + newB.slice(-2));
 };
+
+const tweenTint = (game, obj, startColor, endColor, time) =>  {
+    // create an object to tween with our step value at 0
+    const colorBlend = {step: 0};
+
+    // create the tween on this object and tween its step property to 100
+    const colorTween = game.add.tween(colorBlend).to({step: 100}, time);
+
+    // run the interpolateColor function every time the tween updates, feeding it the
+    // updated value of our tween each time, and set the result as our tint
+    colorTween.onUpdateCallback(() => {
+        nextColor = Phaser.Color.interpolateColor(startColor, endColor, 100, colorBlend.step);
+        if (obj.tint) {
+            obj.tint = nextColor;
+        } else {
+            game.stage.backgroundColor = nextColor;
+        }
+    });
+
+    // start the tween
+    colorTween.start();
+}
 
 
 module.exports = {
