@@ -6,7 +6,6 @@ class ChartLabel extends Phaser.Text {
   //initialization code in the constructor
   constructor(game, x, y, text) {
     super(game, x, y, text, styles.fonts.medium(game));
-    console.log(text);
     this.anchor.set(0.5, 0.5);
   }
 
