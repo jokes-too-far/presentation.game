@@ -77,30 +77,6 @@ module.exports = (() => {
             'wyrmsun_german-voice_012',
             'wyrmsun_german-voice_013',
         ],
-        themes: [
-            'agriculture',
-            'beard-care',
-            'breakfast',
-            'computer-literacy',
-            'conspiracies',
-            'corporate-strategies',
-            'dental-hygiene',
-            'dessert',
-            'ducks',
-            'extreme-fitness',
-            'greek-mythology',
-            'marine-biology',
-            'millennials',
-            'modern-city-life',
-            'multi-level-marketing',
-            'parenting-a-teen',
-            'pets',
-            'ponies',
-            'pop-music',
-            'product-reviews',
-            'reconsidering-stereotypes',
-            'romance',
-            'treating-illnesses',
-        ]
+        themes: []
     };
 })()

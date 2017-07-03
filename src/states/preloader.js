@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 class Preloader extends Phaser.State {
 
   constructor() {
@@ -28,15 +30,14 @@ class Preloader extends Phaser.State {
        this.game.load.image('pixel', 'assets/pixel.png');
        this.game.load.image('button-border', 'assets/button-border.png');
 
-       const themeList = this.game.global.themes;
-       for (const theme of themeList) {
-        this.game.load.json('theme-' + theme, 'assets/themes/'+theme+'.json');
-       }
+       for (const filename of fs.readdirSync(__dirname + '/../../assets/themes/')) {
+        const theme = filename.replace('.json', '');
+        this.game.global.themes.push(theme);
+        this.game.load.json('theme-' + theme, 'assets/themes/'+filename);
 
-       for (const theme of themeList) {
-         for (let i=1; i<=30; ++i) {
-          this.game.load.image('theme-picture-' + theme + i, 'assets/pictures/'+theme+i+'.jpg');
-         }
+        for (let i=1; i<=30; ++i) {
+         this.game.load.image('theme-picture-' + theme + i, 'assets/pictures/'+theme+i+'.jpg');
+        }
        }
   }
 
