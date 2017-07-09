@@ -166,11 +166,16 @@ const pickTheme = (game) => {
   };
 }
 
-const makeFeedbackSlide = () => {
+const makeFeedbackSlide = (game) => {
   const questions = feedbackQuestions.question;
   Phaser.ArrayUtils.shuffle(questions);
-  const str = 'Audience: please discuss and answer the following questions:\n\n1. ' + questions[0] + '\n2. ' + questions[1] + '\n3. ' + questions[2]  + '\n4. name one thing you learned from this presentation';
-  return toTitleCase(str);
+  const title = 'Audience: please discuss and answer the following questions:';
+  const bulletPoints = [];
+  bulletPoints.push('1. ' + questions[0]);
+  bulletPoints.push('2. ' + questions[1]);
+  bulletPoints.push('3. ' + questions[2]);
+  bulletPoints.push('4. name one thing you learned from this presentation');
+  return new BulletPointSlide(game, title, '', bulletPoints);
 }
 
 const makeIntroductionSlide = (game) => {

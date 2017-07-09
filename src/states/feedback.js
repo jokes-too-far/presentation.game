@@ -7,8 +7,7 @@ class Menu extends Phaser.State {
   create() {
     new GradientBG(this.game);
 
-    const feedbackText = contentGeneration.makeFeedbackSlide();
-    new CenteredContent(this.game, feedbackText);
+    this.add.existing(contentGeneration.makeFeedbackSlide(this.game));
 
     this.input.onDown.add(this.restartGame, this);
   }
