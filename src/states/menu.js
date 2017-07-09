@@ -25,7 +25,7 @@ class Menu extends Phaser.State {
     new CenteredContent(this.game, this.game.global.title);
 
     new TextButton(this.game, 25, this.game.world.height* 0.9, 'Start Presentation', () => {
-      this.game.state.start('slide', null, null, true, false, slides);
+      this.game.state.start('introduction', null, null, true, false, slides);
     });
 
     new TextButton(this.game, 25, this.game.world.height, 'Reroll Theme', () => {

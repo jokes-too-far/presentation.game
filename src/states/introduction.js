@@ -3,14 +3,13 @@ const SlideNumber = require('../prefabs/slideNumber')
 const SlideTimer = require('../prefabs/slideTimer')
 const TextButton = require('../prefabs/textButton')
 
-class Slide extends Phaser.State {
+const contentGeneration = require('../contentGeneration')
+
+class Introduction extends Phaser.State {
 
   init(slides) {
     this.slides = slides;
-    this.slideNumber = this.game.global.total_slides - (this.slides.length - 1);
-    if (this.game.global.addBonusSlide){
-      this.slideNumber = this.slideNumber + 2;
-    }
+    this.slideNumber = 0;
   }
 
   create() {
@@ -46,22 +45,16 @@ class Slide extends Phaser.State {
     });
 
     // Actual content
-    const content = this.slides[0];
-    this.game.add.existing(content);
-
+    this.game.add.existing(contentGeneration.makeIntroductionSlide(this.game));
   }
 
   update() {}
 
   progress() {
     const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
-    const remainingSlides = this.slides.splice(1, this.slides.length - 1);
-    if(remainingSlides.length){
-      return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, remainingSlides);
-    }
-    this.game.state.start('questions', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false)
+    return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, this.slides);
   }
 
 }
 
-module.exports = Slide;
+module.exports = Introduction;

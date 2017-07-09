@@ -62,7 +62,6 @@ const makeSlides = (game, theme) => {
 
   const slides = [];
 
-  slides.push(makeIntroductionSlide(game));
   slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
   slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
   let primariesUsed = 2;
@@ -84,6 +83,7 @@ const makeSlides = (game, theme) => {
   }
 
   if (game.global.addBonusSlide) {
+    console.log('bonus slide generated');
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
     if (primariesUsed < Object.keys(primaryTemplates).length){
       slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], primaryTemplates[primariesUsed++], secondaryWords));
@@ -196,4 +196,5 @@ module.exports = {
   generateTitle: generateTitle,
   pickTheme: pickTheme,
   makeFeedbackSlide: makeFeedbackSlide,
+  makeIntroductionSlide: makeIntroductionSlide,
 };
