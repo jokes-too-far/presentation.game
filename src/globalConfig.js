@@ -8,7 +8,7 @@ module.exports = (() => {
         title: 'a placeholder title for a talk',
         bonusSlideChancePercent: 20,
         total_slides: 10,
-        transition_timeout: 25000,
+        transition_timeout: 2000,
         transition_list: transistions.getTransitions(),
         differentSoundPercentChance: 2,
         transition_sounds: [

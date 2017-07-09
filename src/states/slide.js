@@ -43,10 +43,9 @@ class Slide extends Phaser.State {
     const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
     new SlideTimer(this.game, event);
 
-    const backButton = new TextButton(this.game, 0, this.game.world.height, 'Back to menu', () => {
+    new TextButton(this.game, 0, this.game.world.height, 'Back to menu', () => {
         this.game.state.start('menu')
     });
-    backButton.anchor.setTo(0, 1);
 
     // Actual content
     const content = this.slides[0];

@@ -2,7 +2,8 @@ const GradientBG = require('./prefabs/gradientBG')
 
 const titleSizedFont = (game) => {
     return {
-      font: '42px Arial',
+      font: 'Arial',
+      fontSize: game.height * 0.15 + 'px',
       fill: '#ffffff',
       align: 'center',
       strokeThickness: 5,
@@ -11,18 +12,20 @@ const titleSizedFont = (game) => {
     };
 };
 
-const labelFont = (game) => {
+const mediumFont = (game) => {
     return {
-        font: '32px Arial',
+        font: 'Arial',
+        fontSize: game.height * 0.05 + 'px',
         fill: '#ffffff',
         align: 'center',
         strokeThickness: 4,
     };
 };
 
-const supportingSizedFont = (game) => {
+const smallFont = (game) => {
     return {
-        font: '16px Arial',
+        font: 'Arial',
+        fontSize: game.height * 0.025 + 'px',
         fill: '#ffffff',
         align: 'center',
         strokeThickness: 3,
@@ -90,7 +93,7 @@ module.exports = {
     backgroundColor: randomTheme,
     fonts: {
         big: titleSizedFont,
-        medium: labelFont,
-        small: supportingSizedFont,
+        medium: mediumFont,
+        small: smallFont,
     }
 };
