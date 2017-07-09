@@ -1,4 +1,5 @@
 const CenteredContent = require('./prefabs/centeredContent')
+const BulletPointSlide = require('./prefabs/bulletPointSlide')
 const BarChart = require('./prefabs/barChart')
 const RandomImage = require('./prefabs/randomImage')
 const tracery = require('./vendor/tracery')
@@ -185,9 +186,12 @@ const makeIntroductionSlide = (game) => {
       duration = 'months';
     };
 
-    const str = 'First, a little bit about me, ' + presenter.firstname[0] + ' ' + presenter.lastname1[0] + presenter.lastname2[0] +  ':\n\n' +
-                presenter.profession[0] + ' for ' + Math.round(Math.random() * 10) + ' ' + duration + '\n\n' + presenter.trivia[0];
-    return new CenteredContent(game, toTitleCase(str), true) ;
+    const title = toTitleCase('First, a little bit about me');
+    const name = toTitleCase(presenter.firstname[0] + ' ' + presenter.lastname1[0] + presenter.lastname2[0]);
+    const bulletPoints = [];
+    bulletPoints.push(toTitleCase(presenter.profession[0] + ' for ' + Math.round(Math.random() * 10) + ' ' + duration));
+    bulletPoints.push(toTitleCase(presenter.trivia[0]));
+    return new BulletPointSlide(game, title, name, bulletPoints);
 }
 
 module.exports = {

@@ -1,9 +1,11 @@
 const GradientBG = require('./prefabs/gradientBG')
 
 const titleSizedFont = (game) => {
+    const fontHeight =  game.height * 0.125;
     return {
       font: 'Arial',
-      fontSize: game.height * 0.125 + 'px',
+      fontHeight: fontHeight,
+      fontSize: fontHeight + 'px',
       fill: '#ffffff',
       align: 'center',
       strokeThickness: 5,
@@ -13,9 +15,11 @@ const titleSizedFont = (game) => {
 };
 
 const mediumFont = (game) => {
+    const fontHeight =  game.height * 0.05;
     return {
         font: 'Arial',
-        fontSize: game.height * 0.05 + 'px',
+        fontHeight: fontHeight,
+        fontSize: fontHeight + 'px',
         fill: '#ffffff',
         align: 'center',
         strokeThickness: 4,
@@ -23,9 +27,11 @@ const mediumFont = (game) => {
 };
 
 const smallFont = (game) => {
+    const fontHeight =  game.height * 0.025;
     return {
         font: 'Arial',
-        fontSize: game.height * 0.025 + 'px',
+        fontHeight: fontHeight,
+        fontSize: fontHeight + 'px',
         fill: '#ffffff',
         align: 'center',
         strokeThickness: 3,
