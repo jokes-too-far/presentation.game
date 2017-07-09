@@ -3,7 +3,7 @@ const GradientBG = require('./prefabs/gradientBG')
 const titleSizedFont = (game) => {
     return {
       font: 'Arial',
-      fontSize: game.height * 0.15 + 'px',
+      fontSize: game.height * 0.125 + 'px',
       fill: '#ffffff',
       align: 'center',
       strokeThickness: 5,
