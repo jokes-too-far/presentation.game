@@ -19,7 +19,8 @@ class Questions extends Phaser.State {
   update() {}
 
   displayFeedback () {
-    this.game.state.start('feedback')
+    const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
+    return this.game.state.start('feedback', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName]);
   }
 
 }
