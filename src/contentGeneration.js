@@ -78,7 +78,7 @@ const generateTitle = (game, theme) => {
     'primary-theme': theme.primary,
     'secondary-theme': theme.secondary,
     'ridiculous-claim': ['saved my life', 'will ruin #affected#', 'will change #affected#', 'are so 1999', 'are a match made in heaven'],
-    'question': ['why', 'how', 'when'],
+    'question': ['why', 'how'],
     'linking': ['the #superlative# link between', 'what you don\'t know about', 'the truth behind', 'examining', 'the future of', 'the importance of', 'the uselessness of'],
     'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing', 'hidden'],
     'affected': ['you', 'the future', 'the world of tomorrow', 'everything', 'nothing'],
