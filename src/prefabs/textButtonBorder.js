@@ -19,12 +19,12 @@ class TextButtonBorder extends Phaser.Sprite {
 
     this.events.onInputOver.add(() => {
       if (parent.animation) parent.animation.stop();
-      parent.animation = game.add.tween(parent).to({x: parent.originalX + 20}, shiftTween, shiftEase);
+      parent.animation = game.add.tween(parent).to({y: parent.originalY - 20}, shiftTween, shiftEase);
       parent.animation.start();
     });
     this.events.onInputOut.add(() => {
       if (parent.animation) parent.animation.stop();
-      parent.animation = game.add.tween(parent).to({x: parent.originalX}, shiftTween, shiftEase);
+      parent.animation = game.add.tween(parent).to({y: parent.originalY}, shiftTween, shiftEase);
       parent.animation.start();
     });
 

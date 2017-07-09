@@ -5,13 +5,18 @@ const TextButtonBorder = require('./textButtonBorder')
 class TextButton extends Phaser.Text {
 
   //initialization code in the constructor
-  constructor(game, x, y, text, callback) {
-    super(game, x, y, text, styles.fonts.medium(game));
-    this.anchor.set(0, 1);
-    this.originalX = x;
+  constructor(game, x, text, callback) {
+    super(game, x, game.height, text, styles.fonts.medium(game));
+    this.originalY = game.height;
 
+    this.anchor.set(0, 1);
+    this.border = new TextButtonBorder(game, this, callback);
     game.add.existing(this);
-    new TextButtonBorder(game, this, callback);
+  }
+
+  setAnchor(x) {
+      this.anchor.set(x, this.anchor.y);
+      this.border.anchor.set(x, this.anchor.y);
   }
 
   //Code ran on each frame of game

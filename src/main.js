@@ -2,6 +2,7 @@ const Boot = require('./states/boot');
 const Preloader = require('./states/preloader');
 
 const Menu = require('./states/menu');
+const Settings = require('./states/settings');
 const Introduction = require('./states/introduction');
 const Slide = require('./states/slide');
 const Questions = require('./states/questions');
@@ -14,6 +15,7 @@ game.state.add('boot', new Boot());
 game.state.add('preloader', new Preloader());
 
 game.state.add('menu', new Menu());
+game.state.add('settings', new Settings());
 game.state.add('introduction', new Introduction());
 game.state.add('slide', new Slide());
 game.state.add('questions', new Questions());
