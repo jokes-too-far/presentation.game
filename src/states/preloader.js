@@ -19,11 +19,13 @@ class Preloader extends Phaser.State {
   update() {}
 
   loadResources() {
-       this.game.load.audio('boop', 'assets/transition_sounds/boop.ogg');
-       this.game.load.audio('beep', 'assets/transition_sounds/beep.ogg');
+       this.game.load.audio('boop', 'assets/boop.ogg');
+       this.game.load.audio('beep', 'assets/beep.ogg');
 
-       for (const key of this.game.global.transition_sounds) {
+       for (const filename of fs.readdirSync(__dirname + '/../../assets/transition_sounds/')) {
+        const key = filename.replace('.ogg', '');
         this.game.load.audio(key, 'assets/transition_sounds/' + key + '.ogg');
+        this.game.global.transition_sounds.push(key);
        }
 
        this.game.load.image('gradient', 'assets/gradient.png');
