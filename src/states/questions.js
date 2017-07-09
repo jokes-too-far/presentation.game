@@ -2,7 +2,7 @@ const contentGeneration = require('../contentGeneration')
 const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 
-class Menu extends Phaser.State {
+class Questions extends Phaser.State {
 
   constructor() {
     super();
@@ -24,4 +24,4 @@ class Menu extends Phaser.State {
 
 }
 
-module.exports = Menu;
+module.exports = Questions;
