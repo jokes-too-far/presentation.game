@@ -169,12 +169,12 @@ const pickTheme = (game) => {
 const makeFeedbackSlide = (game) => {
   const questions = feedbackQuestions.question;
   Phaser.ArrayUtils.shuffle(questions);
-  const title = 'Audience: please discuss and answer the following questions:';
+  const title = toTitleCase('Audience: please discuss and answer the following questions:');
   const bulletPoints = [];
-  bulletPoints.push('1. ' + questions[0]);
-  bulletPoints.push('2. ' + questions[1]);
-  bulletPoints.push('3. ' + questions[2]);
-  bulletPoints.push('4. name one thing you learned from this presentation');
+  bulletPoints.push(toTitleCase('1. ' + questions[0]));
+  bulletPoints.push(toTitleCase('2. ' + questions[1]));
+  bulletPoints.push(toTitleCase('3. ' + questions[2]));
+  bulletPoints.push(toTitleCase('4. name one thing you learned from this presentation'));
   return new BulletPointSlide(game, title, '', bulletPoints);
 }
 
