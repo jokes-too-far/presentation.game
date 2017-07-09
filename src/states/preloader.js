@@ -30,6 +30,9 @@ class Preloader extends Phaser.State {
        this.game.load.image('pixel', 'assets/pixel.png');
        this.game.load.image('button-border', 'assets/button-border.png');
 
+       this.game.load.json('feedbackQuestions', 'assets/feedbackQuestions.json');
+       this.game.load.json('introductions', 'assets/introductions.json');
+
        for (const filename of fs.readdirSync(__dirname + '/../../assets/themes/')) {
         const theme = filename.replace('.json', '');
         this.game.global.themes.push(theme);

@@ -11,44 +11,6 @@ const commonTheme = {
   'gerund': [],
 };
 
-const presenterName = {
-  'firstname':['darryl','smitty','leo','gargantua','emmalina','dee dee','carl','mike','sue','carol','llana','brunhilda','xavier "x"','pierce','john','maryanne','edward','bella',
-                'renesmee','fabio','carlisle','rainbow','lakey','hermione','rusev','sammy','kevin','"fudge"','roman','becky','bayley','charlotte','sasha'],
-  'lastname1':['open','smith','john','sky','rose','handcart','hard','apple','east','west','round','dither','shoe','rein'],
-  'lastname2':['bottom','hammer','son','tailor','smith','ee','lin','heimer','wick','s','ski','y','man','ther','bag'],
-  'profession':['homemaker','architect','beekeeper','scientist','self employed','businessman','president','professional lecturer','flight attendant','handyman','plumber','dentist','retiree',
-                'boat captain','ski-jump instructor','professional wrestler','encyclopedia salesman','acupuncturist','pet psychologist','sports announcer','interpretive dancer','c-list celebrity',
-                'e-sports player','lawyer','med student'],
-  'trivia':['2 kids', 'woodworker','feeling a little sick today','think i\'m losing my voice','allergic to 5 things','amateur wine-taster','coffee addict','sommellier (wine snob)',
-            'avid gardener','speak 4 languages','taking the bar exam right after this','hold a guinness world record: can you guess what it is?','own a chain restaurant','briefly owned an elephant',
-            '39 teeth','had a conjoined twin','scorpio','gemini','halfway between a virgo and a libra','lactose intolerant','8-pack','volunteer mascot','won the lottery',
-            'this is my 200th presentation!', 'this is my first ever presentation','type a blood','little league coach','amateur astronomer','didn\'t get much sleep last night',
-            'raise corgis', 'related to abraham lincoln', 'visited 6 continents','no hobbies of interest','afraid of loud noises','avid bodybuilder','rhodes scholar',
-            'going skydiving after this presentation','I\'m proposing after this presentation','moving across the country after this presentation','forgot to eat breakfast',
-            'looooooooooooooooooooooooove puppies','12 cats','<3 a certain celebrity...','amateur chef','won "best moonshine in the county" 3 years running','have had the hiccups for 3 years',
-            'once met my namesake','love smooth jazz','play the trumpet','donated my spare kidney','make and sell custom handbags','breed chihuahuas','breed finches','collect stuffed animals'],
-};
-
-const feedbackQuestions = {
-  'question':['presenter knew the subject matter well',
-              'pacing of the presentation was good',
-              'i learned a lot from this presentation',
-              'presenter captured my interest',
-              'presenter was able to answer questions',
-              'presenter was devilishly handsome',
-              'appropriate use of visual aids',
-              'presentation was appropriate for my age group',
-              'presentation was coherent',
-              'presentation was relevant to my interests',
-              'presenter made good use of the daily vocabulary words',
-              'i can apply what i learned from this presentation to my daily life',
-              'presentation reinforced family values',
-              'presentation seemed well rehearsed',
-              'presentation inspired me to give 110 %',
-              'presenter covered both sides of the controversy',
-              'i could not tell that presenter was in witness protection'],
-};
-
 let dictionary = {};
 
 const makeSlides = (game, theme) => {
@@ -167,7 +129,7 @@ const pickTheme = (game) => {
 }
 
 const makeFeedbackSlide = (game) => {
-  const questions = feedbackQuestions.question;
+  const questions = game.cache.getJSON('feedbackQuestions');
   Phaser.ArrayUtils.shuffle(questions);
   const title = toTitleCase('Audience: please discuss and answer the following questions:');
   const bulletPoints = [];
@@ -179,8 +141,7 @@ const makeFeedbackSlide = (game) => {
 }
 
 const makeIntroductionSlide = (game) => {
-
-    const presenter = presenterName;
+    const presenter = game.cache.getJSON('introductions');;
     Phaser.ArrayUtils.shuffle(presenter.firstname);
     Phaser.ArrayUtils.shuffle(presenter.lastname1);
     Phaser.ArrayUtils.shuffle(presenter.lastname2);
