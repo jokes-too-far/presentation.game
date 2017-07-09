@@ -5,9 +5,9 @@ class SlideTimer extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, event) {
-    super(game, 20, game.height - 30, "0", styles.fonts.small(game));
+    super(game, game.world.centerX, game.height, "0", styles.fonts.small(game));
     this.timer = event.timer;
-    this.anchor.set(0.5);
+    this.anchor.set(0.5, 1);
     game.add.existing(this);
   }
 

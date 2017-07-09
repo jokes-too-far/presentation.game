@@ -6,8 +6,8 @@ class SlideNumber extends Phaser.Text {
   //initialization code in the constructor
   constructor(game, number) {
     const text = number + '/' + game.global.total_slides
-    super(game, game.width - 20, game.height - 20, text, styles.fonts.small(game));
-    this.anchor.set(0.5);
+    super(game, game.width, game.height, text, styles.fonts.small(game));
+    this.anchor.set(1,1);
     game.add.existing(this);
   }
 

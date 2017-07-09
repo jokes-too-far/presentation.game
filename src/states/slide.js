@@ -18,7 +18,6 @@ class Slide extends Phaser.State {
   create() {
     new GradientBG(this.game);
     // Meta slide stuff
-    new SlideTitle(this.game, this.game.global.title);
     new SlideNumber(this.game, this.slideNumber);
 
     const timer = this.game.time.create(true);
@@ -44,13 +43,15 @@ class Slide extends Phaser.State {
     const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
     new SlideTimer(this.game, event);
 
+    const backButton = new TextButton(this.game, 0, this.game.world.height, 'Back to menu', () => {
+        this.game.state.start('menu')
+    });
+    backButton.anchor.setTo(0, 1);
+
     // Actual content
     const content = this.slides[0];
     this.game.add.existing(content);
 
-    new TextButton(this.game, 25, this.game.world.height * 0.8, 'Back to menu', () => {
-      this.game.state.start('menu')
-    });
   }
 
   update() {}
