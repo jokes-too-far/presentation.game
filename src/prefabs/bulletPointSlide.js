@@ -22,7 +22,7 @@ class BulletPointSlide extends Phaser.Group {
         const point = new CenteredContent(game, bulletPoints[i]);
         point.setStyle(mediumStyle);
         point.align = 'left';
-        point.y = game.height * 0.3 + ((1 + i) * 2 * mediumStyle.fontHeight)
+        point.y = game.height * 0.4 + ((1 + i) * 2 * mediumStyle.fontHeight)
         this.add(point);
     }
 
