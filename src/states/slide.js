@@ -1,5 +1,4 @@
 const GradientBG = require('../prefabs/gradientBG')
-const SlideTitle = require('../prefabs/slideTitle')
 const SlideNumber = require('../prefabs/slideNumber')
 const SlideTimer = require('../prefabs/slideTimer')
 const TextButton = require('../prefabs/textButton')

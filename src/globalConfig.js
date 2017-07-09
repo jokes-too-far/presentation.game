@@ -5,7 +5,6 @@ module.exports = (() => {
     transistions.initCustomTransitions();
 
     return {
-        title: 'a placeholder title for a talk',
         bonusSlideChancePercent: 20,
         total_slides: 10,
         transition_timeout: 2000,
