@@ -10,7 +10,7 @@ class Questions extends Phaser.State {
 
   create() {
     new GradientBG(this.game);
-    new CenteredContent(this.game, 'Questions?');
+    new CenteredContent(this.game, contentGeneration.makeQuestionsTitle(this.game));
 
     this.input.onDown.add(this.displayFeedback, this);
   }

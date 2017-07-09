@@ -141,7 +141,7 @@ const makeFeedbackSlide = (game) => {
 }
 
 const makeIntroductionSlide = (game) => {
-    const presenter = game.cache.getJSON('introductions');;
+    const presenter = game.cache.getJSON('introductions');
     Phaser.ArrayUtils.shuffle(presenter.firstname);
     Phaser.ArrayUtils.shuffle(presenter.lastname1);
     Phaser.ArrayUtils.shuffle(presenter.lastname2);
@@ -159,6 +159,11 @@ const makeIntroductionSlide = (game) => {
     bulletPoints.push(toTitleCase(presenter.trivia[0]));
     return new BulletPointSlide(game, title, name, bulletPoints);
 }
+const makeQuestionsTitle = (game) => {
+    const variations = game.cache.getJSON('questionsVariations');
+    Phaser.ArrayUtils.shuffle(variations);
+    return toTitleCase(variations[0]);
+}
 
 module.exports = {
   // dictionary: dictionary,
@@ -167,4 +172,5 @@ module.exports = {
   pickTheme: pickTheme,
   makeFeedbackSlide: makeFeedbackSlide,
   makeIntroductionSlide: makeIntroductionSlide,
+  makeQuestionsTitle: makeQuestionsTitle,
 };
