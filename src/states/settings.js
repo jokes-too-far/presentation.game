@@ -18,8 +18,8 @@ class Settings extends Phaser.State {
       });
       leaveButton.setAnchor(1);
 
-      new CheckBox(this.game, 200, 'Introduction Slide', this.game.global.key_shouldDoIntroSlide);
-      new CheckBox(this.game, 400, 'Pause for questions', this.game.global.key_pauseForQuestions);
+      new CheckBox(this.game, this.game.height * 0.2, 'Introduction Slide', this.game.global.key_shouldDoIntroSlide);
+      new CheckBox(this.game, this.game.height * 0.3, 'Pause for questions', this.game.global.key_pauseForQuestions);
   }
 
   update() {}
