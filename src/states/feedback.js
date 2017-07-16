@@ -5,14 +5,13 @@ const CenteredContent = require('../prefabs/centeredContent')
 class Menu extends Phaser.State {
 
     init() {
+        new GradientBG(this.game);
         if (!JSON.parse(localStorage.getItem(this.game.global.key_askForFeedback))) {
             this.restartGame();
         }
     }
 
   create() {
-    new GradientBG(this.game);
-
     this.add.existing(contentGeneration.makeFeedbackSlide(this.game));
 
     this.input.onDown.add(this.restartGame, this);

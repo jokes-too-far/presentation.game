@@ -9,13 +9,13 @@ class Questions extends Phaser.State {
   }
 
   init() {
+      new GradientBG(this.game);
       if (!JSON.parse(localStorage.getItem(this.game.global.key_pauseForQuestions))) {
           this.goToFeedback();
       }
   }
 
   create() {
-    new GradientBG(this.game);
     new CenteredContent(this.game, contentGeneration.makeQuestionsTitle(this.game));
 
     this.input.onDown.add(this.goToFeedback, this);

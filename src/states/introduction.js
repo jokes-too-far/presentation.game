@@ -8,6 +8,7 @@ const contentGeneration = require('../contentGeneration')
 class Introduction extends Phaser.State {
 
   init(slides) {
+    new GradientBG(this.game);
     this.slides = slides;
     this.slideNumber = 0;
     if (!JSON.parse(localStorage.getItem(this.game.global.key_shouldDoIntroSlide))) {
@@ -16,7 +17,6 @@ class Introduction extends Phaser.State {
   }
 
   create() {
-    new GradientBG(this.game);
     // Meta slide stuff
     new SlideNumber(this.game, this.slideNumber);
 

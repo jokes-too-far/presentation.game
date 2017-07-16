@@ -11,10 +11,10 @@ class Slide extends Phaser.State {
     if (this.game.global.addBonusSlide){
       this.slideNumber = this.slideNumber + 2;
     }
+    new GradientBG(this.game);
   }
 
   create() {
-    new GradientBG(this.game);
     // Meta slide stuff
     new SlideNumber(this.game, this.slideNumber);
 
