@@ -22,8 +22,7 @@ class Menu extends Phaser.State {
   update() {}
 
   restartGame () {
-      const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
-      return this.game.state.start('menu', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName]);
+      return this.game.state.start('menu');
   }
 
 }

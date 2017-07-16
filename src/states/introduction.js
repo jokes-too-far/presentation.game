@@ -56,8 +56,7 @@ class Introduction extends Phaser.State {
   update() {}
 
   progress() {
-    const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
-    return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, this.slides);
+    return this.game.state.start('slide', true, false, this.slides);
   }
 
 }

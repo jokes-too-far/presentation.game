@@ -56,12 +56,12 @@ class Slide extends Phaser.State {
   update() {}
 
   progress() {
-    const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
+
     const remainingSlides = this.slides.splice(1, this.slides.length - 1);
     if(remainingSlides.length){
-      return this.game.state.start('slide', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, remainingSlides);
+      return this.game.state.start('slide', true, false, remainingSlides);
     }
-    this.game.state.start('questions', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false)
+    this.game.state.start('questions', true, false)
   }
 
 }

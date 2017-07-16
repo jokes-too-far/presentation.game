@@ -17,8 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "phaser": "^2.6.2",
-    "phaser-state-transition": "^2.4.3"
+    "phaser": "^2.6.2"
   },
   "devDependencies": {
     "electron": "^1.6.11",

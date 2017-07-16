@@ -1,5 +1,3 @@
-const Transitions = require('./transitions')
-
 const setDefault = (key, initialValue) => {
     const result = localStorage.getItem(key);
     if (result === null) {
@@ -9,9 +7,6 @@ const setDefault = (key, initialValue) => {
 };
 
 module.exports = (() => {
-    var transistions = new Transitions();
-    transistions.initCustomTransitions();
-
     // set defaults
     setDefault('shouldDoIntroSlide', true);
     setDefault('shouldPlaySounds', true);
@@ -28,7 +23,6 @@ module.exports = (() => {
         key_totalSlides: 'totalSlides',
         key_timeOnSlide: 'timeOnSlide',
         bonusSlideChancePercent: 20,
-        transition_list: transistions.getTransitions(),
         differentSoundPercentChance: 2,
         transition_sounds: [],
         themes: []
