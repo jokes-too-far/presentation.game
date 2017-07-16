@@ -18,25 +18,27 @@ class Slide extends Phaser.State {
     // Meta slide stuff
     new SlideNumber(this.game, this.slideNumber);
 
-    const timer = this.game.time.create(true);
-    timer.add(this.game.global.transition_timeout - 3000, () => {
-      this.game.sound.play('boop');
-    });
-    timer.add(this.game.global.transition_timeout - 2000, () => {
-      this.game.sound.play('boop');
-    });
-    timer.add(this.game.global.transition_timeout - 1000, () => {
-      this.game.sound.play('boop');
-    });
-    timer.add(this.game.global.transition_timeout, () => {
-      if (Math.random() < this.game.global.differentSoundPercentChance / 100) {
-        console.log('different');
-        this.game.sound.play(this.game.rnd.pick(this.game.global.transition_sounds));
-      } else {
-        this.game.sound.play('beep');
-      }
-    });
-    timer.start();
+    if (JSON.parse(localStorage.getItem(this.game.global.key_shouldPlaySounds))) {
+        const timer = this.game.time.create(true);
+        timer.add(this.game.global.transition_timeout - 3000, () => {
+          this.game.sound.play('boop');
+        });
+        timer.add(this.game.global.transition_timeout - 2000, () => {
+          this.game.sound.play('boop');
+        });
+        timer.add(this.game.global.transition_timeout - 1000, () => {
+          this.game.sound.play('boop');
+        });
+        timer.add(this.game.global.transition_timeout, () => {
+          if (Math.random() < this.game.global.differentSoundPercentChance / 100) {
+            console.log('different');
+            this.game.sound.play(this.game.rnd.pick(this.game.global.transition_sounds));
+          } else {
+            this.game.sound.play('beep');
+          }
+        });
+        timer.start();
+    }
 
     const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
     new SlideTimer(this.game, event);

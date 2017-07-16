@@ -14,11 +14,13 @@ module.exports = (() => {
 
     // set defaults
     setDefault('shouldDoIntroSlide', true);
+    setDefault('shouldPlaySounds', true);
     setDefault('pauseForQuestions', true);
     setDefault('askForFeedback', true);
 
     return {
         key_shouldDoIntroSlide: 'shouldDoIntroSlide',
+        key_shouldPlaySounds: 'shouldPlaySounds',
         key_pauseForQuestions: 'pauseForQuestions',
         key_askForFeedback: 'askForFeedback',
         bonusSlideChancePercent: 20,
