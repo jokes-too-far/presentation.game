@@ -18,6 +18,7 @@ module.exports = (() => {
     setDefault('pauseForQuestions', true);
     setDefault('askForFeedback', true);
     setDefault('totalSlides', 8);
+    setDefault('timeOnSlide', 25);
 
     return {
         key_shouldDoIntroSlide: 'shouldDoIntroSlide',
@@ -25,8 +26,8 @@ module.exports = (() => {
         key_pauseForQuestions: 'pauseForQuestions',
         key_askForFeedback: 'askForFeedback',
         key_totalSlides: 'totalSlides',
+        key_timeOnSlide: 'timeOnSlide',
         bonusSlideChancePercent: 20,
-        transition_timeout: 25000,
         transition_list: transistions.getTransitions(),
         differentSoundPercentChance: 2,
         transition_sounds: [],

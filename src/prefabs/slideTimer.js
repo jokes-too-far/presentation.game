@@ -5,7 +5,7 @@ class SlideTimer extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, event) {
-    super(game, game.world.centerX, game.height, game.global.transition_timeout / 1000 + ' seconds remaining', styles.fonts.medium(game));
+    super(game, game.world.centerX, game.height, JSON.parse(localStorage.getItem(game.global.key_totalSlides)) + ' seconds remaining', styles.fonts.medium(game));
     this.timer = event.timer;
     this.anchor.set(0.5, 1);
     game.add.existing(this);

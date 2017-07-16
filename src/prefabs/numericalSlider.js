@@ -16,9 +16,8 @@ class NumericalSlider extends Phaser.Group {
     label.anchor.set(0.5, 1);
     this.add(label);
 
-    console.log(game.world.centerX - label.width * 2/3);
-    this.add(new numericalSliderButton(game, game.world.centerX - label.width * 2/3, y, '-', linkedStorageKey, false, lowerBound, upperBound));
-    this.add(new numericalSliderButton(game, game.world.centerX + label.width * 2/3, y, '+', linkedStorageKey, true, lowerBound, upperBound));
+    this.add(new numericalSliderButton(game, game.world.centerX - game.width * 1/10, y, '-', linkedStorageKey, false, lowerBound, upperBound));
+    this.add(new numericalSliderButton(game, game.world.centerX + game.width * 1/10, y, '+', linkedStorageKey, true, lowerBound, upperBound));
 
     game.add.existing(this);
   }

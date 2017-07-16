@@ -20,16 +20,16 @@ class Slide extends Phaser.State {
 
     if (JSON.parse(localStorage.getItem(this.game.global.key_shouldPlaySounds))) {
         const timer = this.game.time.create(true);
-        timer.add(this.game.global.transition_timeout - 3000, () => {
+        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND - 3000, () => {
           this.game.sound.play('boop');
         });
-        timer.add(this.game.global.transition_timeout - 2000, () => {
+        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND - 2000, () => {
           this.game.sound.play('boop');
         });
-        timer.add(this.game.global.transition_timeout - 1000, () => {
+        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND - 1000, () => {
           this.game.sound.play('boop');
         });
-        timer.add(this.game.global.transition_timeout, () => {
+        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, () => {
           if (Math.random() < this.game.global.differentSoundPercentChance / 100) {
             console.log('different');
             this.game.sound.play(this.game.rnd.pick(this.game.global.transition_sounds));
@@ -40,7 +40,7 @@ class Slide extends Phaser.State {
         timer.start();
     }
 
-    const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
+    const event = this.game.time.events.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, this.progress, this);
     new SlideTimer(this.game, event);
 
     new TextButton(this.game, 0, 'Back to menu', () => {

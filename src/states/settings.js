@@ -27,6 +27,7 @@ class Settings extends Phaser.State {
       new CheckBox(this.game, this.game.height * yOffset++ / 10, 'Ask for feedback', this.game.global.key_askForFeedback);
       yOffset++;
       new NumericalSlider(this.game, this.game.height * yOffset++ / 10, 'Slides', this.game.global.key_totalSlides, 2, 30);
+      new NumericalSlider(this.game, this.game.height * yOffset++ / 10, 'Seconds per Slide', this.game.global.key_timeOnSlide, 5, 60);
   }
 
   update() {}
