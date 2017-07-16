@@ -40,7 +40,7 @@ class Introduction extends Phaser.State {
     const event = this.game.time.events.add(this.game.global.transition_timeout, this.progress, this);
     new SlideTimer(this.game, event);
 
-    new TextButton(this.game, 0, this.game.world.height, 'Back to menu', () => {
+    new TextButton(this.game, 0, 'Back to menu', () => {
         this.game.state.start('menu')
     });
 
