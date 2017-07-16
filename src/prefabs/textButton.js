@@ -6,12 +6,13 @@ class TextButton extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, x, text, callback) {
-    super(game, x, game.height, text, styles.fonts.medium(game));
-    this.originalY = game.height;
+    super(game, x, game.height * 2, text, styles.fonts.medium(game));
 
     this.anchor.set(0, 1);
     this.border = new TextButtonBorder(game, this, callback);
+
     game.add.existing(this);
+    game.add.tween(this).to({y: game.height}, 750 + Math.random() * 250, Phaser.Easing.Elastic.InOut).start();
   }
 
   setAnchor(x) {
