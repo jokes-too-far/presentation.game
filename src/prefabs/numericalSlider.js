@@ -9,7 +9,12 @@ class NumericalSlider extends Phaser.Group {
     const valueDisplay = new numericalSliderLabel(game, y, JSON.parse(localStorage.getItem(linkedStorageKey)));
     this.add(valueDisplay);
     this.update = () => {
-        valueDisplay.text = JSON.parse(localStorage.getItem(linkedStorageKey));
+        const newValue = JSON.parse(localStorage.getItem(linkedStorageKey));
+        if (valueDisplay.text != newValue) {
+            valueDisplay.scale.set(1.3);
+            game.add.tween(valueDisplay.scale).to({x:1, y:1}, 200).start();
+            valueDisplay.text = newValue;
+        }
     }
 
     const label = new numericalSliderLabel(game, y, text);
