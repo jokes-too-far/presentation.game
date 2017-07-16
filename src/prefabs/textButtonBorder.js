@@ -18,14 +18,10 @@ class TextButtonBorder extends Phaser.Sprite {
     const shiftEase = Phaser.Easing.Exponential.Out;
 
     this.events.onInputOver.add(() => {
-      if (parent.animation) parent.animation.stop();
-      parent.animation = game.add.tween(parent).to({y: parent.originalY - 20}, shiftTween, shiftEase);
-      parent.animation.start();
+      parent.fill = '#e0f23a';
     });
     this.events.onInputOut.add(() => {
-      if (parent.animation) parent.animation.stop();
-      parent.animation = game.add.tween(parent).to({y: parent.originalY}, shiftTween, shiftEase);
-      parent.animation.start();
+      parent.fill = '#fff';
     });
 
     game.add.existing(this);
