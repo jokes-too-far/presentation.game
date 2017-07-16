@@ -4,15 +4,13 @@ class Preloader extends Phaser.State {
 
   preload() {
     //setup loading bar
-    const asset = this.add.sprite(this.game.width * 0.5 - 110, this.game.height * 0.5 - 10, 'preloader');
+    const asset = this.game.add.sprite(this.game.width * 0.5 - 110, this.game.height * 0.9, 'preloader');
     this.load.setPreloadSprite(asset);
 
     //Setup loading and its events
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.loadResources();
   }
-
-  update() {}
 
   loadResources() {
        this.game.load.audio('boop', 'assets/boop.ogg');
@@ -23,6 +21,9 @@ class Preloader extends Phaser.State {
         this.game.load.audio(key, 'assets/transition_sounds/' + key + '.ogg');
         this.game.global.transition_sounds.push(key);
        }
+
+       this.load.image('logo-stl', 'assets/logos/stl.png');
+       this.load.spritesheet('logo-studio', 'assets/logos/studio.png', 128, 128);
 
        this.game.load.image('gradient', 'assets/gradient.png');
        this.game.load.image('pixel', 'assets/pixel.png');
@@ -46,7 +47,7 @@ class Preloader extends Phaser.State {
   }
 
   onLoadComplete() {
-    this.game.state.start('menu')
+    this.game.state.start('splashScreen')
   }
 }
 
