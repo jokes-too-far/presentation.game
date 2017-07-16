@@ -23,9 +23,15 @@ class Menu extends Phaser.State {
     new CenteredContent(this.game, this.game.global.title);
 
     const transitionName = Phaser.ArrayUtils.getRandomItem(this.game.global.transition_list)
-    new TextButton(this.game, 0, 'Start', () => {
-        return this.game.state.start('introduction', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, slides);        
+    const startButton = new TextButton(this.game, 0, 'Start', () => {
+        return this.game.state.start('introduction', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName], true, false, slides);
     });
+    this.game.add.tween(startButton.scale).to(
+        {x: 1.1, y: 1.1,},
+        1500,
+        Phaser.Easing.Linear.In,
+        true
+    ).yoyo(true, 0).repeatAll(-1);
 
     const rerollButton = new TextButton(this.game, this.game.world.centerX, 'Reroll Theme', () => {
       return this.game.state.start('menu');

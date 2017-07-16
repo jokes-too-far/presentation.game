@@ -1,6 +1,7 @@
 const contentGeneration = require('../contentGeneration')
 const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
+const ClickToProceedIndicator = require('../prefabs/clickToProceedIndicator')
 
 class Questions extends Phaser.State {
 
@@ -17,6 +18,7 @@ class Questions extends Phaser.State {
 
   create() {
     new CenteredContent(this.game, contentGeneration.makeQuestionsTitle(this.game));
+    new ClickToProceedIndicator(this.game);
 
     this.input.onDown.add(this.goToFeedback, this);
   }

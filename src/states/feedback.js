@@ -1,6 +1,7 @@
 const contentGeneration = require('../contentGeneration')
 const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
+const ClickToProceedIndicator = require('../prefabs/clickToProceedIndicator')
 
 class Menu extends Phaser.State {
 
@@ -12,6 +13,7 @@ class Menu extends Phaser.State {
     }
 
   create() {
+    new ClickToProceedIndicator(this.game);
     this.add.existing(contentGeneration.makeFeedbackSlide(this.game));
 
     this.input.onDown.add(this.restartGame, this);
