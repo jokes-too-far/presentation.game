@@ -11,7 +11,7 @@
     "publish:darwin-x64": "butler push ./build/presentation.game-darwin-x64/ icbat/presentation-game:osx-x64 --userversion %npm_package_version%",
     "publish:linux-x64": "butler push ./build/presentation.game-linux-x64/ icbat/presentation-game:linux-x64 --userversion %npm_package_version%",
     "publish:win32": "butler push ./build/presentation.game-win32-ia32/ icbat/presentation-game:windows-32 --userversion %npm_package_version%",
-    "publish:win64": "butler push ./build/presentation.game-win32-x64/ icbat/presentation-game:windows-64 --userversion %npm_package_version%4"
+    "publish:win64": "butler push ./build/presentation.game-win32-x64/ icbat/presentation-game:windows-64 --userversion %npm_package_version%"
   },
   "keywords": [],
   "author": "",
