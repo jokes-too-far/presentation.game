@@ -7,7 +7,7 @@ class CheckBox extends Phaser.Sprite {
       super(game, x + 10, y, 'checkBox');
       this.anchor.set(0, 0.5);
 
-      new SettingsLabel(game, x - 10, y, labelText);
+      const label = new SettingsLabel(game, x - 10, y, labelText);
 
       const initialValue = JSON.parse(localStorage.getItem(linkedStorageKey));
       this.setFrameByState(initialValue);
@@ -18,7 +18,14 @@ class CheckBox extends Phaser.Sprite {
           localStorage.setItem(linkedStorageKey, !value);
           this.setFrameByState(!value);
       });
-      
+
+      label.inputEnabled = true;
+      label.events.onInputDown.add(() => {
+          const value = JSON.parse(localStorage.getItem(linkedStorageKey));
+          localStorage.setItem(linkedStorageKey, !value);
+          this.setFrameByState(!value);
+      });
+
       game.add.existing(this);
   }
 
