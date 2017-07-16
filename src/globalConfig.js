@@ -15,10 +15,12 @@ module.exports = (() => {
     // set defaults
     setDefault('shouldDoIntroSlide', true);
     setDefault('pauseForQuestions', true);
+    setDefault('askForFeedback', true);
 
     return {
         key_shouldDoIntroSlide: 'shouldDoIntroSlide',
         key_pauseForQuestions: 'pauseForQuestions',
+        key_askForFeedback: 'askForFeedback',
         bonusSlideChancePercent: 20,
         total_slides: 8,
         transition_timeout: 25000,

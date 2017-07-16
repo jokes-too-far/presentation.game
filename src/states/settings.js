@@ -20,6 +20,7 @@ class Settings extends Phaser.State {
 
       new CheckBox(this.game, this.game.height * 0.2, 'Introduction Slide', this.game.global.key_shouldDoIntroSlide);
       new CheckBox(this.game, this.game.height * 0.3, 'Pause for questions', this.game.global.key_pauseForQuestions);
+      new CheckBox(this.game, this.game.height * 0.4, 'Ask for feedback', this.game.global.key_askForFeedback);
   }
 
   update() {}
