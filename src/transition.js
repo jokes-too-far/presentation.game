@@ -8,17 +8,35 @@ class Transition {
     }
 
     out(game, stuffToMove,  destination, extraParams) {
-        this.tweenAllToDestinationState({x: 0, y: 0}, game, stuffToMove,  destination, extraParams)
+        const transition = this.randomTransition(game);
+        this.tweenAllToDestinationState(transition.tween, transition.stateOut, game, stuffToMove,  destination, extraParams)
     }
 
     in(game, stuffToMove) {
+        const transition = this.randomTransition(game);
         for (const ele of stuffToMove) {
-            ele['scale'].set(0, 0);
+            transition.beforeIn(ele);
         }
-        this.tweenAllToDestinationState({x: 1, y: 1}, game, stuffToMove)
+        this.tweenAllToDestinationState(transition.tween, transition.stateIn, game, stuffToMove)
     }
 
-    tweenAllToDestinationState (state, game, stuffToMove, destination, extraParams) {
+    randomTransition(game) {
+        const transitions = [
+            {
+                beforeIn: (ele) => {
+                    ele['scale'].set(0,0);
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele['scale']);
+                },
+                stateIn: {x:1, y:1},
+                stateOut: {x:0, y:0},
+            }
+        ];
+        return game.rnd.pick(transitions);
+    }
+
+    tweenAllToDestinationState (getTween, state, game, stuffToMove, destination, extraParams) {
         const totalSignals = stuffToMove.length;
         let finishedSignals = 0;
 
@@ -26,7 +44,7 @@ class Transition {
         const inout = game.rnd.pick(this.inout);
 
         for (const piece of stuffToMove) {
-            const tween = game.add.tween(piece['scale']).to(
+            const tween = getTween(piece).to(
                 state,
                 250 + Math.random() * 500,
                 Phaser.Easing[easing][inout],
