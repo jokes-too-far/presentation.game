@@ -41,6 +41,8 @@ class Preloader extends Phaser.State {
          this.game.load.image('theme-picture-' + theme + i, 'assets/pictures/'+theme+i+'.jpg');
         }
        }
+
+       this.game.load.spritesheet('checkBox', 'assets/checkBox.png', 32, 32);
   }
 
   onLoadComplete() {

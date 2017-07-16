@@ -5,6 +5,8 @@ const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 const TextButton = require('../prefabs/textButton')
 
+const CheckBox = require('../prefabs/checkBox')
+
 class Settings extends Phaser.State {
 
   create() {
@@ -15,6 +17,8 @@ class Settings extends Phaser.State {
         return this.game.state.start('menu', Phaser.Plugin.StateTransition.Out[transitionName], Phaser.Plugin.StateTransition.In[transitionName]);
       });
       leaveButton.setAnchor(1);
+
+      new CheckBox(this.game, 200, 'Introduction Slide', true);
   }
 
   update() {}
