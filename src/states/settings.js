@@ -24,8 +24,8 @@ class Settings extends Phaser.State {
       tweenedUI.push(new CheckBox(this.game, this.game.height * yOffset++ / 10, 'Introduction Slide', this.game.global.key_shouldDoIntroSlide));
       tweenedUI.push(new CheckBox(this.game, this.game.height * yOffset++ / 10, 'Pause for questions', this.game.global.key_pauseForQuestions));
       tweenedUI.push(new CheckBox(this.game, this.game.height * yOffset++ / 10, 'Ask for feedback', this.game.global.key_askForFeedback));
-      yOffset++;
-      tweenedUI.push(new NumericalSlider(this.game, this.game.height * yOffset++ / 10, 'Slides', this.game.global.key_totalSlides, 2, 30));
+      tweenedUI.push(new NumericalSlider(this.game, this.game.height * (0.05 + (yOffset++ / 10)), 'Slides', this.game.global.key_totalSlides, 2, 30));
+      yOffset++
       tweenedUI.push(new NumericalSlider(this.game, this.game.height * yOffset++ / 10, 'Seconds per Slide', this.game.global.key_timeOnSlide, 5, 60));
 
       transition.in(this.game, tweenedUI);
