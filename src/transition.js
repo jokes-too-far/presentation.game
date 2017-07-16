@@ -48,7 +48,7 @@ class Transition {
             },
             {
                 beforeIn: (ele) => {
-                    ele.x = 0 - ele.width;
+                    ele.x = -ele.width;
                 },
                 tween: (ele) => {
                     return game.add.tween(ele);
@@ -58,6 +58,108 @@ class Transition {
                 },
                 stateOut: (ele) => {
                     return {x:game.width + ele.width}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.x = game.width + ele.width;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {x: ele.x}
+                },
+                stateOut: (ele) => {
+                    return {x: -ele.width}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.y = -ele.height;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {y: ele.y}
+                },
+                stateOut: (ele) => {
+                    return {y: game.height + ele.height}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.y = game.height + ele.height;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {y: ele.y}
+                },
+                stateOut: (ele) => {
+                    return {y: -ele.height}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.y = game.height + ele.height;
+                    ele.x = game.width + ele.width;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {y: ele.y, x: ele.x}
+                },
+                stateOut: (ele) => {
+                    return {y: -ele.height, x:-ele.width}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.y = -ele.height;
+                    ele.x = -ele.width;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {y: ele.y, x: ele.x}
+                },
+                stateOut: (ele) => {
+                    return {y: game.height + ele.height, x: game.width + ele.width}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.y = game.height + ele.height;
+                    ele.x = -ele.width;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {y: ele.y, x: ele.x}
+                },
+                stateOut: (ele) => {
+                    return {y: -ele.height, x: game.width + ele.width}
+                },
+            },
+            {
+                beforeIn: (ele) => {
+                    ele.y = game.height + ele.height;
+                    ele.x = -ele.width;
+                },
+                tween: (ele) => {
+                    return game.add.tween(ele);
+                },
+                stateIn: (ele) => {
+                    return {y: ele.y, x: ele.x}
+                },
+                stateOut: (ele) => {
+                    return {y: -ele.height, x: game.width + ele.width}
                 },
             },
         ];
@@ -76,7 +178,7 @@ class Transition {
             const state = states[i];
             const runningTween = tween.to(
                 state,
-                250 + Math.random() * 500,
+                250 + Math.random() * 250,
                 Phaser.Easing[easing][inout],
                 true
             );
