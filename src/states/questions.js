@@ -26,10 +26,7 @@ class Questions extends Phaser.State {
     transition.in(this.game, tweenedUI);
 
     this.input.onDown.add(() => {
-        transition.out(this.game, tweenedUI, () => {
-            return this.game.state.start('feedback')
-        });
-
+        transition.out(this.game, tweenedUI, 'feedback');
     });
   }
 

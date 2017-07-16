@@ -65,13 +65,9 @@ class Slide extends Phaser.State {
   progress() {
     const remainingSlides = this.slides.splice(1, this.slides.length - 1);
     if(remainingSlides.length){
-        transition.out(this.game, [this.content], () => {
-            this.game.state.start('slide', true, false, remainingSlides);
-        });
+        transition.out(this.game, [this.content], 'slide', remainingSlides);
     } else {
-        transition.out(this.game, this.tweenedUI, () => {
-            this.game.state.start('questions')
-        });
+        transition.out(this.game, this.tweenedUI, 'questions');
     }
   }
 

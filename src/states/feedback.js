@@ -23,9 +23,7 @@ class Menu extends Phaser.State {
     transition.in(this.game, tweenedUI);
 
     this.input.onDown.add(() => {
-        transition.out(this.game, tweenedUI, () => {
-            this.game.state.start('menu');
-        });
+        transition.out(this.game, tweenedUI, 'menu');
     });
   }
 

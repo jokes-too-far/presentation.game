@@ -9,9 +9,7 @@ class TextButton extends Phaser.Text {
 
     this.anchor.set(0, 1);
     this.border = new TextButtonBorder(game, this, () => {
-        transition.out(game, elementsToTransition, () => {
-            game.state.start(destination, true, false, extraParams);
-        });
+        transition.out(game, elementsToTransition, destination, extraParams);
     });
 
     game.add.existing(this);

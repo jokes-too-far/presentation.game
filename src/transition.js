@@ -7,8 +7,8 @@ class Transition {
         this.inout = ['In', 'Out', 'InOut'];
     }
 
-    out(game, stuffToMove, callback) {
-        this.tweenAllToDestinationState({x: 0, y: 0}, game, stuffToMove, callback)
+    out(game, stuffToMove,  destination, extraParams) {
+        this.tweenAllToDestinationState({x: 0, y: 0}, game, stuffToMove,  destination, extraParams)
     }
 
     in(game, stuffToMove) {
@@ -18,7 +18,7 @@ class Transition {
         this.tweenAllToDestinationState({x: 1, y: 1}, game, stuffToMove)
     }
 
-    tweenAllToDestinationState (state, game, stuffToMove, callback) {
+    tweenAllToDestinationState (state, game, stuffToMove, destination, extraParams) {
         const totalSignals = stuffToMove.length;
         let finishedSignals = 0;
 
@@ -32,10 +32,10 @@ class Transition {
                 Phaser.Easing[easing][inout],
                 true
             );
-            if (callback) {
+            if (destination) {
                 tween.onComplete.add(() => {
                     if (totalSignals === ++finishedSignals) {
-                        callback();
+                        game.state.start(destination, true, false, extraParams);
                     }
                 })
             }

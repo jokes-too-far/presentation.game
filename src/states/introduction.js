@@ -49,9 +49,8 @@ class Introduction extends Phaser.State {
     }
 
     const event = this.game.time.events.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, () => {
-        transition.out(this.game, [content], () => {
-            console.log(this);
-            this.game.state.start('slide', true, false, this.slides)})}, this);
+        transition.out(this.game, [content], 'slide', this.slides)}
+        , this);
     const timer = new SlideTimer(this.game, event);
 
     const returnButton = new TextButton(this.game, 0, 'Back to menu', 'menu', tweenedUI);
