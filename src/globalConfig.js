@@ -6,8 +6,8 @@ module.exports = (() => {
 
     return {
         bonusSlideChancePercent: 20,
-        total_slides: 10,
-        transition_timeout: 2000,
+        total_slides: 8,
+        transition_timeout: 25000,
         transition_list: transistions.getTransitions(),
         differentSoundPercentChance: 2,
         transition_sounds: [],
