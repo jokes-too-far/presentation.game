@@ -30,7 +30,7 @@ const makeSlides = (game, theme) => {
   let primariesUsed = 2;
   let secondariesUsed = 0;
   let commonsUsed = 0;
-  const slidesRemaining = game.global.total_slides;
+  const slidesRemaining = JSON.parse(localStorage.getItem(game.global.key_totalSlides));
   for (let i=primariesUsed; i < slidesRemaining; ++i) {
     if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
       slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], primaryTemplates[primariesUsed++], secondaryWords));
@@ -89,7 +89,7 @@ const generateTitle = (game, theme) => {
       '#question# #secondary-theme# #x-will-y-z# #primary-theme#',
       '#question# #primary-theme# and #secondary-theme# #ridiculous-claim#',
       '#primary-theme# + #secondary-theme# = #meme#',
-      game.global.total_slides + ' #superlative# slides about #primary-theme#, #secondary-theme#, and #affected#',
+      JSON.parse(localStorage.getItem(game.global.key_totalSlides)) + ' #superlative# slides about #primary-theme#, #secondary-theme#, and #affected#',
       ],
   };
 

@@ -5,7 +5,7 @@ class SlideNumber extends Phaser.Text {
 
   //initialization code in the constructor
   constructor(game, number) {
-    const text = number + '/' + game.global.total_slides + ' slides'
+    const text = number + '/' + JSON.parse(localStorage.getItem(game.global.key_totalSlides)) + ' slides'
     super(game, game.width, game.height, text, styles.fonts.medium(game));
     this.anchor.set(1,1);
     game.add.existing(this);

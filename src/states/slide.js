@@ -7,7 +7,7 @@ class Slide extends Phaser.State {
 
   init(slides) {
     this.slides = slides;
-    this.slideNumber = this.game.global.total_slides - (this.slides.length - 1);
+    this.slideNumber = JSON.parse(localStorage.getItem(this.game.global.key_totalSlides)) - (this.slides.length - 1);
     if (this.game.global.addBonusSlide){
       this.slideNumber = this.slideNumber + 2;
     }
