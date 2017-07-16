@@ -10,6 +10,9 @@ class Introduction extends Phaser.State {
   init(slides) {
     this.slides = slides;
     this.slideNumber = 0;
+    if (!JSON.parse(localStorage.getItem(this.game.global.key_shouldDoIntroSlide))) {
+        this.progress();
+    }
   }
 
   create() {
