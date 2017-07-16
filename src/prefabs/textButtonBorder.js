@@ -4,7 +4,7 @@ class TextButtonBorder extends Phaser.Sprite {
 
   //initialization code in the constructor
   constructor(game, parent, callback) {
-    super(game, parent.x, game.height, 'button-border');
+    super(game, parent.x, parent.y, 'button-border');
     this.width = parent.width * 1.1;
     this.height = parent.height * 1.2;
     this.anchor.set(parent.anchor.x, parent.anchor.y);

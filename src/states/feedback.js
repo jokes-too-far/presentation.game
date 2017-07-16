@@ -1,4 +1,6 @@
 const contentGeneration = require('../contentGeneration')
+const transition = require('../transition')
+
 const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 const ClickToProceedIndicator = require('../prefabs/clickToProceedIndicator')
@@ -13,16 +15,18 @@ class Menu extends Phaser.State {
     }
 
   create() {
-    new ClickToProceedIndicator(this.game);
-    this.add.existing(contentGeneration.makeFeedbackSlide(this.game));
+    const idicator = new ClickToProceedIndicator(this.game);
+    const content = contentGeneration.makeFeedbackSlide(this.game)
+    this.add.existing(content);
 
-    this.input.onDown.add(this.restartGame, this);
-  }
+    const tweenedUI = [idicator, content];
+    transition.in(this.game, tweenedUI);
 
-  update() {}
-
-  restartGame () {
-      return this.game.state.start('menu');
+    this.input.onDown.add(() => {
+        transition.out(this.game, tweenedUI, () => {
+            this.game.state.start('menu');
+        });
+    });
   }
 
 }

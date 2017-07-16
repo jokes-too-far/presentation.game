@@ -4,6 +4,7 @@ const SlideTimer = require('../prefabs/slideTimer')
 const TextButton = require('../prefabs/textButton')
 
 const contentGeneration = require('../contentGeneration')
+const transition = require('../transition')
 
 class Introduction extends Phaser.State {
 
@@ -17,8 +18,13 @@ class Introduction extends Phaser.State {
   }
 
   create() {
+    const tweenedUI = [];
+    // Actual content
+    const content = contentGeneration.makeIntroductionSlide(this.game);
+    this.game.add.existing(content);
+
     // Meta slide stuff
-    new SlideNumber(this.game, this.slideNumber);
+    const slideNumber = new SlideNumber(this.game, this.slideNumber);
 
     if (JSON.parse(localStorage.getItem(this.game.global.key_shouldPlaySounds))) {
         const timer = this.game.time.create(true);
@@ -42,22 +48,23 @@ class Introduction extends Phaser.State {
         timer.start();
     }
 
-    const event = this.game.time.events.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, this.progress, this);
-    new SlideTimer(this.game, event);
+    const event = this.game.time.events.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, () => {
+        transition.out(this.game, [content], () => {
+            console.log(this);
+            this.game.state.start('slide', true, false, this.slides)})}, this);
+    const timer = new SlideTimer(this.game, event);
 
-    new TextButton(this.game, 0, 'Back to menu', () => {
-        this.game.state.start('menu')
-    });
+    const returnButton = new TextButton(this.game, 0, 'Back to menu', 'menu', tweenedUI);
 
-    // Actual content
-    this.game.add.existing(contentGeneration.makeIntroductionSlide(this.game));
+    tweenedUI.push(content);
+    tweenedUI.push(slideNumber);
+    tweenedUI.push(returnButton);
+    tweenedUI.push(timer);
+
+    transition.in(this.game, tweenedUI);
   }
 
   update() {}
-
-  progress() {
-    return this.game.state.start('slide', true, false, this.slides);
-  }
 
 }
 

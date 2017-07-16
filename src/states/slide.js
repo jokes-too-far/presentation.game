@@ -3,6 +3,8 @@ const SlideNumber = require('../prefabs/slideNumber')
 const SlideTimer = require('../prefabs/slideTimer')
 const TextButton = require('../prefabs/textButton')
 
+const transition = require('../transition')
+
 class Slide extends Phaser.State {
 
   init(slides) {
@@ -16,7 +18,7 @@ class Slide extends Phaser.State {
 
   create() {
     // Meta slide stuff
-    new SlideNumber(this.game, this.slideNumber);
+    const slideNumber = new SlideNumber(this.game, this.slideNumber);
 
     if (JSON.parse(localStorage.getItem(this.game.global.key_shouldPlaySounds))) {
         const timer = this.game.time.create(true);
@@ -41,27 +43,36 @@ class Slide extends Phaser.State {
     }
 
     const event = this.game.time.events.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, this.progress, this);
-    new SlideTimer(this.game, event);
+    const displayTimer = new SlideTimer(this.game, event);
 
-    new TextButton(this.game, 0, 'Back to menu', () => {
-        this.game.state.start('menu')
-    });
+    this.tweenedUI = [];
+    const backButton = new TextButton(this.game, 0, 'Back to menu', 'menu', this.tweenedUI);
 
     // Actual content
-    const content = this.slides[0];
-    this.game.add.existing(content);
+    this.content = this.slides[0];
+    this.game.add.existing(this.content);
 
+    transition.in(this.game, [this.content]);
+
+    this.tweenedUI.push(this.content);
+    this.tweenedUI.push(slideNumber);
+    this.tweenedUI.push(displayTimer);
+    this.tweenedUI.push(backButton);
   }
 
   update() {}
 
   progress() {
-
     const remainingSlides = this.slides.splice(1, this.slides.length - 1);
     if(remainingSlides.length){
-      return this.game.state.start('slide', true, false, remainingSlides);
+        transition.out(this.game, [this.content], () => {
+            this.game.state.start('slide', true, false, remainingSlides);
+        });
+    } else {
+        transition.out(this.game, this.tweenedUI, () => {
+            this.game.state.start('questions')
+        });
     }
-    this.game.state.start('questions', true, false)
   }
 
 }

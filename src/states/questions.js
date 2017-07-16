@@ -1,4 +1,6 @@
 const contentGeneration = require('../contentGeneration')
+const transition = require('../transition')
+
 const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 const ClickToProceedIndicator = require('../prefabs/clickToProceedIndicator')
@@ -17,19 +19,22 @@ class Questions extends Phaser.State {
   }
 
   create() {
-    new CenteredContent(this.game, contentGeneration.makeQuestionsTitle(this.game));
-    new ClickToProceedIndicator(this.game);
+    const tweenedUI = [];
+    tweenedUI.push(new CenteredContent(this.game, contentGeneration.makeQuestionsTitle(this.game)));
+    tweenedUI.push(new ClickToProceedIndicator(this.game));
 
-    this.input.onDown.add(this.goToFeedback, this);
+    transition.in(this.game, tweenedUI);
+
+    this.input.onDown.add(() => {
+        transition.out(this.game, tweenedUI, () => {
+            return this.game.state.start('feedback')
+        });
+
+    });
   }
 
 
   update() {}
-
-  goToFeedback () {
-
-    return this.game.state.start('feedback');
-  }
 
 }
 
