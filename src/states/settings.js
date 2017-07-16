@@ -18,7 +18,7 @@ class Settings extends Phaser.State {
       });
       leaveButton.setAnchor(1);
 
-      new CheckBox(this.game, 200, 'Introduction Slide', true);
+      new CheckBox(this.game, 200, 'Introduction Slide', this.game.global.key_shouldDoIntroSlide);
   }
 
   update() {}
