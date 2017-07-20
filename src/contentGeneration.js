@@ -25,34 +25,43 @@ const makeSlides = (game, theme) => {
 
   const slides = [];
 
-  slides.push(makeWordSlide(game, primaryTemplates[0], secondaryWords));
-  slides.push(makeWordSlide(game, primaryTemplates[1], secondaryWords));
-  let primariesUsed = 2;
-  let secondariesUsed = 0;
-  let commonsUsed = 0;
   const slidesRemaining = JSON.parse(localStorage.getItem(game.global.key_totalSlides));
-  for (let i=primariesUsed; i < slidesRemaining; ++i) {
-    if (Math.random() < 0.5 && i <= Object.keys(primaryTemplates).length) {
-      slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], primaryTemplates[primariesUsed++], secondaryWords));
-      //console.log('primary', i, Object.keys(primaryTemplates).length);
-    } else {
-      if (Math.random() >= 0.8 && commonsUsed <= Object.keys(commonTemplates).length){
-        slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], commonTemplates[commonsUsed++], primaryWords));
-      } else {
-        slides.push(makeSlide(game, dictionary[theme.secondary]['internal_id'], secondaryTemplates[secondariesUsed++], primaryWords));
-        //console.log('secondary', i-primariesUsed, Object.keys(secondaryTemplates).length);
-      }
+
+  let primarySlideCount = Math.ceil(slidesRemaining / 3);
+  let secondarySlideCount = Math.ceil(slidesRemaining / 4);
+  let secondaryPictureSlideCount = Math.floor(slidesRemaining / 10);
+  let chartSlideCount = Math.floor(slidesRemaining / 10);
+  let commonSlideCount = Math.floor(slidesRemaining / 5);
+  //we'll have primary pictures make up the balance of slides
+  let primaryPictureSlideCount = slidesRemaining - (primarySlideCount + secondarySlideCount + secondaryPictureSlideCount + chartSlideCount + commonSlideCount);
+
+  console.log('primary ', primarySlideCount, ', secondary ',secondarySlideCount, ', primaryPicture ', primaryPictureSlideCount, ', secondaryPicture ', secondaryPictureSlideCount, ', common ', commonSlideCount, ', chart ', chartSlideCount);
+
+  for (let i=0; i < primarySlideCount; ++i) {
+    slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
     }
+  for (let i=0; i < secondarySlideCount; ++i) {
+    slides.push(makeWordSlide(game, secondaryTemplates[i], primaryWords));
+    }
+  for (let i=0; i < primaryPictureSlideCount; ++i) {
+    slides.push(new RandomImage(game, dictionary[theme.primary]['internal_id']));
   }
+  for (let i=0; i < secondaryPictureSlideCount; ++i) {
+    slides.push(new RandomImage(game, dictionary[theme.secondary]['internal_id']));
+  }
+  for (let i=0; i < commonSlideCount; ++i) {
+    slides.push(makeWordSlide(game, commonTemplates[i], secondaryWords));
+  }
+  for (let i=0; i < chartSlideCount; ++i) {
+    slides.push(new BarChart(game, primaryWords));
+  }
+
+  Phaser.ArrayUtils.shuffle(slides);
 
   if (game.global.addBonusSlide) {
     console.log('bonus slide generated');
     slides.push(new CenteredContent(game, 'BONUS SLIDE INCOMING!', true));
-    if (primariesUsed < Object.keys(primaryTemplates).length){
-      slides.push(makeSlide(game, dictionary[theme.primary]['internal_id'], primaryTemplates[primariesUsed++], secondaryWords));
-    } else {
-      slides.push(makeSlide(game, dictionary[theme.secondary]['internal_id'], secondaryTemplates[secondariesUsed++], primaryWords));
-    }
+    slides.push(makeSlide(game, dictionary[theme.secondary]['internal_id'], secondaryTemplates[secondarySlideCount++], primaryWords));
   }
 
   return slides;
