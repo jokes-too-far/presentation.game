@@ -1,0 +1,72 @@
+{
+    "improving your home": {
+        "slides": [
+            "remember to unplug #noun# before doing electrical work!!!",
+            "lost your spirit level? use ordinary #noun# instead!",
+            "don't #verb# your leaky faucet",
+            "toilet backed up?  tried #gerund#?",
+            "lift up that ugly carpet to find beautiful #noun# underneath!",
+            "exterior paint colors:\n1. #noun# blue\n2. greenish #noun#\n3. #gerund# gray",
+            "fix energy-inefficient windows by #gerund#",
+            "add a faux-wood finish to class up your #noun#",
+            "whoah! before you go knocking out that wall, does it support #noun#?",
+            "when to d.i.y., and when to hire a professional?",
+            "your rotary reciprocating saw can also be used to #verb#",
+            "prevent nail gun accidents by #gerund# with care",
+            "table saw vs saber saw when #gerund#?"
+        ],
+        "noun": [
+            "ductwork",
+            "shingles",
+            "flooding",
+            "faucet",
+            "insulation",
+            "roof",
+            "carport",
+            "closet space",
+            "rustic plaster",
+            "window seat",
+            "creaky stairs",
+            "fireplace",
+            "septic tank",
+            "crown molding",
+            "garbage disposal",
+            "mudroom"
+        ],
+        "verb": [
+            "paint walls",
+            "bevel",
+            "replace doors",
+            "insulate",
+            "replace plumbing",
+            "caulk",
+            "repair",
+            "build a deck",
+            "repaint",
+            "tile the floor",
+            "restore old houses",
+            "power-wash",
+            "wire up lighting",
+            "sweep the fireplace",
+            "knock out a wall"
+
+        ],
+        "gerund": [
+            "painting walls",
+            "bevelling",
+            "replacing doors",
+            "insulating",
+            "replacing plumbing",
+            "caulking",
+            "repairing",
+            "building a deck",
+            "repainting",
+            "tiling the floor",
+            "restoring old houses",
+            "power-washing",
+            "wiring up lighting",
+            "sweeping the fireplace",
+            "knocking out a wall"
+        ]
+    }
+}
