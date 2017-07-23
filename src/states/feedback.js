@@ -10,7 +10,7 @@ class Menu extends Phaser.State {
     init() {
         new GradientBG(this.game);
         if (!JSON.parse(localStorage.getItem(this.game.global.key_askForFeedback))) {
-            this.restartGame();
+            this.game.state.start('menu');
         }
     }
 

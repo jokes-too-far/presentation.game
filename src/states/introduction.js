@@ -13,7 +13,8 @@ class Introduction extends Phaser.State {
     this.slides = slides;
     this.slideNumber = 0;
     if (!JSON.parse(localStorage.getItem(this.game.global.key_shouldDoIntroSlide))) {
-        this.progress();
+        this.game.state.start('slide', slides);
+        //this.progress();
     }
   }
 
@@ -64,6 +65,7 @@ class Introduction extends Phaser.State {
   }
 
   update() {}
+
 
 }
 

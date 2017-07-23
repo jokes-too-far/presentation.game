@@ -14,7 +14,7 @@ class Questions extends Phaser.State {
   init() {
       new GradientBG(this.game);
       if (!JSON.parse(localStorage.getItem(this.game.global.key_pauseForQuestions))) {
-          this.goToFeedback();
+          this.game.state.start('feedback');
       }
   }
 
