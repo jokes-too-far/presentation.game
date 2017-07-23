@@ -18,30 +18,42 @@
         "noun": [
             "celebrity crush",
             "single movie stars",
-            "sexy movie villains",
+            "handsome movie villain",
             "dreamy blondes",
             "dreamboat",
             "mr. right",
-            "badonk-a-donk",
             "sea-blue eyes",
-            "perfect teeth"
+            "perfect teeth",
+            "celebrity gossip",
+            "romance novels",
+            "#1 fan",
+            "fantasy boyfriend",
+            "amazing hair",
+            "dating simulator"
         ],
         "verb": [
-            "stalk",
             "moisturize",
             "date",
             "idolize",
             "gossip",
             "propose",
-            "break up"
+            "break up",
+            "fantasize",
+            "autograph",
+            "meet your crush",
+            "imagine your lives together"
         ],
         "gerund": [
             "idolizing",
             "dating",
-            "stalking",
             "gossipping",
             "proposing",
-            "breaking up"
-        ]
+            "breaking up",
+            "fantasizing",
+            "autographing",
+            "meeting your crush",
+            "imagining your lives together"
+        ],
+        "comments": ["badonk-a-donk"]
     }
 }

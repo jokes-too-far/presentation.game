@@ -20,7 +20,12 @@
             "parties",
             "family values",
             "family dinnertime",
-            "ankle monitor"
+            "ankle monitor",
+            "\"just a phase\"",
+            "angst",
+            "authoritarianism",
+            "growing independence",
+            "tiger mother"
         ],
         "verb": [
             "rebel",
@@ -28,18 +33,29 @@
             "spend quality time",
             "heart to heart",
             "ground",
-            "spank",
             "love",
             "discipline",
-            "sex"
+            "set curfew",
+            "discuss the rules",
+            "maintain a close relationship",
+            "indulge",
+            "\"helicopter\"",
+            "neglect"
         ],
         "gerund": [
             "spending quality time",
             "rebelling",
             "grounding",
-            "spanking",
-            "nurturing"
+            "nurturing",
+            "disciplining",
+            "setting curfew",
+            "discussing the rules",
+            "maintaining a close relationship",
+            "indulging"
+            "\"helicoptering\"",
+            "neglecting"
         ],
-        "comment" :["condoms, condoms, condoms!"]
+        "comment" :["condoms, condoms, condoms!",
+        "spank"]
     }
 }

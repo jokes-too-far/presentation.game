@@ -5,7 +5,6 @@
             "myths to explain the origin of #noun#",
             "greek gods and their #gerund# escapades",
             "poseidon is also the god of #noun#",
-            "hera punishes infidelity with #gerund#",
             "tragedy, comedy, and #gerund# with #noun#",
             "#noun#: all greek to me!",
             "athena sprang full-formed from the #noun# of zeus",
@@ -13,37 +12,55 @@
             "cronus likes to #verb#. Yes, even his kids",
             "#noun#, god of the #noun#",
             "#noun# + #noun# = pegasus",
-            "the ancient greeks would worship aphrodite by #gerund#"
+            "the poet homer wrote 'the illiad' to describe the fall of #noun#",
+            "the most difficult labor of hercules involved #gerund#"
         ],
         "noun": [
             "fiery chariot",
             "doric, ionic, and corinthian columns",
-            "extra-marital demigod babby",
             "oracle",
             "cerberus",
             "river styx",
             "lightning bolt",
-            "homemade, heat-sensitive wings"
+            "homemade, heat-sensitive wings",
+            "the golden fleece",
+            "sea serpent",
+            "achilles",
+            "cyclops",
+            "ampohora designs"
         ],
         "verb": [
             "murder",
-            "seduce",
             "kidnap",
-            "cannibalize",
+            "eat babies",
             "curse",
             "prophesy",
             "escape",
-            "throw lightningbolts"
+            "throw lightningbolts",
+            "turn to gold",
+            "worship",
+            "defeat the minotaur",
+            "clean the stables",
+            "behead the hydra"
         ],
         "gerund": [
             "murdering",
-            "seducing",
             "kidnapping",
-            "cannibalizing",
+            "eating babies",
             "cursing",
             "prophesying",
             "escaping",
-            "throwing lightningbolts"
-        ]
+            "throwing lightningbolts",
+            "turning to gold",
+            "worshipping",
+            "defeating the minotaur",
+            "cleaning the stables",
+            "beheading the hydra"
+        ],
+        "Comments":[
+        "extra-marital demigod babby",
+        "hera punishes infidelity with #gerund#",
+        "the ancient greeks would worship aphrodite by #gerund#",
+        "seduce"]
     }
 }

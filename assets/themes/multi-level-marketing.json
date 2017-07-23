@@ -25,7 +25,9 @@
             "college student",
             "gullible housewives",
             "seminar",
-            "start-up fee"
+            "start-up fee",
+            "downline distributor",
+            "false product claims"
         ],
         "verb": [
             "market",
@@ -34,7 +36,11 @@
             "profit",
             "flee investigation",
             "lie",
-            "money-launder"
+            "money-launder",
+            "distribute profit",
+            "trickle down",
+            "sell the dream",
+            "exploit personal relationships"
         ],
         "gerund": [
             "marketing",
@@ -43,7 +49,11 @@
             "profiting",
             "fleeing investigations",
             "lying",
-            "money-laundering"
+            "money-laundering",
+            "distributing profit",
+            "trickling down",
+            "selling the dream",
+            "exploiting personal relationships"
         ]
     }
 }

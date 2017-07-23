@@ -11,19 +11,27 @@
             "you may disagree,\nbut I say radishes are superior to #noun#",
             "leftover biomatter can fuel #noun#",
             "#gerund#: good or bad for your rutabaga fields?",
-            "believe it or not,\neggs come from the #noun# of the chicken"
+            "believe it or not,\neggs come from the #noun# of the chicken",
+            "rotate your crops annually: corn -> beans -> #noun#",
+            "ornery cows? give them #noun#",
+            "sheep keep jumping the fence?  try #gerund#"
         ],
         "noun": [
             "corn",
             "combine harvesters",
             "heritage tomatoes",
-            "G.m.o.s (genetically modified organisms)",
+            "G.m.o.s",
             "cows",
             "sheep",
             "prize-winning cucumber",
             "rutabagas",
             "sweetpeas",
-            "strawberries"
+            "strawberries",
+            "soybeans",
+            "seed crops",
+            "cash crops",
+            "rice fields",
+            "pesticide"
         ],
         "verb": [
             "harvest crops",
@@ -31,7 +39,14 @@
             "mulch",
             "spray pesticide",
             "till fields",
-            "genetically engineer"
+            "genetically engineer",
+            "herd cattle",
+            "rotate crops",
+            "collect eggs",
+            "shear sheep",
+            "fatten up pigs",
+            "milk cows",
+            "stomp grapes"
         ],
         "gerund": [
             "harvesting crops",
@@ -39,7 +54,14 @@
             "mulching",
             "spraying pesticide",
             "tilling fields",
-            "genetically engineering"
+            "genetically engineering",
+            "herding cattle",
+            "rotating crops",
+            "collecting eggs",
+            "shearing sheep",
+            "fattening up pigs",
+            "milking cows",
+            "stomping grapes"
         ]
     }
 }

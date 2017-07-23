@@ -30,7 +30,10 @@
             "starfish",
             "whales",
             "jellyfish",
-            "krill"
+            "krill",
+            "kelp forest",
+            "thermal vent",
+            "oceanography"
         ],
         "verb": [
             "swim with dolphins",
@@ -39,7 +42,12 @@
             "splash around",
             "use sonar",
             "sail",
-            "visit aquariums"
+            "visit aquariums",
+            "explore the deep",
+            "discover new species",
+            "collect shells",
+            "surf",
+            "whale-watch"
         ],
         "gerund": [
             "swimming with dolphins",
@@ -49,7 +57,12 @@
             "submarining",
             "using sonar",
             "sailing",
-            "visiting aquariums"
+            "visiting aquariums",
+            "exploring the deep",
+            "discovering new species",
+            "collecting shells",
+            "surfing",
+            "whale-watching"
         ]
     }
 }

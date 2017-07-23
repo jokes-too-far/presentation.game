@@ -24,7 +24,8 @@
             "breakfast",
             "bacon and eggs",
             "grapefruit",
-            "loaded omelettes"
+            "loaded omelettes",
+            "strawberry crepes"
         ],
         "verb": [
             "pour cereal",
@@ -33,7 +34,10 @@
             "fry flapjacks",
             "peel oranges",
             "sizzle",
-            "smell that bacon"
+            "smell that bacon",
+            "chop up strawberies",
+            "butter toast",
+            "devour breakfast"
         ],
         "gerund": [
             "pouring cereal",
@@ -42,7 +46,10 @@
             "frying flapjacks",
             "breakfasting",
             "sizzling",
-            "smelling that bacon"
+            "smelling that bacon",
+            "chopping up strawberies",
+            "buttering toast",
+            "devouring breakfast"
         ]
     }
 }

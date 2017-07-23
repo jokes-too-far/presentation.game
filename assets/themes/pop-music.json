@@ -19,8 +19,6 @@
         "noun": [
             "heart",
             "sweet love",
-            "li'l somethin-somethin",
-            "sugar daddy",
             "teen idol",
             "teeny-bopper",
             "raving fans",
@@ -28,7 +26,9 @@
             "lips",
             "eyes",
             "hair",
-            "heartbreak"
+            "heartbreak",
+            "boy band",
+            "girl group"
         ],
         "verb": [
             "love 5-ever",
@@ -36,8 +36,13 @@
             "sing",
             "lip-synch",
             "croon",
-            "touch",
-            "\"dance\" (you know what it really means)"
+            "rock out",
+            "dance",
+            "get concert tickets",
+            "release singles",
+            "top the charts",
+            "watch music videos",
+            "listen to the radio"
         ],
         "gerund": [
             "loving 5-ever",
@@ -45,8 +50,17 @@
             "singing",
             "lip-synching",
             "crooning",
-            "touching",
-            "\"dancing\" (you know what it really means)"
-        ]
+            "rocking out",
+            "dancing",
+            "getting concert tickets",
+            "releasing singles",
+            "topping the charts",
+            "watching music videos",
+            "listening to the radio"
+        ],
+        "comments": [
+        "li'l somethin-somethin",
+        "sugar daddy",
+        "\"dance\" (you know what it really means)"]
     }
 }

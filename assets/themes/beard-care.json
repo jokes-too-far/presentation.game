@@ -3,7 +3,7 @@
         "slides": [
             "5 inch beards > 2 inch beards > #noun#",
             "do beards make you #noun#?",
-            "flower beards and #noun#",
+            "flower beards look better with #noun#",
             "maintain manly stubble by #gerund#",
             "help! my beard is #gerund#!",
             "beard wash: worth giving up #gerund#?",
@@ -25,24 +25,35 @@
             "neckbeard",
             "handlebar mustache",
             "goatee",
-            "pencil mustache"
+            "pencil mustache",
+            "sea captain beard",
+            "van dyke",
+            "monkey tail beard",
+            "full beard",
+            "manly stubble"
         ],
         "verb": [
             "shave",
             "trim",
             "hedge-clip",
-            "proudly display your facial hair",
+            "proudly display",
             "tickle",
-            "groom"
+            "groom",
+            "grow",
+            "braid",
+            "wash"
         ],
         "gerund": [
             "shaving",
             "trimming",
             "hedge-clipping",
-            "proudly displaying your facial hair",
+            "proudly displaying",
             "tickling",
             "balding",
-            "grooming"
+            "grooming",
+            "growing",
+            "braiding",
+            "washing"
         ]
     }
 }

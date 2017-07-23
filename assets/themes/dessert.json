@@ -34,7 +34,9 @@
             "decorate",
             "whip",
             "burn",
-            "glaze"
+            "glaze",
+            "pipe icing",
+            "let yeast rise"
         ],
         "gerund": [
             "baking",
@@ -42,7 +44,9 @@
             "whipping",
             "decorating",
             "burning",
-            "glazing"
+            "glazing",
+            "piping icing",
+            "letting yeast rise"
         ]
     }
 }

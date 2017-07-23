@@ -39,7 +39,10 @@
             "weightlift",
             "sprint",
             "chin-up",
-            "flex"
+            "flex",
+            "workout",
+            "use kettlebells",
+            "climb pegboard"
         ],
         "gerund": [
             "crossfitting",
@@ -49,7 +52,10 @@
             "cutting calories",
             "weightlifting",
             "sprinting",
-            "flexing"
+            "flexing",
+            "working out",
+            "using kettlebells",
+            "climbing pegboard"
         ]
     }
 }

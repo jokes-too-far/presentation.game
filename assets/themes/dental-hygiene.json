@@ -11,7 +11,9 @@
             "toothache? your dentist may suggest #gerund#",
             "alternatives to daily flossing: \n1. mouthwash\n2. #gerund#\n3. #noun#",
             "be careful! sugary foods cause #noun#",
-            "local anesthesia or laughing gas for #noun# surgery?"
+            "local anesthesia or laughing gas for #noun# surgery?",
+            "cosmetic tooth alterations your dentist doesn't recommend",
+            "when they all have to come out: denturse or #noun#?"
         ],
         "noun": [
             "toothbrush",
@@ -33,7 +35,10 @@
             "gargle",
             "pull teeth",
             "drill cavities",
-            "use mouthwash"
+            "use mouthwash",
+            "check for cavities",
+            "chew gum",
+            "remove plaque"
         ],
         "gerund": [
             "brushing",
@@ -41,7 +46,10 @@
             "gargling",
             "pulling teeth",
             "drilling cavities",
-            "using mouthwash"
+            "using mouthwash",
+            "checking for cavities",
+            "chewing gum",
+            "removing plaque"
         ]
     }
 }

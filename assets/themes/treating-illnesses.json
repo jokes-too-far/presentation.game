@@ -11,7 +11,8 @@
             "suffering from #noun#? try #gerund#!",
             "consult your doctor if you #verb#",
             "do apples help you #verb#?",
-            "can vaccines cause #noun#?"
+            "can vaccines cause #noun#?",
+            "at the very top of the food pyramid: #noun#"
         ],
         "noun": [
             "fatigue",
@@ -22,7 +23,13 @@
             "cramps",
             "ancient chinese remedies",
             "jaundice",
-            "western medicine"
+            "western medicine",
+            "vitamins and minerals",
+            "food pyramid",
+            "moderate exercise",
+            "low-grade fever",
+            "runny nose",
+            "cough drops"
         ],
         "verb": [
             "sneeze",
@@ -32,14 +39,21 @@
             "vomit",
             "vaccinate",
             "diagnose",
-            "juice-cleanse"
+            "juice-cleanse",
+            "consult your doctor",
+            "experience side effects"
         ],
         "gerund": [
-            "diluting",
-            "vomiting",
+            "sneezing",
             "coughing",
+            "diluting",
+            "home-brewing",
+            "vomiting",
+            "vaccinating",
             "diagnosing",
-            "juice-cleansing"
+            "juice-cleansing",
+            "consulting your doctor",
+            "experiencing side effects"
         ]
     }
 }

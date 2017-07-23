@@ -28,8 +28,10 @@
             "muggers",
             "city blocks",
             "mounted police",
-            "panhandlers",
-            "crosswalks"
+            "crosswalks",
+            "skyline",
+            "global hub",
+            "tourists"
         ],
         "verb": [
             "rent",
@@ -42,7 +44,8 @@
             "get mugged",
             "pollute",
             "commute",
-            "busk"
+            "advertise",
+            "experience nightlife"
         ],
         "gerund": [
             "renting",
@@ -55,7 +58,8 @@
             "getting mugged",
             "polluting",
             "commuting",
-            "busking"
+            "advertising",
+            "experiencing nightlife"
         ]
     }
 }

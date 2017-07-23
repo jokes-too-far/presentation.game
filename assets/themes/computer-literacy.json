@@ -10,7 +10,9 @@
             "antivirus or #noun#?",
             "your own printer, or shared #noun#?",
             "your grandchildren can answer questions about #noun#",
-            "don't be discouraged if you #verb# once in a while"
+            "don't be discouraged if you #verb# once in a while",
+            "consult an expert before you #verb# online",
+            "when #gerund#, focus on accuracy, and speed will come in time"
         ],
         "noun": [
             "mouse",
@@ -33,7 +35,13 @@
             "click",
             "doubleclick",
             "restart",
-            "disassemble"
+            "disassemble your PC",
+            "navigate the internet",
+            "surf the world wide web",
+            "open a file",
+            "close a window",
+            "copy and paste",
+            "control - alt - delete"
         ],
         "gerund": [
             "mis-typing",
@@ -42,7 +50,13 @@
             "clicking",
             "doubleclicking",
             "restarting",
-            "disassembling"
+            "disassembling your PC",
+            "navigating the internet",
+            "surfing the world wide web",
+            "opening a file",
+            "closing a window",
+            "copying and pasting",
+            "control - alt - deleting"
         ]
     }
 }

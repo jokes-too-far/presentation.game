@@ -10,33 +10,50 @@
             "imagine how you would feel if someone told you that you #verb#",
             "statistically, #noun# will only rarely #verb#",
             "many people learn to #verb# from their parents",
-            "put yourself in someone else's shoes before you #verb#"
+            "put yourself in someone else's shoes before you #verb#",
+            "appearances are only skin deep"
         ],
         "noun": [
             "in-group",
-            "thugs",
             "token < X > of the group",
-            "racial stereotype",
-            "W.A.S.P. (white anglo-saxon protestant)",
-            "N.I.M.B.Y. (not in my backyard)",
+            "stereotype",
+            "W.A.S.P.",
             "strangers",
-            "weirdos"
+            "weirdos",
+            "different cultures",
+            "prep school",
+            "loud music",
+            "edgy clothes",
+            "shy kids",
+            "nerds",
+            "jocks",
+            "preppy kids",
+            "skateboarders",
+            "valley girls"
         ],
         "verb": [
             "bully",
             "wear black",
             "pierce",
-            "steal",
             "exclude",
-            "follow the crowd"
+            "follow the crowd",
+            "judge",
+            "avoid",
+            "open your mind",
+            "broaden your horizons",
+            "listen to loud music"
         ],
         "gerund": [
             "bullying",
             "wearing black",
             "piercing",
-            "stealing",
             "excluding",
-            "following the crowd"
+            "following the crowd",
+            "judging",
+            "avoiding",
+            "opening your mind",
+            "broadening your horizons",
+            "listening to loud music"
         ]
     }
 }
