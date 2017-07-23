@@ -1,0 +1,52 @@
+{
+    "agriculture": {
+        "slides": [
+            "most children are afraid of #noun# for a while",
+            "top 3 phobias:\n1. public speaking\n2. #gerund#\n3. #gerund#",
+            "exposure therapy: great for #noun# fears",
+            "medication can help with fear of #noun#",
+            "think that spider wants to #verb#?\nactually, it probably doesn't",
+            "social phobia: roots in #gerund#?",
+            "controversial #noun# exposure therapy for phobias",
+            "psychologists can help you overcome fear of #noun#",
+            "#gerund#: helpful or harmful in treating fear of sharks?",
+            "fear of #noun# is completely normal\n and very common",
+            "#gerund# is nothing to be afraid of!",
+            "fear of elevators = common in #noun# workers"
+        ],
+        "noun": [
+            "loud noises",
+            "public speaking",
+            "spiders",
+            "snakes",
+            "dentists",
+            "sharks",
+            "heights",
+            "germs",
+            "claustrophobia",
+            "arachnophobia",
+            "agoraphobia (fear of leaving home)",
+            "clowns"
+        ],
+        "verb": [
+            "face fears",
+            "hold spiders",
+            "run away",
+            "cry",
+            "attack",
+            "bite",
+            "crawl",
+            "skydive"
+        ],
+        "gerund": [
+            "facing fears",
+            "holding spiders",
+            "running away",
+            "crying",
+            "attacking",
+            "biting",
+            "crawling",
+            "skydiving"
+        ]
+    }
+}
