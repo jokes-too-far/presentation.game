@@ -1,0 +1,53 @@
+{
+    "retirement": {
+        "slides": [
+            "how to keep #noun# off your lawn",
+            "#gerund# in long-form complaint letters",
+            "fill your days with:\n1. #noun#\n2. #gerund#",
+            "spend time with the grandkids: bring #noun#!",
+            "dating past 65: get ready to #verb#",
+            "#noun# senior benefits",
+            "retirement not what you hoped? did you #verb# enough?",
+            "if you #verb#, consider an assisted living facility",
+            "remember, you're 65 years young",
+            "pursue those hobbies you never had time for, like #gerund#",
+            "golden years and golden #noun#",
+            "hips giving out? you can become a cyborg!"
+        ],
+        "noun": [
+            "dentures",
+            "cruises",
+            "AARP card",
+            "social security",
+            "coupons",
+            "nursing home",
+            "senior discount",
+            "blue-haired ladies",
+            "kids these days"
+        ],
+        "verb": [
+            "play shuffleboard",
+            "golf",
+            "volunteer at a school",
+            "travel the world",
+            "complain",
+            "garden",
+            "pursue hobbies",
+            "drive dangerously",
+            "date supermodels",
+            "age gracefully"
+        ],
+        "gerund": [
+            "playing shuffleboard",
+            "golfing",
+            "volunteering at a school",
+            "traveling the world",
+            "complaining",
+            "gardening",
+            "pursuing hobbies",
+            "driving dangerously",
+            "dating supermodels",
+            "aging gracefully"
+        ]
+    }
+}
