@@ -9,23 +9,25 @@ class BarChart extends Phaser.Group {
     super(game, null);
     const barsToMake = 4;
     const width = game.world.width * 0.8;
-    const height = game.world.height * 0.9;
+    const height = game.world.height * 0.8;
 
     // Make bars
     for (let i = 1; i < barsToMake + 1; ++i) {
       const bar = new BarChartBar(game);
       this.add(bar);
       bar.width = 50;
-      bar.height = (height * 0.7) * (1 / i);      
+      bar.height = (height * 0.7) * (1 / i);
       bar.anchor.set(0.5, 1);
     }
 
     // Randomize the positions of the bars
     const positions = [];
+    const labelPositions = [];
     for (let i = 1; i < barsToMake + 1; ++i) {
       const x = width / barsToMake * i;
       const y = height - 50;
       positions.push({x: x, y:y});
+      labelPositions.push({x: x, y:y});
     }
     Phaser.ArrayUtils.shuffle(positions);
 
@@ -36,9 +38,16 @@ class BarChart extends Phaser.Group {
 
     const originalBars = this.children.slice();
 
-    // Make labels
-    for (const linkedChild of originalBars) {
-      const label = new ChartLabel(game, linkedChild.x, linkedChild.y + 20, words.flatten('#noun#'));
+
+    // Make labels, in order
+    let labelY = 0;
+    for (let i = 1; i < barsToMake + 1; ++i) {
+      if (labelY == labelPositions[i - 1].y + 20){
+        labelY = labelPositions[i - 1].y + 80;
+      } else {
+        labelY = labelPositions[i - 1].y + 20;
+      }
+      const label = new ChartLabel(game, labelPositions[i - 1].x, labelY + 20, words.flatten('#noun#'));
       this.add(label);
     }
 
