@@ -19,6 +19,8 @@ const makeSlides = (game, theme) => {
   const commonTemplates = commonTheme.slides;
   const primaryWords = createGrammar(dictionary[theme.primary]);
   const secondaryWords = createGrammar(dictionary[theme.secondary]);
+  const combinedNouns = combineThemes(theme);
+  Phaser.ArrayUtils.shuffle(combinedNouns);
   Phaser.ArrayUtils.shuffle(primaryTemplates);
   Phaser.ArrayUtils.shuffle(secondaryTemplates);
   Phaser.ArrayUtils.shuffle(commonTemplates);
@@ -61,11 +63,7 @@ if (pictureSlideCount < 0) {
     }
   }
   for (let i=0; i < chartSlideCount; ++i) {
-    if (i % 2 == 0){
-      slides.push(new BarChart(game, primaryWords));
-    }else {
-      slides.push(new BarChart(game, secondaryWords));
-    }
+    slides.push(new BarChart(game, combinedNouns));
   }
 
   Phaser.ArrayUtils.shuffle(slides);
@@ -89,6 +87,15 @@ const makeSlide = (game, internal_id, slides, words) => {
     return makeWordSlide(game, slides, words);
   }
 };
+
+
+const combineThemes = (themes) => {
+  const amalgam = {};
+  amalgam.noun = commonTheme.noun.concat(dictionary[themes.primary].noun, dictionary[themes.secondary].noun);
+  amalgam.verb = commonTheme.verb.concat(dictionary[themes.primary].verb, dictionary[themes.secondary].verb);
+  amalgam.gerund = commonTheme.gerund.concat(dictionary[themes.primary].gerund, dictionary[themes.secondary].gerund);
+  return createGrammar(amalgam);
+}
 
 const makeWordSlide = (game, template, grammar) => {
   return new CenteredContent(game, toTitleCase(grammar.flatten(template)), true);
