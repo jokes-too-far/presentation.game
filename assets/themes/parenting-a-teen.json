@@ -5,7 +5,6 @@
             "do you need to supervise #verb# time?",
             "#noun# concerns:\n 1. Safety\n 2. #noun#",
             "making time to #verb# together",
-            "condoms, condoms, condoms!",
             "tough love vs #noun#",
             "their future depends on #noun#",
             "parenting studies on #noun#",
@@ -40,6 +39,7 @@
             "grounding",
             "spanking",
             "nurturing"
-        ]
+        ],
+        "comment" :["condoms, condoms, condoms!"]
     }
 }

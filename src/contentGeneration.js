@@ -5,7 +5,7 @@ const RandomImage = require('./prefabs/randomImage')
 const tracery = require('./vendor/tracery')
 
 const commonTheme = {
-  'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >','#noun#: have you tried #gerund#?',"#noun# + #noun#?", "#verb# with #noun#","never ever #verb#!", "#gerund# with #noun#","from personal experience, #noun# > #noun#","downsides of #gerund#", "#noun#, #noun#, and #noun#"],
+  'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >','#noun#: have you tried #gerund#?',"#noun# + #noun#?", "#verb# with #noun#","never ever #verb#!", "#gerund# with #noun#","from personal experience, #noun# > #noun#","downsides of #gerund#", "#noun#, #noun#, and #noun#","\"#gerund#\""],
   'noun': [],
   'verb': [],
   'gerund': [],

@@ -2,12 +2,12 @@
     "first date advice": {
         "slides": [
             "meet your date in a public location, with #noun#",
-            "going #gerund# is a great way to break the ice",
+            "#gerund# is a great way to break the ice",
             "conversation starters:\n1. #noun#\n2. family\n3. #noun#",
             "can you ever #verb# on the first date?",
             "woo your date with #noun#",
             "roses are a bit much for the first date\nconsider #noun# instead",
-            "memorable first date activities:\n1. #gerund#\n2. #gerund#\n3. #gerund#",
+            "for a memorable first date:\n1. #gerund#\n2. #gerund#\n3. #gerund#",
             "if you #verb#, remember that your date probably does too!",
             "should you pay for your date's #noun#?",
             "when things go wrong: some ways to bail on your date",
@@ -26,7 +26,8 @@
             "drive-in movies",
             "goodnight kiss",
             "red flag",
-            "double date"
+            "double date",
+            "cute stranger"
         ],
         "verb": [
             "dance",
