@@ -31,9 +31,13 @@ const makeSlides = (game, theme) => {
   let secondarySlideCount = Math.ceil(slidesRemaining / 4);
   let secondaryPictureSlideCount = Math.floor(slidesRemaining / 10);
   let chartSlideCount = Math.floor(slidesRemaining / 10);
-  let commonSlideCount = Math.floor(slidesRemaining / 5);
+  let commonSlideCount = Math.floor(slidesRemaining / 8);
   //we'll have primary pictures make up the balance of slides
   let primaryPictureSlideCount = slidesRemaining - (primarySlideCount + secondarySlideCount + secondaryPictureSlideCount + chartSlideCount + commonSlideCount);
+
+if (primaryPictureSlideCount < 0) {
+  primaryPictureSlideCount = 0;
+}
 
   console.log('primary ', primarySlideCount, ', secondary ',secondarySlideCount, ', primaryPicture ', primaryPictureSlideCount, ', secondaryPicture ', secondaryPictureSlideCount, ', common ', commonSlideCount, ', chart ', chartSlideCount);
 
@@ -53,7 +57,11 @@ const makeSlides = (game, theme) => {
     slides.push(makeWordSlide(game, commonTemplates[i], secondaryWords));
   }
   for (let i=0; i < chartSlideCount; ++i) {
-    slides.push(new BarChart(game, primaryWords));
+    if (i % 2 == 0){
+      slides.push(new BarChart(game, primaryWords));
+    }else {
+      slides.push(new BarChart(game, secondaryWords));
+    }
   }
 
   Phaser.ArrayUtils.shuffle(slides);
@@ -88,7 +96,7 @@ const generateTitle = (game, theme) => {
     'secondary-theme': theme.secondary,
     'ridiculous-claim': ['saved my life', 'will ruin #affected#', 'will change #affected#', 'are so 1999', 'are a match made in heaven'],
     'question': ['why', 'how'],
-    'linking': ['the #superlative# link between', 'what you don\'t know about', 'the truth behind', 'examining', 'the future of', 'the importance of', 'the uselessness of'],
+    'linking': ['the #superlative# link between', 'what you don\'t know about', 'the truth behind', 'examining', 'the future of', 'the importance of', 'the uselessness of','my lucrative startup idea:','my fanfiction of'],
     'superlative': ['amazing', 'unbelievable', '<INSERT SUPERLATIVE>', 'astounding', 'life-changing', 'hidden'],
     'affected': ['you', 'the future', 'the world of tomorrow', 'everything', 'nothing'],
     'x-will-y-z': ['will forever change', 'is interlocked with', 'are'],

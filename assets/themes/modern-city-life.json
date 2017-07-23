@@ -1,52 +1,61 @@
 {
-    "modern city life": {
+    "life in the urban jungle": {
         "slides": [
-            "keeping #noun# off your lawn",
-            "high-rises and #noun#",
-            "it's the 21st century.\nwhatever happened to my flying #noun#?",
+            "skyscrapers are home to #noun#",
             "should you #verb#, or take public transportation?",
-            "feeling lost in a crowd? try\n1. #gerund#\n2. seek #noun#\n 3. never ever #verb#!",
-            "the dating scene: singles that #verb#",
-            "renting vs #gerund#",
+            "feeling lost in a crowd? try\n1. #gerund#\n2. find #noun#",
             "the blight of urban #noun#",
-            "fire: a serious #noun# risk",
             "carry spare change to cover #gerund#",
-            "condos: the best place to #verb#",
-            "#noun# in the urban jungle",
-            "longing for the suburbs? remember, in the city you can #verb#",
+            "longing for suburbs? remember, in the city you can #verb#",
             "check out the amazing #noun# art and culture events near you!",
-            "high city cost of living vs #noun#"
+            "high city cost of living vs #noun#",
+            "prevent graffiti with #noun#",
+            "the best street tacos include #noun#",
+            "ask your taxi driver to #verb#, for a faster trip",
+            "carry #noun# in case of muggers",
+            "bikes vs\npublic transportation vs\ntaxis vs\nyour own #noun#?",
+            "#verb# to find your way around downtown"
         ],
         "noun": [
-            "robocop",
-            "nightlife",
             "skyscrapers",
             "urban blight",
             "smog",
-            "tindr",
-            "your mayor",
-            "department stores",
             "traffic jams",
             "crowds",
-            "city parks"
+            "city parks",
+            "street artists",
+            "graffiti",
+            "muggers",
+            "city blocks",
+            "mounted police",
+            "panhandlers",
+            "crosswalks"
         ],
         "verb": [
             "rent",
             "work downtown",
-            "scooter",
-            "eat out",
             "find love in the city",
-            "ride-share",
-            "recycle"
+            "take the subway",
+            "spray-paint",
+            "visit museums",
+            "go out at 2am",
+            "get mugged",
+            "pollute",
+            "commute",
+            "busk"
         ],
         "gerund": [
             "renting",
             "working downtown",
-            "scootering",
-            "eating out",
             "finding love in the city",
-            "ride-sharing",
-            "recycling"
+            "taking the subway",
+            "spray-painting",
+            "visiting museums",
+            "going out at 2am",
+            "getting mugged",
+            "polluting",
+            "commuting",
+            "busking"
         ]
     }
 }

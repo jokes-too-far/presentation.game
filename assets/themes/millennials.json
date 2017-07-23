@@ -23,7 +23,10 @@
             "artisanal pizza",
             "craft beer",
             "safe spaces",
-            "fidget spinner"
+            "fidget spinner",
+            "tindr",
+            "city parks",
+            "micro-houses"
         ],
         "verb": [
             "frolf",
@@ -31,7 +34,12 @@
             "color",
             "post on facebook",
             "trend-set",
-            "use social media"
+            "use social media",
+            "ride-share",
+            "recycle",
+            "scooter",
+            "rent",
+            "take public transportation"
         ],
         "gerund": [
             "frolfing",
@@ -40,7 +48,12 @@
             "socializing",
             "coloring",
             "using social media",
-            "dabbing"
+            "dabbing",
+            "ride-sharing",
+            "recycling",
+            "scootering",
+            "renting",
+            "taking public transportation"
         ]
     }
 }
