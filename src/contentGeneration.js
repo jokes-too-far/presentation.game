@@ -162,8 +162,7 @@ const makeFeedbackSlide = (game) => {
   const bulletPoints = [];
   bulletPoints.push(toTitleCase('1. ' + questions[0]));
   bulletPoints.push(toTitleCase('2. ' + questions[1]));
-  bulletPoints.push(toTitleCase('3. ' + questions[2]));
-  bulletPoints.push(toTitleCase('4. name one thing you learned from this presentation'));
+  bulletPoints.push(toTitleCase('3. name one thing you learned from this presentation'));
   return new BulletPointSlide(game, title, '', bulletPoints);
 }
 
