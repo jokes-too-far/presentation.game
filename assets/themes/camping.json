@@ -1,0 +1,54 @@
+{
+    "camping": {
+        "slides": [
+            "be sure to pack your trusty #noun# in case of bears",
+            "bug bites making you mad enough to #verb#?",
+            "what is the best season to see #noun#?",
+            "you don't have to travel far to camp: set up a tent in your backyard",
+            "#gerund#: don't miss out on your next trip!",
+            "hike, swim, and #verb#",
+            "protect our national parks: #verb# today!",
+            "the best campfire stories involve #noun#",
+            "#verb# to scare away coyotes at night",
+            "can you go camping near #noun#?",
+            "camping trip must-haves:\n1. #noun#\n2. #noun#\n3. #gerund# gear",
+            "remember #noun# to avoid accidents when camping during hunting season",
+            "check for snakes before #gerund#"
+        ],
+        "noun": [
+            "tent",
+            "sleeping bag",
+            "bear stick",
+            "mosquito repellent",
+            "marshmallows",
+            "s'mores",
+            "campfires",
+            "emergency flares",
+            "trees",
+            "nature",
+            "mountains"
+        ],
+        "verb": [
+            "climb mountains",
+            "set up camp",
+            "go hiking",
+            "trailblaze",
+            "sleep outdoors",
+            "rough it",
+            "eat tinned beans",
+            "become one with nature",
+            "swim in the river"
+        ],
+        "gerund": [
+            "climbing mountains",
+            "setting up camp",
+            "hiking",
+            "trailblazing",
+            "sleeping outdoors",
+            "roughing it",
+            "eating tinned beans",
+            "becoming one with nature",
+            "swimming in the river"
+        ]
+    }
+}
