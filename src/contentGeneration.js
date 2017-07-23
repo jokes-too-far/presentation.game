@@ -5,7 +5,7 @@ const RandomImage = require('./prefabs/randomImage')
 const tracery = require('./vendor/tracery')
 
 const commonTheme = {
-  'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >','#noun#: have you tried #gerund#?',"#noun# + #noun#?"],
+  'slides': ['Unusual examples of #noun#', 'Uses for #noun# you may not know about', 'How #noun# contributes to society','#gerund#: how much is enough?','the subtle link between #noun# and #noun#','< live demonstration >','#noun#: have you tried #gerund#?',"#noun# + #noun#?", "#verb# with #noun#","never ever #verb#!", "#gerund# with #noun#","from personal experience, #noun# > #noun#","downsides of #gerund#", "#noun#, #noun#, and #noun#"],
   'noun': [],
   'verb': [],
   'gerund': [],
@@ -45,9 +45,11 @@ if (pictureSlideCount < 0) {
   for (let i=0; i < primarySlideCount; ++i) {
     slides.push(makeWordSlide(game, primaryTemplates[i], secondaryWords));
     }
+
   for (let i=0; i < secondarySlideCount; ++i) {
     slides.push(makeWordSlide(game, secondaryTemplates[i], primaryWords));
     }
+
   for (let i=0; i < pictureSlideCount; ++i) {
       if (i % 2 == 0){
         slides.push(new RandomImage(game, dictionary[theme.primary]['internal_id']));
@@ -56,12 +58,9 @@ if (pictureSlideCount < 0) {
       }
   }
   for (let i=0; i < commonSlideCount; ++i) {
-    if (i % 2 == 0){
-      slides.push(makeWordSlide(game, commonTemplates[i], secondaryWords));
-    }else {
-      slides.push(makeWordSlide(game, commonTemplates[i], primaryWords));
-    }
+    slides.push(makeWordSlide(game, commonTemplates[i], combinedNouns));
   }
+
   for (let i=0; i < chartSlideCount; ++i) {
     slides.push(new BarChart(game, combinedNouns));
   }
