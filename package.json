@@ -8,10 +8,10 @@
     "build": "electron-packager . --all --out build --electronVersion 1.6.11 --overwrite",
     "build-dev": "electron-packager . --out build --electronVersion 1.6.11 --overwrite --arch x64 --platform win32",
     "publish": "npm run publish:win32 && npm run publish:win64 && npm run publish:linux-x64 && npm run publish:darwin-x64",
-    "publish:darwin-x64": "butler push ./build/presentation.game-darwin-x64/ icbat/presentation-game:osx-x64 --userversion %npm_package_version%",
-    "publish:linux-x64": "butler push ./build/presentation.game-linux-x64/ icbat/presentation-game:linux-x64 --userversion %npm_package_version%",
-    "publish:win32": "butler push ./build/presentation.game-win32-ia32/ icbat/presentation-game:windows-32 --userversion %npm_package_version%",
-    "publish:win64": "butler push ./build/presentation.game-win32-x64/ icbat/presentation-game:windows-64 --userversion %npm_package_version%"
+    "publish:darwin-x64": "butler push ./build/presentation.game-darwin-x64/ icbat/presenting:osx-x64 --userversion %npm_package_version%",
+    "publish:linux-x64": "butler push ./build/presentation.game-linux-x64/ icbat/presenting:linux-x64 --userversion %npm_package_version%",
+    "publish:win32": "butler push ./build/presentation.game-win32-ia32/ icbat/presenting:windows-32 --userversion %npm_package_version%",
+    "publish:win64": "butler push ./build/presentation.game-win32-x64/ icbat/presenting:windows-64 --userversion %npm_package_version%"
   },
   "keywords": [],
   "author": "",
