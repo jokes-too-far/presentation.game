@@ -31,7 +31,7 @@ const makeSlides = (game, theme) => {
 
   let primarySlideCount = Math.ceil(slidesRemaining / 3);
   let secondarySlideCount = Math.ceil(slidesRemaining / 4);
-  let chartSlideCount = Math.floor(slidesRemaining / 10);
+  let chartSlideCount = Math.floor(slidesRemaining / 6);
   let commonSlideCount = Math.floor(slidesRemaining / 8);
   //we'll have pictures make up the balance of slides
   let pictureSlideCount = slidesRemaining - (primarySlideCount + secondarySlideCount +  chartSlideCount + commonSlideCount);
