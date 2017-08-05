@@ -21,7 +21,9 @@ class Menu extends Phaser.State {
       this.game.global.addBonusSlide = 0;
     };
 
-    const title = new CenteredContent(this.game, contentGeneration.generateTitle(this.game, theme));
+    const titleText = contentGeneration.generateTitle(this.game, theme)
+    this.game.global.talkTitle = titleText
+    const title = new CenteredContent(this.game, titleText);
 
     const startButton = new TextButton(this.game, 0, 'Start', 'introduction', tweenedUI, contentGeneration.makeSlides(this.game, theme));
 

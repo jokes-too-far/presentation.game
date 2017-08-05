@@ -1,6 +1,7 @@
 const GradientBG = require('../prefabs/gradientBG')
 const SlideNumber = require('../prefabs/slideNumber')
 const SlideTimer = require('../prefabs/slideTimer')
+const SlideTitle = require('../prefabs/slideTitle')
 const TextButton = require('../prefabs/textButton')
 
 const transition = require('../transition')
@@ -19,6 +20,7 @@ class Slide extends Phaser.State {
   create() {
     // Meta slide stuff
     const slideNumber = new SlideNumber(this.game, this.slideNumber);
+    const talkTitle = new SlideTitle(this.game, this.game.global.talkTitle);
 
     if (JSON.parse(localStorage.getItem(this.game.global.key_shouldPlaySounds))) {
         const timer = this.game.time.create(true);
@@ -55,6 +57,7 @@ class Slide extends Phaser.State {
     transition.in(this.game, [this.content]);
 
     this.tweenedUI.push(this.content);
+    this.tweenedUI.push(talkTitle);
     this.tweenedUI.push(slideNumber);
     this.tweenedUI.push(displayTimer);
     this.tweenedUI.push(backButton);
