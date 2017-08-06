@@ -22,18 +22,26 @@ class Slide extends Phaser.State {
     const slideNumber = new SlideNumber(this.game, this.slideNumber);
     const talkTitle = new SlideTitle(this.game, this.game.global.talkTitle);
 
+    let slideDuration = JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide));
+    //console.log('slideDuration ', slideDuration, ', slideNumber ',this.slideNumber, ', count ', JSON.parse(localStorage.getItem(this.game.global.key_totalSlides)));
+
+    if (this.slideNumber == JSON.parse(localStorage.getItem(this.game.global.key_totalSlides)) + 1){
+      slideDuration = 5; //bonus slide needs shortening
+    }
+    //JSON.parse(localStorage.getItem(this.game.global.key_totalSlides))
+
     if (JSON.parse(localStorage.getItem(this.game.global.key_shouldPlaySounds))) {
         const timer = this.game.time.create(true);
-        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND - 3000, () => {
+        timer.add(slideDuration * Phaser.Timer.SECOND - 3000, () => {
           this.game.sound.play('boop');
         });
-        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND - 2000, () => {
+        timer.add(slideDuration * Phaser.Timer.SECOND - 2000, () => {
           this.game.sound.play('boop');
         });
-        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND - 1000, () => {
+        timer.add(slideDuration * Phaser.Timer.SECOND - 1000, () => {
           this.game.sound.play('boop');
         });
-        timer.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, () => {
+        timer.add(slideDuration * Phaser.Timer.SECOND, () => {
           if (Math.random() < this.game.global.differentSoundPercentChance / 100) {
             console.log('different');
             this.game.sound.play(this.game.rnd.pick(this.game.global.transition_sounds));
@@ -44,7 +52,7 @@ class Slide extends Phaser.State {
         timer.start();
     }
 
-    const event = this.game.time.events.add(JSON.parse(localStorage.getItem(this.game.global.key_timeOnSlide)) * Phaser.Timer.SECOND, this.progress, this);
+    const event = this.game.time.events.add(slideDuration * Phaser.Timer.SECOND, this.progress, this);
     const displayTimer = new SlideTimer(this.game, event);
 
     this.tweenedUI = [];
