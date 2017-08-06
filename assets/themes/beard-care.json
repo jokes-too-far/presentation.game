@@ -16,9 +16,11 @@
             "beard going gray? try #gerund#",
             "#noun# or beard implants?",
             "how often does your beard need to #verb#?",
-            "do you have to like #gerund# if you have a majestic beard?\n technically no. but maybe you should anyway."
+            "do you have to like #gerund# if you have a majestic beard?\n technically no. but maybe you should anyway.",
+            "daily conditioning will allow you to #verb# victory"
         ],
         "noun": [
+            "hipster serums",
             "wizard beard",
             "muttonchops",
             "soul patch",
@@ -41,7 +43,8 @@
             "groom",
             "grow",
             "braid",
-            "wash"
+            "wash",
+            "primp"
         ],
         "gerund": [
             "shaving",

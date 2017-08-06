@@ -9,10 +9,10 @@
             "#noun# senior benefits",
             "retirement not what you hoped? did you #verb# enough?",
             "if you #verb#, consider an assisted living facility",
-            "remember, you're 65 years young",
+            "remember, you're not #noun.a#; you're 65 years young",
             "pursue those hobbies you never had time for, like #gerund#",
             "golden years and golden #noun#",
-            "hips giving out? you can become a cyborg!"
+            "65-year-old #noun# giving out? get a prosthetic #noun#!"
         ],
         "noun": [
             "dentures",
