@@ -25,6 +25,7 @@ module.exports = (() => {
         bonusSlideChancePercent: 20,
         differentSoundPercentChance: 2,
         transition_sounds: [],
+        bgs: [],
         themes: []
     };
 })()

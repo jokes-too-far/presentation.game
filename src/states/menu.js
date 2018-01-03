@@ -2,7 +2,7 @@ const contentGeneration = require('../contentGeneration')
 const styles = require('../styles')
 const transition = require('../transition')
 
-const GradientBG = require('../prefabs/gradientBG')
+const BackgroundImage = require('../prefabs/BackgroundImage')
 const CenteredContent = require('../prefabs/centeredContent')
 const TextButton = require('../prefabs/textButton')
 
@@ -12,7 +12,7 @@ class Menu extends Phaser.State {
     const tweenedUI = [];
 
     styles.backgroundColor(this.game);
-    new GradientBG(this.game);
+    new BackgroundImage(this.game);
 
     const theme = contentGeneration.pickTheme(this.game);
     if (Math.random() < (this.game.global.bonusSlideChancePercent/100)){

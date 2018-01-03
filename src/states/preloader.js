@@ -22,6 +22,12 @@ class Preloader extends Phaser.State {
         this.game.global.transition_sounds.push(key);
        }
 
+       for (const filename of fs.readdirSync(__dirname + '/../../assets/bgs/')) {
+        this.game.load.image(filename, 'assets/bgs/' + filename);
+        this.game.global.bgs.push(filename);
+       }
+       console.log(this.game.global.bgs);
+
        this.load.image('logo-stl', 'assets/logos/stl.png');
        this.load.spritesheet('logo-studio', 'assets/logos/studio.png', 128, 128);
 
