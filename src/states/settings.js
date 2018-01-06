@@ -2,7 +2,6 @@ const contentGeneration = require('../contentGeneration')
 const styles = require('../styles')
 const transition = require('../transition')
 
-const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 const TextButton = require('../prefabs/textButton')
 
@@ -12,7 +11,6 @@ const NumericalSlider = require('../prefabs/numericalSlider')
 class Settings extends Phaser.State {
 
   create() {
-      new GradientBG(this.game);
       const tweenedUI = [];
 
       const leaveButton = new TextButton(this.game, this.game.world.width, 'Back to game', 'menu', tweenedUI);

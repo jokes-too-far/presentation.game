@@ -1,4 +1,3 @@
-const GradientBG = require('../prefabs/gradientBG')
 const SlideNumber = require('../prefabs/slideNumber')
 const SlideTimer = require('../prefabs/slideTimer')
 const SlideTitle = require('../prefabs/slideTitle')
@@ -14,7 +13,6 @@ class Slide extends Phaser.State {
     if (this.game.global.addBonusSlide){
       this.slideNumber = this.slideNumber + 2;
     }
-    new GradientBG(this.game);
   }
 
   create() {

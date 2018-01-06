@@ -1,4 +1,3 @@
-const GradientBG = require('../prefabs/gradientBG')
 const SlideNumber = require('../prefabs/slideNumber')
 const SlideTimer = require('../prefabs/slideTimer')
 const TextButton = require('../prefabs/textButton')
@@ -9,7 +8,6 @@ const transition = require('../transition')
 class Introduction extends Phaser.State {
 
   init(slides) {
-    new GradientBG(this.game);
     this.slides = slides;
     this.slideNumber = 0;
     if (!JSON.parse(localStorage.getItem(this.game.global.key_shouldDoIntroSlide))) {

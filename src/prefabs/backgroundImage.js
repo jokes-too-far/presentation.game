@@ -9,10 +9,19 @@ class BackgroundImage extends Phaser.Sprite {
         const ratio = Math.max(heightRatio, widthRatio);
         this.width = this.width * ratio;
         this.height = this.height * ratio;
-        game.add.existing(this);
+
+        // Stage doesn't get dropped between states (unlike World)
+        game.stage.addChildAt(this, 0);
+
+        // Clean up any old BackgroundImages
+        if (game.stage.getChildAt(1).name !== '__world') {
+            game.stage.getChildAt(1).destroy();
+        }
     }
 
     update() {}
+
+
 
 }
 

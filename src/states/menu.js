@@ -11,9 +11,6 @@ class Menu extends Phaser.State {
   create() {
     const tweenedUI = [];
 
-    styles.backgroundColor(this.game);
-    new BackgroundImage(this.game);
-
     const theme = contentGeneration.pickTheme(this.game);
     if (Math.random() < (this.game.global.bonusSlideChancePercent/100)){
       this.game.global.addBonusSlide = 1;
@@ -40,6 +37,8 @@ class Menu extends Phaser.State {
     transition.in(this.game, tweenedUI);
 
     settingsButton.setAnchor(1);
+    new BackgroundImage(this.game);
+    console.log(this.game.stage.children);
   }
 
   update() {}

@@ -1,14 +1,12 @@
 const contentGeneration = require('../contentGeneration')
 const transition = require('../transition')
 
-const GradientBG = require('../prefabs/gradientBG')
 const CenteredContent = require('../prefabs/centeredContent')
 const ClickToProceedIndicator = require('../prefabs/clickToProceedIndicator')
 
 class Menu extends Phaser.State {
 
     init() {
-        new GradientBG(this.game);
         if (!JSON.parse(localStorage.getItem(this.game.global.key_askForFeedback))) {
             this.game.state.start('menu');
         }

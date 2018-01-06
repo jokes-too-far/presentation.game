@@ -1,5 +1,3 @@
-const GradientBG = require('./prefabs/gradientBG')
-
 const titleSizedFont = (game) => {
     const fontHeight =  Math.min(game.height, game.width) * 0.12;
     return {
@@ -38,14 +36,6 @@ const smallFont = (game) => {
         wordWrap: true,
         wordWrapWidth: game.width * 0.7,
     };
-};
-
-const randomTheme = (game) => {
-  const newBgColor = parseInt(Math.random().toString(16).slice(2,8), 16);
-  const newGradientColor = gradientDestination(newBgColor, 0.3);
-  const bg = new GradientBG(game, newGradientColor);
-  tweenTint(game, game.stage, game.stage.backgroundColor, newBgColor, Phaser.Timer.SECOND / 2);
-  tweenTint(game, bg, game.stage.backgroundColor, newGradientColor, Phaser.Timer.SECOND / 2);
 };
 
 const gradientDestination = (hexString, percentChange) => {
@@ -96,7 +86,6 @@ const tweenTint = (game, obj, startColor, endColor, time) =>  {
 
 
 module.exports = {
-    backgroundColor: randomTheme,
     fonts: {
         big: titleSizedFont,
         medium: mediumFont,
