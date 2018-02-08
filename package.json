@@ -5,8 +5,8 @@
   "main": "src/electronStart.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --all --out build --electronVersion 1.6.11 --overwrite",
-    "build-dev": "electron-packager . --out build --electronVersion 1.6.11 --overwrite --arch x64 --platform win32",
+    "build": "electron-packager . --all --out build --electronVersion 1.8.2 --overwrite",
+    "build-dev": "electron-packager . --out build --electronVersion 1.8.2 --overwrite --arch x64 --platform win32",
     "publish": "npm run publish:win32 && npm run publish:win64 && npm run publish:linux-x64 && npm run publish:darwin-x64",
     "publish:darwin-x64": "butler push ./build/presentation.game-darwin-x64/ icbat/presenting:osx-x64 --userversion %npm_package_version%",
     "publish:linux-x64": "butler push ./build/presentation.game-linux-x64/ icbat/presenting:linux-x64 --userversion %npm_package_version%",
@@ -20,7 +20,7 @@
     "phaser": "^2.6.2"
   },
   "devDependencies": {
-    "electron": "^1.6.11",
+    "electron": "^1.8.2",
     "electron-packager": "^8.7.2"
   }
 }
